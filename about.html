@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>About & methodology — Thermal Model Zoo</title>
+<meta name="description" content="Why thermal-infrared simulation needs models split into real parts with researched materials, and how each entry in the zoo is prepared."/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101419'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23f59e0b' stroke-width='3'/%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=block" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/tokens.css"/>
+<link rel="stylesheet" href="assets/css/site.css"/>
+<script src="assets/js/theme.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tailwind-config.js"></script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col" data-page="about">
+<div id="site-header"></div>
+<main class="w-full pt-16 bg-surface flex-1">
+<section class="w-full bg-surface-container-lowest px-gutter py-space-xl border-b border-outline-variant/30"><div class="max-w-4xl mx-auto flex flex-col gap-space-sm">
+<span class="font-label-caps text-label-caps text-primary uppercase">About &amp; methodology</span>
+<h1 class="font-display text-display text-on-surface tracking-tight">Why thermal models need more than a mesh</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A thermal camera does not see colour. It sees how much infrared a surface gives off, which depends on its temperature and on what it is made of. A model that looks right in daylight can look completely wrong in infrared.</p></div></section>
+
+<section class="w-full bg-surface px-gutter py-space-xl"><div class="max-w-4xl mx-auto flex flex-col gap-space-xl font-body-lg text-body-lg text-on-surface-variant">
+<div class="flex flex-col gap-space-sm"><h2 class="font-headline-lg text-headline-lg text-on-surface">What infrared simulation is</h2>
+<p>Infrared simulation renders what a thermal camera would record: a long-wave camera (8–14 µm) for most vehicles and people, mid-wave (3–5 µm) for hot exhausts. Engineers use the images to compare sensors before buying them, and to train and test perception software without flying real aircraft or driving real cars at night.</p></div>
+<div class="flex flex-col gap-space-sm"><h2 class="font-headline-lg text-headline-lg text-on-surface">Why parts and materials matter</h2>
+<p>A car body, its windscreen, its tyres and its exhaust are at different temperatures and shed heat differently. Glass is opaque in the long-wave band, bare metal reflects the sky instead of glowing, and rubber glows brightly. A single merged mesh with one texture cannot capture any of that, so each model here is split into the components the real object has, and each component gets its own material.</p></div>
+<div class="flex flex-col gap-space-sm"><h2 class="font-headline-lg text-headline-lg text-on-surface">How an entry is made</h2>
+<ol class="list-decimal pl-6 flex flex-col gap-space-sm"><li><strong class="text-on-surface">Licence check.</strong> Only CC0, CC-BY, CC-BY-SA and the contributor's own work are accepted. Anything else is turned away before any work is done.</li>
+<li><strong class="text-on-surface">Identify the real object</strong> and look up its published dimensions, so the model is scaled to metres.</li>
+<li><strong class="text-on-surface">Split into functional parts</strong> such as motors, battery, exhaust and glazing, including hidden ones like an engine inside a car shell.</li>
+<li><strong class="text-on-surface">Research each part's material</strong> and its long-wave emissivity.</li>
+<li><strong class="text-on-surface">Record the source of every value</strong> as <em>measured</em>, <em>reference</em> (from a published table) or <em>estimated</em>.</li>
+<li><strong class="text-on-surface">Publish with credit:</strong> the author, the original link, the licence and a note of what was changed.</li></ol></div>
+<div class="flex flex-col gap-space-sm"><h2 class="font-headline-lg text-headline-lg text-on-surface">How far to trust the numbers</h2>
+<p>Emissivity depends on surface finish, paint, ageing, wavelength and viewing angle. The values here are starting points for a simulation, not laboratory measurements of the specific object, unless an entry says <em>measured</em>. Check the source tag on each part.</p></div>
+<div class="flex flex-col gap-space-sm"><h2 class="font-headline-lg text-headline-lg text-on-surface">Where files live</h2>
+<p>This site is a static page set on GitHub Pages: images, descriptions and the catalogue. The large model files (.blend, .usdc, .fbx, .glb) are hosted on free storage such as GitHub Releases, Hugging Face or Zenodo, and each model page links to them.</p></div>
+<div class="bg-surface-container-low rounded p-space-lg flex flex-col gap-space-sm"><h2 class="font-headline-md text-headline-md text-on-surface">Want to add a model?</h2><p class="font-body-md">The contribute page builds the submission for you.</p><a class="h-10 px-space-lg self-start bg-primary-container hover:bg-secondary-container text-on-primary-container font-headline-sm rounded flex items-center gap-space-xs" href="contribute.html"><span class="material-symbols-outlined text-[18px]">add</span>Contribute a model</a></div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/layout.js"></script>
+</body>
+</html>

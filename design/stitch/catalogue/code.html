@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-bright":"#36393f","surface-dim":"#101419","primary-container":"#f59e0b","surface-container":"#1c2025","surface-container-highest":"#31353b","surface":"#101419","on-secondary-fixed":"#370e00","surface-container-low":"#181c21","on-secondary":"#5a1c00","inverse-on-surface":"#2d3136","inverse-primary":"#855300","tertiary-fixed":"#c4e7ff","secondary":"#ffb599","tertiary-container":"#38bdf8","on-error":"#690005","secondary-fixed":"#ffdbce","on-tertiary-container":"#004965","secondary-container":"#f66018","surface-container-lowest":"#0a0e13","on-primary-fixed":"#2a1700","on-tertiary":"#00354a","on-primary":"#472a00","on-secondary-fixed-variant":"#7f2b00","on-surface-variant":"#d8c3ad","outline":"#a08e7a","surface-variant":"#31353b","on-tertiary-fixed-variant":"#004c69","on-secondary-container":"#4f1700","on-surface":"#e0e2ea","primary":"#ffc174","error":"#ffb4ab","secondary-fixed-dim":"#ffb599","primary-fixed-dim":"#ffb95f","on-background":"#e0e2ea","surface-tint":"#ffb95f","on-primary-container":"#613b00","inverse-surface":"#e0e2ea","background":"#101419","tertiary-fixed-dim":"#7bd0ff","outline-variant":"#534434","tertiary":"#8ed5ff","on-tertiary-fixed":"#001e2c","primary-fixed":"#ffddb8","surface-container-high":"#262a30","on-error-container":"#ffdad6","error-container":"#93000a","on-primary-fixed-variant":"#653e00"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xs":"0.25rem","margin":"1.25rem","space-sm":"0.5rem","space-xl":"2rem","space-lg":"1.25rem","gutter":"1rem","space-md":"0.75rem"},fontFamily:{"label-caps":["JetBrains Mono"],"headline-lg-mobile":["Inter"],"mono-data-sm":["JetBrains Mono"],"headline-md":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"display":["Inter"],"mono-data-md":["JetBrains Mono"],"body-md":["Inter"],"mono-data-lg":["JetBrains Mono"],"headline-lg":["Inter"],"headline-sm":["Inter"]},fontSize:{"label-caps":["10px",{lineHeight:"12px",letterSpacing:"0.08em",fontWeight:"600"}],"headline-lg-mobile":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"mono-data-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"400"}],"headline-md":["18px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"display":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"mono-data-md":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"400"}],"body-md":["13px",{lineHeight:"18px",fontWeight:"400"}],"mono-data-lg":["14px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["15px",{lineHeight:"20px",letterSpacing:"-0.005em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="IR Model Zoo Radiometric Sensor Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1US0P0_6lXXLFkWnckOu6cKH_lHUvglgW85MWWlf-uzxpnHJRMHODsBkSZNSrM30mRilrI4KD5AQJLWJZuUfivW-wd5hJSEU4GRbURYFyATeUNStviNTC5U-80rbWpbdmvqZLgbv16z1tc6ggVn3ZMQdtbe8yWb3YzYZRjP0WpFXBIpLZLwM6SKNP5UAJILI_H6EDw9nxHu23e2yH_2S8XfO7frP-mAcxH00XDFf7aKRITYg4_lCduWZ48"/><a class="flex items-center gap-space-sm" data-path="home" href="#"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">IR Model Zoo</span><span class="font-mono-data-sm text-mono-data-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant">v1.2.0 • Static</span></a></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded"><a class="px-space-md py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a aria-current="page" class="px-space-md py-space-xs transition-colors bg-primary-container text-on-primary-container font-semibold rounded" data-path="browse-catalogue" href="#">Browse Catalogue</a><a class="px-space-md py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="licences-and-criteria" href="#">Licences &amp; Criteria</a><a class="px-space-md py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contribute" href="#">Contribute</a><a class="px-space-md py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-and-methodology" href="#">About &amp; Methodology</a></nav><div class="flex items-center gap-space-sm shrink-0"><button class="h-8 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded flex items-center gap-space-xs transition-colors" title="Quick Model Search (Ctrl+K)" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="hidden sm:inline font-mono-data-sm text-mono-data-sm">Search (/)</span></button><button class="h-8 w-8 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded flex items-center justify-center transition-colors" title="Toggle Radiometric Spectrum Color Theme" type="button"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><a class="h-8 w-8 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded flex items-center justify-center transition-colors" href="https://github.com" rel="noreferrer" target="_blank" title="Source Repository"><span class="material-symbols-outlined text-[18px]">code</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><details class="lg:hidden relative"><summary class="list-none h-8 w-8 bg-surface-container hover:bg-surface-container-high text-on-surface rounded flex items-center justify-center cursor-pointer"><span class="material-symbols-outlined text-[20px]">menu</span></summary><div class="absolute right-0 mt-space-sm w-64 p-space-sm bg-surface-container-high rounded shadow-xl flex flex-col gap-space-xs z-50"><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="home" href="#">Home</a><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="browse-catalogue" href="#">Browse Catalogue</a><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="licences-and-criteria" href="#">Licences &amp; Criteria</a><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="contribute" href="#">Contribute</a><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="about-and-methodology" href="#">About &amp; Methodology</a></div></details></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<div class="w-full bg-surface-container-lowest py-space-lg px-gutter">
+<div class="max-w-[1720px] mx-auto flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container text-primary font-mono-data-sm text-mono-data-sm uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Telemetry Stream Calibrated • ASTM E1311
+          </span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">LWIR 8-14 µm PASS</span>
+</div>
+<h1 class="font-display text-display text-on-surface tracking-tight">Radiometric Model Catalogue</h1>
+<p class="font-mono-data-md text-mono-data-md text-on-surface-variant" id="catalogue-counter">
+          Showing <span class="text-primary font-semibold" id="visible-count">24</span> models matching active sensor constraints
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative flex items-center min-w-[260px] sm:min-w-[320px]">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-8 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-mono-data-sm text-mono-data-sm rounded focus:outline-none focus:ring-1 focus:ring-primary-container" id="model-search-input" placeholder="Search airframe, vehicle, sensor tag..." type="text"/>
+<button class="absolute right-2.5 text-on-surface-variant hover:text-on-surface hidden" id="clear-search-btn" title="Clear Search" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low rounded px-2.5 h-9">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Sort:</span>
+<select class="bg-transparent font-mono-data-sm text-mono-data-sm text-on-surface focus:outline-none cursor-pointer" id="sort-select">
+<option class="bg-surface-container-high text-on-surface" value="newest">Newest Added</option>
+<option class="bg-surface-container-high text-on-surface" value="name">Name (A-Z)</option>
+<option class="bg-surface-container-high text-on-surface" value="triangles-asc">Triangle Count (Low to High)</option>
+<option class="bg-surface-container-high text-on-surface" value="triangles-desc">Triangle Count (High to Low)</option>
+<option class="bg-surface-container-high text-on-surface" value="parts-desc">Parts Count (High to Low)</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-container-low rounded p-0.5">
+<button class="h-8 px-2.5 rounded bg-primary-container text-on-primary-container flex items-center gap-1 font-mono-data-sm text-mono-data-sm font-semibold transition-colors" id="view-mode-grid" title="Grid View" type="button">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+<span class="hidden md:inline">Grid</span>
+</button>
+<button class="h-8 px-2.5 rounded text-on-surface-variant hover:text-on-surface flex items-center gap-1 font-mono-data-sm text-mono-data-sm transition-colors" id="view-mode-table" title="Detailed Table View" type="button">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+<span class="hidden md:inline">Matrix</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full max-w-[1720px] mx-auto px-gutter py-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<aside class="lg:col-span-3 flex flex-col gap-space-md bg-surface-container-low p-space-md rounded">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">tune</span>
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide">Parametric Filters</span>
+</div>
+<button class="font-mono-data-sm text-mono-data-sm text-primary hover:text-secondary-fixed transition-colors" id="reset-filters-btn" type="button">
+            Reset All
+          </button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Airframe / Asset Class</span>
+<div class="flex flex-col gap-1.5 font-mono-data-sm text-mono-data-sm text-on-surface" id="category-filter-group">
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container cursor-pointer select-none">
+<span class="flex items-center gap-2">
+<input checked="" class="w-3.5 h-3.5 accent-primary-container rounded" name="cat" type="checkbox" value="all"/>
+<span>All Categories</span>
+</span>
+<span class="text-on-surface-variant font-mono-data-sm">24</span>
+</label>
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container cursor-pointer select-none">
+<span class="flex items-center gap-2">
+<input class="w-3.5 h-3.5 accent-primary-container rounded" name="cat" type="checkbox" value="drones"/>
+<span>Drones (sUAS)</span>
+</span>
+<span class="text-on-surface-variant font-mono-data-sm">8</span>
+</label>
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container cursor-pointer select-none">
+<span class="flex items-center gap-2">
+<input class="w-3.5 h-3.5 accent-primary-container rounded" name="cat" type="checkbox" value="aircraft"/>
+<span>Aircraft &amp; Fixed Wing</span>
+</span>
+<span class="text-on-surface-variant font-mono-data-sm">6</span>
+</label>
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container cursor-pointer select-none">
+<span class="flex items-center gap-2">
+<input class="w-3.5 h-3.5 accent-primary-container rounded" name="cat" type="checkbox" value="ground"/>
+<span>Ground Vehicles</span>
+</span>
+<span class="text-on-surface-variant font-mono-data-sm">7</span>
+</label>
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container cursor-pointer select-none">
+<span class="flex items-center gap-2">
+<input class="w-3.5 h-3.5 accent-primary-container rounded" name="cat" type="checkbox" value="ships"/>
+<span>Maritime / Ships</span>
+</span>
+<span class="text-on-surface-variant font-mono-data-sm">3</span>
+</label>
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container cursor-pointer select-none">
+<span class="flex items-center gap-2">
+<input class="w-3.5 h-3.5 accent-primary-container rounded" name="cat" type="checkbox" value="animals"/>
+<span>Animals (Fauna IR)</span>
+</span>
+<span class="text-on-surface-variant font-mono-data-sm">4</span>
+</label>
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container cursor-pointer select-none">
+<span class="flex items-center gap-2">
+<input class="w-3.5 h-3.5 accent-primary-container rounded" name="cat" type="checkbox" value="infrastructure"/>
+<span>Infrastructure / Masts</span>
+</span>
+<span class="text-on-surface-variant font-mono-data-sm">5</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Licence Compliance</span>
+<span class="font-mono-data-sm text-mono-data-sm text-tertiary">Commercial Pass</span>
+</div>
+<div class="flex flex-wrap gap-1.5" id="licence-pills">
+<button class="licence-btn px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-mono-data-sm text-mono-data-sm font-semibold" data-licence="all" type="button">All</button>
+<button class="licence-btn px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-mono-data-sm text-mono-data-sm" data-licence="CC0" type="button">CC0</button>
+<button class="licence-btn px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-mono-data-sm text-mono-data-sm" data-licence="CC-BY 4.0" type="button">CC-BY 4.0</button>
+<button class="licence-btn px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-mono-data-sm text-mono-data-sm" data-licence="CC-BY-SA 4.0" type="button">CC-BY-SA 4.0</button>
+<button class="licence-btn px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-mono-data-sm text-mono-data-sm" data-licence="Own Work" type="button">Own Work</button>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">verified</span>
+<p class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">
+              NC (Non-Commercial) and ND (No-Derivatives) are strictly excluded from zoo repository compliance.
+            </p>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Available Geometry Formats</span>
+<div class="grid grid-cols-2 gap-1.5 font-mono-data-sm text-mono-data-sm">
+<label class="flex items-center gap-2 p-1.5 rounded bg-surface-container cursor-pointer select-none">
+<input checked="" class="w-3.5 h-3.5 accent-primary-container rounded" name="format" type="checkbox" value="blend"/>
+<span class="text-on-surface">.blend (Blender)</span>
+</label>
+<label class="flex items-center gap-2 p-1.5 rounded bg-surface-container cursor-pointer select-none">
+<input checked="" class="w-3.5 h-3.5 accent-primary-container rounded" name="format" type="checkbox" value="glb"/>
+<span class="text-on-surface">.glb (glTF 3D)</span>
+</label>
+<label class="flex items-center gap-2 p-1.5 rounded bg-surface-container cursor-pointer select-none">
+<input checked="" class="w-3.5 h-3.5 accent-primary-container rounded" name="format" type="checkbox" value="usdc"/>
+<span class="text-on-surface">.usdc (Pixar USD)</span>
+</label>
+<label class="flex items-center gap-2 p-1.5 rounded bg-surface-container cursor-pointer select-none">
+<input checked="" class="w-3.5 h-3.5 accent-primary-container rounded" name="format" type="checkbox" value="fbx"/>
+<span class="text-on-surface">.fbx (Autodesk)</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Thermal Sensor Capabilities</span>
+<div class="flex flex-col gap-2 font-mono-data-sm text-mono-data-sm text-on-surface">
+<label class="flex items-center justify-between p-2 rounded bg-surface-container cursor-pointer">
+<span>Calibrated Thermal Emissivity</span>
+<input checked="" class="w-4 h-4 accent-primary-container rounded cursor-pointer" id="filter-emissivity" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-2 rounded bg-surface-container cursor-pointer">
+<span>Synthetic LWIR Render Pass</span>
+<input checked="" class="w-4 h-4 accent-primary-container rounded cursor-pointer" id="filter-lwir" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-2 rounded bg-surface-container cursor-pointer">
+<span>Interactive WebGL 3D Preview</span>
+<input class="w-4 h-4 accent-primary-container rounded cursor-pointer" id="filter-webgl" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-mono-data-sm text-mono-data-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Max Triangles (LOD)</span>
+<span class="text-primary font-semibold" id="triangles-label">500k Tri</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded appearance-none cursor-pointer accent-primary-container" id="triangles-slider" max="500000" min="10000" step="10000" type="range" value="500000"/>
+<div class="flex justify-between font-mono-data-sm text-mono-data-sm text-on-surface-variant">
+<span>10k</span>
+<span>250k</span>
+<span>500k+</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-tertiary font-mono-data-sm text-mono-data-sm">
+<span class="material-symbols-outlined text-[16px]">radar</span>
+<span>Spectral Rigor Check</span>
+</div>
+<p class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">
+            All models feature physical Stefan-Boltzmann emissive coefficients in separate material channels.
+          </p>
+</div>
+</aside>
+<section class="lg:col-span-9 flex flex-col gap-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-md" id="grid-container">
+<div class="model-card flex flex-col bg-surface-container-low rounded overflow-hidden hover:bg-surface-container transition-all group" data-category="drones" data-emissivity="true" data-formats="blend,glb,usdc" data-id="AERO-X4" data-licence="CC-BY 4.0" data-lwir="true" data-parts="18" data-triangles="48200" data-webgl="true">
+<div class="relative aspect-[4/3] w-full bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="High contrast white-hot thermal infrared render of AeroScan X4 quadrotor drone showing heat concentration in motor hubs and lithium battery chamber against a cool dark background, scientific radiometry HUD overlay style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDE-27PKoQcgZ_TVX-d5DR3QhktJRpTRMM77ZpKN84E9IgwrQvwwSP4NfC3SSPOi_KpCOptQ2H_L0FB5RLGhX3pi8oKlYZCqRXOmUBhYqS-Azpq5-upDc45KdFLIv0LUzUCs2skqZeU6rmmfyaDO_wePVSamW2qEcLLCByzUREvS0YYOz8qi6LDK9LgGdRS066s0XBj1FffuHKD_VUrcWMN0QqDySmCfTCbkGhPzYHfB7_RDRkstpL"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-dim/85 backdrop-blur font-mono-data-sm text-mono-data-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+<span>WHITE-HOT LWIR</span>
+</div>
+<div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-highest/90 text-on-surface font-mono-data-sm text-mono-data-sm">
+                48.2k Δ
+              </div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 font-mono-data-sm text-mono-data-sm text-on-surface bg-surface-dim/80 backdrop-blur px-1.5 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span>CC-BY 4.0</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Drones / Multirotor</span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">L: 0.82m • W: 0.82m</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">AeroScan X4 Quadrotor</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                  Calibrated inspection drone with high-heat rotor telemetry, insulated battery bay, and gimbal radiometric targets.
+                </p>
+</div>
+<div class="pt-space-xs flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-mono-data-sm text-mono-data-sm py-1 bg-surface-container rounded px-2">
+<span>Parts: <span class="text-on-surface font-semibold">18 mesh components</span></span>
+<span>Emissivity: <span class="text-primary font-semibold">0.92 - 0.98</span></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.blend</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.glb</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.usdc</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5 pt-1">
+<button class="col-span-4 h-8 bg-primary-container hover:bg-secondary-container text-on-primary-container font-mono-data-sm text-mono-data-sm font-semibold rounded flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Radiometry &amp; Parts</span>
+</button>
+<button class="col-span-1 h-8 bg-surface-container hover:bg-surface-container-high text-on-surface rounded flex items-center justify-center transition-colors" title="Quick Download Geometry Package" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="model-card flex flex-col bg-surface-container-low rounded overflow-hidden hover:bg-surface-container transition-all group" data-category="ground" data-emissivity="true" data-formats="blend,glb,fbx" data-id="EV-400" data-licence="CC0" data-lwir="true" data-parts="34" data-triangles="142500" data-webgl="true">
+<div class="relative aspect-[4/3] w-full bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Monochrome thermal camera signature view of Sedan EV-400 electric automobile showing cool aerodynamic roof and distinct hot friction regions along tires and inverter cooling radiator undercarriage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY0fXjn65_7Ufcqvtjyy-wzh3afrG2JlbqrY8L10yDeWYILDd_TkAU1u8J2gGb1bd2591757ZqHtWeBHxCbsa9Tsa8Jb5_u4tRBg03ciMAW364U_-9UZ3_5xmduenFmY0sclDH25eKlrrkPMXhsFwlhGsRhTORX8j30ToiIrn2KJaeIWEuuBF368lVRQfM1Uu5_OiEQE8zWqc4-Tf_6jVlso9v0aErEedxU7B9hf-UhV5hn8Hy1z-n"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-dim/85 backdrop-blur font-mono-data-sm text-mono-data-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+<span>WHITE-HOT LWIR</span>
+</div>
+<div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-highest/90 text-on-surface font-mono-data-sm text-mono-data-sm">
+                142.5k Δ
+              </div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 font-mono-data-sm text-mono-data-sm text-on-surface bg-surface-dim/80 backdrop-blur px-1.5 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>CC0 Domain</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Ground Vehicles / EV</span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">L: 4.88m • W: 1.90m</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">Sedan EV-400</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                  Full chassis electric commuter with segmented battery thermal dissipation array and heated glass elements.
+                </p>
+</div>
+<div class="pt-space-xs flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-mono-data-sm text-mono-data-sm py-1 bg-surface-container rounded px-2">
+<span>Parts: <span class="text-on-surface font-semibold">34 sub-assemblies</span></span>
+<span>Emissivity: <span class="text-primary font-semibold">0.85 - 0.95</span></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.blend</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.glb</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.fbx</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5 pt-1">
+<button class="col-span-4 h-8 bg-primary-container hover:bg-secondary-container text-on-primary-container font-mono-data-sm text-mono-data-sm font-semibold rounded flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Radiometry &amp; Parts</span>
+</button>
+<button class="col-span-1 h-8 bg-surface-container hover:bg-surface-container-high text-on-surface rounded flex items-center justify-center transition-colors" title="Quick Download" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="model-card flex flex-col bg-surface-container-low rounded overflow-hidden hover:bg-surface-container transition-all group" data-category="aircraft" data-emissivity="true" data-formats="blend,usdc" data-id="SKYT-20" data-licence="CC-BY 4.0" data-lwir="true" data-parts="42" data-triangles="268000" data-webgl="false">
+<div class="relative aspect-[4/3] w-full bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Long wave infrared aerial perspective render of twin turboprop utility aircraft SkyTrek-20 in flight showing hot turbine exhausts and leading edge de-icing boot thermal contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwbQ3zTMMIktGTwsPpspjiP06Ju-8k7sh3nRaykcF7xpjFN2UHV1VdpGJL_UV-xa5R8_XXd8VkJHgjpBksf1vBcMzOKQJOC06-RmbZ3x_yd0s3vsVN5j5aAuTKmebP0nvp6xcaQzce4XoVJnRG1bgrWgpGL_apdz7KVOxHsFeOZM2tEYuQTqb5hh-h1GoX4Bb9gRV29d9aKUfPhyNpZNeVRNqlo-etHQ5JJpr4TiX5GA-Qy0DrRCYH"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-dim/85 backdrop-blur font-mono-data-sm text-mono-data-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+<span>WHITE-HOT LWIR</span>
+</div>
+<div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-highest/90 text-on-surface font-mono-data-sm text-mono-data-sm">
+                268.0k Δ
+              </div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 font-mono-data-sm text-mono-data-sm text-on-surface bg-surface-dim/80 backdrop-blur px-1.5 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span>CC-BY 4.0</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Aircraft / Fixed Wing</span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">L: 19.5m • Span: 28.0m</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">SkyTrek-20 Turboprop</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                  Twin-engine utility cargo carrier featuring dynamic nacelle exhaust plumes and calibrated painted aluminum skin.
+                </p>
+</div>
+<div class="pt-space-xs flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-mono-data-sm text-mono-data-sm py-1 bg-surface-container rounded px-2">
+<span>Parts: <span class="text-on-surface font-semibold">42 components</span></span>
+<span>Emissivity: <span class="text-primary font-semibold">0.78 - 0.94</span></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.blend</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.usdc</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5 pt-1">
+<button class="col-span-4 h-8 bg-primary-container hover:bg-secondary-container text-on-primary-container font-mono-data-sm text-mono-data-sm font-semibold rounded flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Radiometry &amp; Parts</span>
+</button>
+<button class="col-span-1 h-8 bg-surface-container hover:bg-surface-container-high text-on-surface rounded flex items-center justify-center transition-colors" title="Quick Download" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="model-card flex flex-col bg-surface-container-low rounded overflow-hidden hover:bg-surface-container transition-all group" data-category="ships" data-emissivity="true" data-formats="blend,glb,fbx,usdc" data-id="MARI-80" data-licence="Own Work" data-lwir="true" data-parts="29" data-triangles="315000" data-webgl="true">
+<div class="relative aspect-[4/3] w-full bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Thermal radiometry simulation view of coastal patrol cutter vessel cutting through dark water with heated diesel generator stack plume and deck lighting housings illuminated in white-hot IR" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZNlC6oza6FA_cAlmXGEJLE3dU0Mh8qR1spNwyGZinrqLA2MTVssn_OBVNkoQjvr5n4ClvYHL0uUNao_kDMC0mT-ghtpLj4ZpPVKTdoUGg7tBRXLCRl0N24irkWqB7i70t4KQUNrVgg3Hf9c59v_Yh_YIa-jt-9C4T8U7J9HEiyCDIw5tnohP9ZUOj-RSB3xyX6gz9bC3j4OZTVLnClo7zqhAshM8NolG7eXaMox5x1Rqanv690_x7"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-dim/85 backdrop-blur font-mono-data-sm text-mono-data-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+<span>WHITE-HOT LWIR</span>
+</div>
+<div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-highest/90 text-on-surface font-mono-data-sm text-mono-data-sm">
+                315.0k Δ
+              </div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 font-mono-data-sm text-mono-data-sm text-on-surface bg-surface-dim/80 backdrop-blur px-1.5 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Own Work</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Maritime / Cutter</span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">L: 45.0m • Beam: 8.2m</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">Sentinel-45 Patrol Cutter</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                  High-speed coastal cutter with cold-steel hull emissivity profile, engine stack heat boundary, and radar mast.
+                </p>
+</div>
+<div class="pt-space-xs flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-mono-data-sm text-mono-data-sm py-1 bg-surface-container rounded px-2">
+<span>Parts: <span class="text-on-surface font-semibold">29 components</span></span>
+<span>Emissivity: <span class="text-primary font-semibold">0.82 - 0.96</span></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.blend</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.glb</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.usdc</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5 pt-1">
+<button class="col-span-4 h-8 bg-primary-container hover:bg-secondary-container text-on-primary-container font-mono-data-sm text-mono-data-sm font-semibold rounded flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Radiometry &amp; Parts</span>
+</button>
+<button class="col-span-1 h-8 bg-surface-container hover:bg-surface-container-high text-on-surface rounded flex items-center justify-center transition-colors" title="Quick Download" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="model-card flex flex-col bg-surface-container-low rounded overflow-hidden hover:bg-surface-container transition-all group" data-category="animals" data-emissivity="true" data-formats="blend,glb" data-id="FAUN-02" data-licence="CC-BY-SA 4.0" data-lwir="true" data-parts="8" data-triangles="64000" data-webgl="true">
+<div class="relative aspect-[4/3] w-full bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Laboratory calibrated thermal infrared view of an adult deer buck in standing stance showing intense white hot eye orbital and muzzle heat signatures against insulating dense fur coat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgYX89XgBvy2MH-YIGsDEmqN7QPUa99_QVNAEHv3hoiSvM30YoIjpYZyGDpyqxZcjyRwGrbC0XYgJp3-1QWz3FQji2_q8iwHnXj_WSD9wxPjq5i8JeHyFIqjH9MJgFN8wqExyMhzePidtX6SnErWg1w-U3jDb_GnOpOseWLDMz6dA9T42LuN_ASbG6aC7K8ongIWWLW5hsU2JAHKWhx_0eYMyeOU-XdQUj1J8CTEcRAQWy6CbYtKxf"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-dim/85 backdrop-blur font-mono-data-sm text-mono-data-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+<span>WHITE-HOT LWIR</span>
+</div>
+<div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-highest/90 text-on-surface font-mono-data-sm text-mono-data-sm">
+                64.0k Δ
+              </div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 font-mono-data-sm text-mono-data-sm text-on-surface bg-surface-dim/80 backdrop-blur px-1.5 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span>CC-BY-SA 4.0</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Fauna IR / Mammal</span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">H: 1.45m • Mass: 90kg</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">Cervus Elaphus (Red Deer)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                  Physiologically calibrated mammalian coat insulation map, realistic ocular / respiratory thermal apertures.
+                </p>
+</div>
+<div class="pt-space-xs flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-mono-data-sm text-mono-data-sm py-1 bg-surface-container rounded px-2">
+<span>Parts: <span class="text-on-surface font-semibold">8 biological zones</span></span>
+<span>Emissivity: <span class="text-primary font-semibold">0.97 - 0.99</span></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.blend</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.glb</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5 pt-1">
+<button class="col-span-4 h-8 bg-primary-container hover:bg-secondary-container text-on-primary-container font-mono-data-sm text-mono-data-sm font-semibold rounded flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Radiometry &amp; Parts</span>
+</button>
+<button class="col-span-1 h-8 bg-surface-container hover:bg-surface-container-high text-on-surface rounded flex items-center justify-center transition-colors" title="Quick Download" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="model-card flex flex-col bg-surface-container-low rounded overflow-hidden hover:bg-surface-container transition-all group" data-category="infrastructure" data-emissivity="true" data-formats="blend,glb,usdc,fbx" data-id="INFR-09" data-licence="CC0" data-lwir="true" data-parts="12" data-triangles="28400" data-webgl="true">
+<div class="relative aspect-[4/3] w-full bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Monochrome infrared sensor camera view of a lattice cellular telecommunications transmission mast and active transformer equipment cabinet emitting distinct thermal dissipation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3vJUtTRT9aUgBZNHqCVQ85YTZAh7BMtcHKe4ro4wANpKvpfYBsVIHsbKixgI6kcdL83Q7blLZiNdwsFA3Fjzx5KAkHEhnRl9QWU3EQKJvocC9Qq_mPwMwzCuOk_9pWyimoeToP6jVgY00MAhH1EydGlhsoVkI0BFGSHrSiyi9ZdvNtfS9BVtbYAzxDKdvgqR1H4NN12nsAw-4D15xciWRKgm40_2WzGHmfU8kzqDm-9KnHESYMQrY"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-dim/85 backdrop-blur font-mono-data-sm text-mono-data-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+<span>WHITE-HOT LWIR</span>
+</div>
+<div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-highest/90 text-on-surface font-mono-data-sm text-mono-data-sm">
+                28.4k Δ
+              </div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 font-mono-data-sm text-mono-data-sm text-on-surface bg-surface-dim/80 backdrop-blur px-1.5 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>CC0 Domain</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Infrastructure / Tower</span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">H: 32.0m • Footprint: 4x4m</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">5G Lattice Telecom Mast</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                  Structural lattice tower with active heat signatures for remote radio heads (RRU), transformer boxes, and solar-shielded cabinets.
+                </p>
+</div>
+<div class="pt-space-xs flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-mono-data-sm text-mono-data-sm py-1 bg-surface-container rounded px-2">
+<span>Parts: <span class="text-on-surface font-semibold">12 components</span></span>
+<span>Emissivity: <span class="text-primary font-semibold">0.28 - 0.90</span></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.blend</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.glb</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.usdc</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5 pt-1">
+<button class="col-span-4 h-8 bg-primary-container hover:bg-secondary-container text-on-primary-container font-mono-data-sm text-mono-data-sm font-semibold rounded flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Radiometry &amp; Parts</span>
+</button>
+<button class="col-span-1 h-8 bg-surface-container hover:bg-surface-container-high text-on-surface rounded flex items-center justify-center transition-colors" title="Quick Download" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="model-card flex flex-col bg-surface-container-low rounded overflow-hidden hover:bg-surface-container transition-all group" data-category="drones" data-emissivity="true" data-formats="blend,glb,usdc" data-id="DRON-VT1" data-licence="CC-BY 4.0" data-lwir="true" data-parts="22" data-triangles="91200" data-webgl="false">
+<div class="relative aspect-[4/3] w-full bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Technical forward-looking infrared camera snapshot of fixed-wing VTOL composite drone with heated tilt-rotor motors in hover mode, cold composite body panels visible in white hot spectrum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOrCs-72rorPCG9dZa_sYF88Kul3hZTQhnLX3NiX5P0F5GGbGWWmOxTubhFhuqzoh3mOkgIRd9bG56wL3o04C3fgpxN8c0vz53ZzRcJ3KWFsDMWKfmFkxcuW_ZjOvs56leJX8kwxlEv1Zn5idEcz_kfky47pER-g1bLJVZpt5SrkIwkv_1G0hndO6l0t3ZDfHJUhIbOijyznVcGcLSEZTHyI86DC-MSjHMaiGSv0OH9gYELbQeFjVB"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-dim/85 backdrop-blur font-mono-data-sm text-mono-data-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+<span>WHITE-HOT LWIR</span>
+</div>
+<div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-highest/90 text-on-surface font-mono-data-sm text-mono-data-sm">
+                91.2k Δ
+              </div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 font-mono-data-sm text-mono-data-sm text-on-surface bg-surface-dim/80 backdrop-blur px-1.5 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span>CC-BY 4.0</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Drones / VTOL Hybrid</span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Span: 2.40m • L: 1.25m</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">VectWing-T VTOL</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                  Transition drone featuring 4 lift rotors and 1 pusher motor with variable thermal load and payload pod bay.
+                </p>
+</div>
+<div class="pt-space-xs flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-mono-data-sm text-mono-data-sm py-1 bg-surface-container rounded px-2">
+<span>Parts: <span class="text-on-surface font-semibold">22 components</span></span>
+<span>Emissivity: <span class="text-primary font-semibold">0.89 - 0.96</span></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.blend</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.glb</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.usdc</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5 pt-1">
+<button class="col-span-4 h-8 bg-primary-container hover:bg-secondary-container text-on-primary-container font-mono-data-sm text-mono-data-sm font-semibold rounded flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Radiometry &amp; Parts</span>
+</button>
+<button class="col-span-1 h-8 bg-surface-container hover:bg-surface-container-high text-on-surface rounded flex items-center justify-center transition-colors" title="Quick Download" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden flex-col bg-surface-container-low rounded overflow-x-auto" id="table-container">
+<table class="w-full text-left font-mono-data-sm text-mono-data-sm">
+<thead class="bg-surface-container-lowest text-on-surface-variant uppercase font-label-caps text-label-caps">
+<tr>
+<th class="py-2.5 px-3">Asset ID</th>
+<th class="py-2.5 px-3">Model Designation</th>
+<th class="py-2.5 px-3">Class</th>
+<th class="py-2.5 px-3">Licence</th>
+<th class="py-2.5 px-3 text-right">Triangles (Δ)</th>
+<th class="py-2.5 px-3 text-right">Parts</th>
+<th class="py-2.5 px-3">Formats</th>
+<th class="py-2.5 px-3 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest text-on-surface">
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-3 font-semibold text-primary">AERO-X4</td>
+<td class="py-2.5 px-3 font-semibold">AeroScan X4 Quadrotor</td>
+<td class="py-2.5 px-3 text-secondary">Drones</td>
+<td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded bg-surface-container-highest">CC-BY 4.0</span></td>
+<td class="py-2.5 px-3 text-right font-mono">48,200</td>
+<td class="py-2.5 px-3 text-right">18</td>
+<td class="py-2.5 px-3 text-on-surface-variant">.blend, .glb, .usdc</td>
+<td class="py-2.5 px-3 text-right">
+<button class="px-2 py-1 bg-primary-container text-on-primary-container font-semibold rounded text-mono-data-sm hover:bg-secondary-container" type="button">Inspect</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-3 font-semibold text-primary">EV-400</td>
+<td class="py-2.5 px-3 font-semibold">Sedan EV-400</td>
+<td class="py-2.5 px-3 text-secondary">Ground Vehicles</td>
+<td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded bg-surface-container-highest">CC0</span></td>
+<td class="py-2.5 px-3 text-right font-mono">142,500</td>
+<td class="py-2.5 px-3 text-right">34</td>
+<td class="py-2.5 px-3 text-on-surface-variant">.blend, .glb, .fbx</td>
+<td class="py-2.5 px-3 text-right">
+<button class="px-2 py-1 bg-primary-container text-on-primary-container font-semibold rounded text-mono-data-sm hover:bg-secondary-container" type="button">Inspect</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-3 font-semibold text-primary">SKYT-20</td>
+<td class="py-2.5 px-3 font-semibold">SkyTrek-20 Turboprop</td>
+<td class="py-2.5 px-3 text-secondary">Aircraft</td>
+<td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded bg-surface-container-highest">CC-BY 4.0</span></td>
+<td class="py-2.5 px-3 text-right font-mono">268,000</td>
+<td class="py-2.5 px-3 text-right">42</td>
+<td class="py-2.5 px-3 text-on-surface-variant">.blend, .usdc</td>
+<td class="py-2.5 px-3 text-right">
+<button class="px-2 py-1 bg-primary-container text-on-primary-container font-semibold rounded text-mono-data-sm hover:bg-secondary-container" type="button">Inspect</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-3 font-semibold text-primary">MARI-80</td>
+<td class="py-2.5 px-3 font-semibold">Sentinel-45 Patrol Cutter</td>
+<td class="py-2.5 px-3 text-secondary">Maritime</td>
+<td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded bg-surface-container-highest">Own Work</span></td>
+<td class="py-2.5 px-3 text-right font-mono">315,000</td>
+<td class="py-2.5 px-3 text-right">29</td>
+<td class="py-2.5 px-3 text-on-surface-variant">.blend, .glb, .usdc</td>
+<td class="py-2.5 px-3 text-right">
+<button class="px-2 py-1 bg-primary-container text-on-primary-container font-semibold rounded text-mono-data-sm hover:bg-secondary-container" type="button">Inspect</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-3 font-semibold text-primary">FAUN-02</td>
+<td class="py-2.5 px-3 font-semibold">Cervus Elaphus (Red Deer)</td>
+<td class="py-2.5 px-3 text-secondary">Animals</td>
+<td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded bg-surface-container-highest">CC-BY-SA 4.0</span></td>
+<td class="py-2.5 px-3 text-right font-mono">64,000</td>
+<td class="py-2.5 px-3 text-right">8</td>
+<td class="py-2.5 px-3 text-on-surface-variant">.blend, .glb</td>
+<td class="py-2.5 px-3 text-right">
+<button class="px-2 py-1 bg-primary-container text-on-primary-container font-semibold rounded text-mono-data-sm hover:bg-secondary-container" type="button">Inspect</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-3 font-semibold text-primary">INFR-09</td>
+<td class="py-2.5 px-3 font-semibold">5G Lattice Telecom Mast</td>
+<td class="py-2.5 px-3 text-secondary">Infrastructure</td>
+<td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded bg-surface-container-highest">CC0</span></td>
+<td class="py-2.5 px-3 text-right font-mono">28,400</td>
+<td class="py-2.5 px-3 text-right">12</td>
+<td class="py-2.5 px-3 text-on-surface-variant">.blend, .glb, .usdc</td>
+<td class="py-2.5 px-3 text-right">
+<button class="px-2 py-1 bg-primary-container text-on-primary-container font-semibold rounded text-mono-data-sm hover:bg-secondary-container" type="button">Inspect</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="hidden flex-col items-center justify-center p-space-xl bg-surface-container-low rounded text-center my-space-md" id="no-results-view">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[28px] text-primary">sensors_off</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">No Radiometric Models Located</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-space-md">
+            No assets match the current combination of polygon LOD, format constraints, and licence filters in the models.json catalogue.
+          </p>
+<button class="h-9 px-space-md bg-primary-container text-on-primary-container font-mono-data-sm text-mono-data-sm font-semibold rounded hover:bg-secondary-container transition-colors" id="clear-all-empty-btn" type="button">
+            Reset Constraints &amp; Show All Models
+          </button>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md border-t border-surface-container-highest">
+<div class="flex items-center gap-1 font-mono-data-sm text-mono-data-sm">
+<button class="w-8 h-8 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-primary-container text-on-primary-container font-semibold flex items-center justify-center" type="button">1</button>
+<button class="w-8 h-8 rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface flex items-center justify-center" type="button">2</button>
+<button class="w-8 h-8 rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface flex items-center justify-center" type="button">3</button>
+<button class="w-8 h-8 rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface flex items-center justify-center" type="button">4</button>
+<button class="w-8 h-8 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<a class="h-9 px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-mono-data-sm text-mono-data-sm flex items-center gap-space-xs transition-colors" download="models.json" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary">data_object</span>
+<span>Download Full Catalogue JSON (models.json)</span>
+</a>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    const searchInput = document.getElementById('model-search-input');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
+    const sortSelect = document.getElementById('sort-select');
+    const gridViewBtn = document.getElementById('view-mode-grid');
+    const tableViewBtn = document.getElementById('view-mode-table');
+    const gridContainer = document.getElementById('grid-container');
+    const tableContainer = document.getElementById('table-container');
+    const noResultsView = document.getElementById('no-results-view');
+    const visibleCountEl = document.getElementById('visible-count');
+    const slider = document.getElementById('triangles-slider');
+    const sliderLabel = document.getElementById('triangles-label');
+    const resetBtn = document.getElementById('reset-filters-btn');
+    const clearEmptyBtn = document.getElementById('clear-all-empty-btn');
+    const licenceBtns = document.querySelectorAll('.licence-btn');
+    const categoryInputs = document.querySelectorAll('#category-filter-group input[type="checkbox"]');
+    const formatInputs = document.querySelectorAll('input[name="format"]');
+    const emissivityToggle = document.getElementById('filter-emissivity');
+    const lwirToggle = document.getElementById('filter-lwir');
+    const webglToggle = document.getElementById('filter-webgl');
+
+    let currentLicence = 'all';
+
+    function updateFilters() {
+      const searchTerm = searchInput.value.trim().toLowerCase();
+      const maxTriangles = parseInt(slider.value, 10);
+      const requiresEmissivity = emissivityToggle.checked;
+      const requiresLWIR = lwirToggle.checked;
+      const requiresWebGL = webglToggle.checked;
+
+      const checkedCategories = Array.from(categoryInputs)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+
+      const checkedFormats = Array.from(formatInputs)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+
+      const isAllCategories = checkedCategories.includes('all') || checkedCategories.length === 0;
+
+      const cards = document.querySelectorAll('.model-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const id = (card.getAttribute('data-id') || '').toLowerCase();
+        const category = card.getAttribute('data-category');
+        const licence = card.getAttribute('data-licence');
+        const triangles = parseInt(card.getAttribute('data-triangles') || '0', 10);
+        const cardFormats = (card.getAttribute('data-formats') || '').split(',');
+        const hasEmissivity = card.getAttribute('data-emissivity') === 'true';
+        const hasLwir = card.getAttribute('data-lwir') === 'true';
+        const hasWebgl = card.getAttribute('data-webgl') === 'true';
+
+        let matchesSearch = !searchTerm || text.includes(searchTerm) || id.includes(searchTerm);
+        let matchesCategory = isAllCategories || checkedCategories.includes(category);
+        let matchesLicence = (currentLicence === 'all') || (licence === currentLicence);
+        let matchesTriangles = triangles <= maxTriangles;
+        let matchesFormat = checkedFormats.length === 0 || cardFormats.some(f => checkedFormats.includes(f));
+        let matchesEmissivity = !requiresEmissivity || hasEmissivity;
+        let matchesLwir = !requiresLWIR || hasLwir;
+        let matchesWebgl = !requiresWebGL || hasWebgl;
+
+        const isVisible = matchesSearch && matchesCategory && matchesLicence && 
+                          matchesTriangles && matchesFormat && matchesEmissivity && 
+                          matchesLwir && matchesWebgl;
+
+        if (isVisible) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      visibleCountEl.textContent = visibleCount;
+
+      if (visibleCount === 0) {
+        gridContainer.classList.add('hidden');
+        tableContainer.classList.add('hidden');
+        noResultsView.classList.remove('hidden');
+      } else {
+        noResultsView.classList.add('hidden');
+        if (tableViewBtn.classList.contains('bg-primary-container')) {
+          gridContainer.classList.add('hidden');
+          tableContainer.classList.remove('hidden');
+        } else {
+          gridContainer.classList.remove('hidden');
+          tableContainer.classList.add('hidden');
+        }
+      }
+    }
+
+    searchInput.addEventListener('input', () => {
+      clearSearchBtn.classList.toggle('hidden', searchInput.value.length === 0);
+      updateFilters();
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearSearchBtn.classList.add('hidden');
+      updateFilters();
+    });
+
+    slider.addEventListener('input', () => {
+      const val = parseInt(slider.value, 10);
+      sliderLabel.textContent = (val / 1000).toFixed(0) + 'k Tri';
+      updateFilters();
+    });
+
+    licenceBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        licenceBtns.forEach(b => {
+          b.className = 'licence-btn px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-mono-data-sm text-mono-data-sm';
+        });
+        btn.className = 'licence-btn px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-mono-data-sm text-mono-data-sm font-semibold';
+        currentLicence = btn.getAttribute('data-licence');
+        updateFilters();
+      });
+    });
+
+    categoryInputs.forEach(input => {
+      input.addEventListener('change', (e) => {
+        if (e.target.value === 'all' && e.target.checked) {
+          categoryInputs.forEach(cb => { if (cb.value !== 'all') cb.checked = false; });
+        } else if (e.target.value !== 'all' && e.target.checked) {
+          const allCb = document.querySelector('#category-filter-group input[value="all"]');
+          if (allCb) allCb.checked = false;
+        }
+        updateFilters();
+      });
+    });
+
+    formatInputs.forEach(i => i.addEventListener('change', updateFilters));
+    emissivityToggle.addEventListener('change', updateFilters);
+    lwirToggle.addEventListener('change', updateFilters);
+    webglToggle.addEventListener('change', updateFilters);
+
+    function resetAll() {
+      searchInput.value = '';
+      clearSearchBtn.classList.add('hidden');
+      slider.value = 500000;
+      sliderLabel.textContent = '500k Tri';
+      categoryInputs.forEach(cb => { cb.checked = (cb.value === 'all'); });
+      formatInputs.forEach(cb => { cb.checked = true; });
+      emissivityToggle.checked = true;
+      lwirToggle.checked = true;
+      webglToggle.checked = false;
+      
+      licenceBtns.forEach(b => {
+        if (b.getAttribute('data-licence') === 'all') {
+          b.className = 'licence-btn px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-mono-data-sm text-mono-data-sm font-semibold';
+        } else {
+          b.className = 'licence-btn px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-mono-data-sm text-mono-data-sm';
+        }
+      });
+      currentLicence = 'all';
+      updateFilters();
+    }
+
+    resetBtn.addEventListener('click', resetAll);
+    clearEmptyBtn.addEventListener('click', resetAll);
+
+    gridViewBtn.addEventListener('click', () => {
+      gridViewBtn.className = 'h-8 px-2.5 rounded bg-primary-container text-on-primary-container flex items-center gap-1 font-mono-data-sm text-mono-data-sm font-semibold transition-colors';
+      tableViewBtn.className = 'h-8 px-2.5 rounded text-on-surface-variant hover:text-on-surface flex items-center gap-1 font-mono-data-sm text-mono-data-sm transition-colors';
+      if (parseInt(visibleCountEl.textContent, 10) > 0) {
+        gridContainer.classList.remove('hidden');
+        tableContainer.classList.add('hidden');
+      }
+    });
+
+    tableViewBtn.addEventListener('click', () => {
+      tableViewBtn.className = 'h-8 px-2.5 rounded bg-primary-container text-on-primary-container flex items-center gap-1 font-mono-data-sm text-mono-data-sm font-semibold transition-colors';
+      gridViewBtn.className = 'h-8 px-2.5 rounded text-on-surface-variant hover:text-on-surface flex items-center gap-1 font-mono-data-sm text-mono-data-sm transition-colors';
+      if (parseInt(visibleCountEl.textContent, 10) > 0) {
+        tableContainer.classList.remove('hidden');
+        gridContainer.classList.add('hidden');
+      }
+    });
+
+    sortSelect.addEventListener('change', () => {
+      const mode = sortSelect.value;
+      const cards = Array.from(document.querySelectorAll('.model-card'));
+      cards.sort((a, b) => {
+        if (mode === 'name') {
+          const nameA = a.querySelector('h2').textContent.trim();
+          const nameB = b.querySelector('h2').textContent.trim();
+          return nameA.localeCompare(nameB);
+        } else if (mode === 'triangles-asc') {
+          return parseInt(a.dataset.triangles, 10) - parseInt(b.dataset.triangles, 10);
+        } else if (mode === 'triangles-desc') {
+          return parseInt(b.dataset.triangles, 10) - parseInt(a.dataset.triangles, 10);
+        } else if (mode === 'parts-desc') {
+          return parseInt(b.dataset.parts, 10) - parseInt(a.dataset.parts, 10);
+        }
+        return 0;
+      });
+      cards.forEach(c => gridContainer.appendChild(c));
+    });
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant mt-auto"><div class="w-full px-gutter py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg mb-space-lg"><div class="md:col-span-7 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Scientific Telemetry Data Portal</span><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Static Pages Build</span></div><p class="font-body-md text-body-md text-on-surface">IR Model Zoo — Curated open radiometric 3D assets for thermal camera simulation, perception datasets &amp; optical sensor engineering.</p><p class="font-body-sm text-body-sm text-on-surface-variant">All 3D airframes, vehicles and geometry remain the intellectual property of their original creators under open attribution licences. Modified for physical LWIR (8-14 µm) radiometric simulation.</p></div><div class="md:col-span-5 flex flex-col justify-between gap-space-md"><div class="flex flex-wrap gap-x-space-md gap-y-space-xs font-mono-data-sm text-mono-data-sm"><a class="text-on-surface-variant hover:text-primary transition-colors" href="https://github.com" rel="noreferrer" target="_blank">GitHub Repo</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="about-and-methodology" href="#">Main IR Simulator Project</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="licences-and-criteria" href="#">Licences &amp; Compliance</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="licences-and-criteria" href="#">Takedown &amp; Provenance Policy</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="https://zenodo.org" rel="noreferrer" target="_blank">Zenodo Community</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="contribute" href="#">Contact</a></div><div class="p-space-sm bg-surface-container-low rounded flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs font-mono-data-sm text-mono-data-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">verified_user</span><span>Zero-tracking, zero-cookie, static GitHub Pages guarantee stamp.</span></div><span class="font-label-caps text-label-caps text-tertiary uppercase">RAD-PASS</span></div></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md font-mono-data-sm text-mono-data-sm text-on-surface-variant"><div class="flex items-center gap-space-sm"><span>© 2025 IR Model Zoo Contributors</span><span>•</span><span>Radiometric Calibration: ASTM E1311</span></div><div><span>LWIR Standard Verification Protocol v2.4</span></div></div></div></footer></body></html>

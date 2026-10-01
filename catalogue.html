@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Catalogue — Thermal Model Zoo</title>
+<meta name="description" content="Browse and filter every model in the Thermal Model Zoo by category, licence, file format and triangle count."/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101419'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23f59e0b' stroke-width='3'/%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=block" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/tokens.css"/>
+<link rel="stylesheet" href="assets/css/site.css"/>
+<script src="assets/js/theme.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tailwind-config.js"></script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col" data-page="catalogue">
+<div id="site-header"></div>
+<main class="w-full pt-16 bg-surface flex-1">
+<section class="w-full bg-surface-container-lowest px-gutter py-space-lg border-b border-outline-variant/30">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps text-primary uppercase">Catalogue</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Model catalogue</h1>
+<p class="font-body-md text-on-surface-variant" id="result-summary" aria-live="polite">Loading…</p></div>
+<div class="flex flex-col sm:flex-row gap-space-sm lg:w-[780px]">
+<label class="flex-1 min-w-[220px] flex items-center gap-space-sm px-space-md h-10 bg-surface-container-low rounded"><span class="material-symbols-outlined text-primary text-[20px]">search</span>
+<input id="model-search-input" type="search" autocomplete="off" class="w-full bg-transparent font-mono-data-md text-mono-data-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search models, real names, materials" aria-label="Search the catalogue"/>
+<button id="clear-search-btn" type="button" class="hidden text-on-surface-variant hover:text-on-surface" aria-label="Clear search"><span class="material-symbols-outlined text-[18px]">close</span></button></label>
+<label class="h-10 flex items-center gap-space-xs px-space-sm bg-surface-container-low rounded font-mono-data-sm text-on-surface-variant">Sort
+<select id="sort-select" class="bg-transparent text-on-surface focus:outline-none cursor-pointer">
+<option value="new">Newest added</option><option value="name">Name A–Z</option><option value="tris-asc">Triangles, low first</option><option value="tris-desc">Triangles, high first</option><option value="parts">Most parts</option></select></label>
+<div class="flex rounded overflow-hidden h-10" role="group" aria-label="View mode">
+<button id="view-grid" type="button" class="px-space-md flex items-center gap-1 font-mono-data-sm bg-primary-container text-on-primary-container" aria-pressed="true"><span class="material-symbols-outlined text-[18px]">grid_view</span>Grid</button>
+<button id="view-table" type="button" class="px-space-md flex items-center gap-1 font-mono-data-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface" aria-pressed="false"><span class="material-symbols-outlined text-[18px]">table_rows</span>Table</button></div>
+</div></div></section>
+
+<section class="w-full px-gutter py-space-lg">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<button id="filters-toggle" type="button" class="lg:hidden h-10 bg-surface-container-low rounded flex items-center justify-center gap-space-xs font-mono-data-md text-on-surface" aria-expanded="false" aria-controls="filters"><span class="material-symbols-outlined text-[18px]">tune</span>Filters</button>
+<aside id="filters" class="hidden lg:flex lg:col-span-3 flex-col gap-space-md bg-surface-container-low p-space-md rounded self-start" aria-label="Filters">
+<div class="flex items-center justify-between"><span class="font-headline-sm text-headline-sm uppercase tracking-wide flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">tune</span>Filters</span>
+<button id="reset-filters-btn" type="button" class="font-mono-data-sm text-primary hover:text-secondary">Reset all</button></div>
+<fieldset class="flex flex-col gap-space-xs"><legend class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Category</legend><div id="category-filter" class="flex flex-col gap-1 font-mono-data-sm"></div></fieldset>
+<fieldset class="flex flex-col gap-space-xs"><legend class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Licence</legend><div id="licence-filter" class="flex flex-wrap gap-1 font-mono-data-sm"></div>
+<p class="font-body-sm text-on-surface-variant">NC and ND licences are never accepted; <a class="text-primary underline" href="licences.html">see why</a>.</p></fieldset>
+<fieldset class="flex flex-col gap-space-xs"><legend class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Files available</legend><div id="format-filter" class="grid grid-cols-2 gap-1 font-mono-data-sm"></div></fieldset>
+<fieldset class="flex flex-col gap-space-xs"><legend class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Includes</legend>
+<label class="flex items-center justify-between gap-2 p-1.5 rounded hover:bg-surface-container cursor-pointer font-mono-data-sm"><span>Thermal render</span><input id="f-thermal" type="checkbox" class="w-3.5 h-3.5 accent-primary-container"/></label>
+<label class="flex items-center justify-between gap-2 p-1.5 rounded hover:bg-surface-container cursor-pointer font-mono-data-sm"><span>Material map (parts)</span><input id="f-materials" type="checkbox" class="w-3.5 h-3.5 accent-primary-container"/></label>
+<label class="flex items-center justify-between gap-2 p-1.5 rounded hover:bg-surface-container cursor-pointer font-mono-data-sm"><span>In-browser 3D preview</span><input id="f-webgl" type="checkbox" class="w-3.5 h-3.5 accent-primary-container"/></label></fieldset>
+<fieldset class="flex flex-col gap-space-xs"><legend class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Max triangles</legend>
+<div class="flex items-center justify-between font-mono-data-sm"><span class="text-on-surface-variant">up to</span><span id="tris-label" class="text-primary font-semibold"></span></div>
+<input id="tris-slider" type="range" min="0" max="100" value="100" class="w-full" aria-label="Maximum triangle count"/></fieldset>
+</aside>
+<div class="lg:col-span-9 flex flex-col gap-space-md">
+<div id="grid-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-md"></div>
+<div id="table-container" class="hidden overflow-x-auto bg-surface-container-low rounded scroll-thin"></div>
+<div id="no-results" class="hidden flex-col items-center gap-space-sm py-space-xl text-center bg-surface-container-low rounded">
+<span class="material-symbols-outlined text-[40px] text-outline">search_off</span><h2 class="font-headline-md text-headline-md">No models match</h2><p class="font-body-md text-on-surface-variant">Try removing a filter or searching for something broader.</p>
+<button id="clear-all-empty-btn" type="button" class="h-9 px-space-lg bg-primary-container text-on-primary-container rounded font-mono-data-md font-semibold">Clear all filters</button></div>
+<nav id="pager" class="flex items-center justify-between flex-wrap gap-space-sm" aria-label="Pagination"></nav>
+</div></div></section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/catalogue.js"></script>
+</body>
+</html>

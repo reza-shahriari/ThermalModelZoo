@@ -1,0 +1,14 @@
+/* Site-wide rules that Tailwind utilities do not cover. Colours come from tokens.css. */
+html, body { margin: 0; padding: 0; }
+body { background: rgb(var(--c-background)); color: rgb(var(--c-on-surface)); overscroll-behavior-y: none; }
+.material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; user-select: none; }
+[class*="font-mono-data"], [class*="font-label-caps"], .tabular { font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 2px solid rgb(var(--c-primary-container)); outline-offset: 2px; }
+::selection { background: rgb(var(--c-primary-container)); color: rgb(var(--c-on-primary-container)); }
+.dotgrid { background-image: radial-gradient(rgb(var(--c-primary) / .35) 1px, transparent 1px); background-size: 24px 24px; }
+.scroll-thin { scrollbar-width: thin; scrollbar-color: rgb(var(--c-outline-variant)) transparent; }
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+input[type="range"] { accent-color: rgb(var(--c-primary-container)); }
+.lightbox[hidden] { display: none; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }

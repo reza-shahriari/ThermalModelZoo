@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Thermal Model Zoo — 3D models for infrared simulation</title>
+<meta name="description" content="Open 3D models split into real parts with researched thermal materials, shared under CC0, CC-BY and CC-BY-SA licences."/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101419'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23f59e0b' stroke-width='3'/%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=block" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/tokens.css"/>
+<link rel="stylesheet" href="assets/css/site.css"/>
+<script src="assets/js/theme.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tailwind-config.js"></script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col" data-page="home">
+<div id="site-header"></div>
+<main class="w-full pt-16 bg-surface flex-1">
+<!-- Hero -->
+<section class="relative w-full bg-surface-container-lowest px-gutter py-space-xl overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none dotgrid"></div>
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg relative z-10">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded">
+<span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span>
+<span class="font-label-caps text-label-caps tracking-wider text-primary uppercase">Open 3D models for thermal simulation</span></div>
+<div class="flex items-center gap-space-sm font-mono-data-sm text-mono-data-sm text-on-surface-variant"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-tertiary-container">sensors</span> LWIR 8–14 µm</span><span>•</span><span class="text-tertiary">Static site on GitHub Pages</span></div>
+</div>
+<div class="max-w-4xl flex flex-col gap-space-sm">
+<h1 class="font-display text-display text-on-surface tracking-tight">Thermally-ready 3D models for infrared simulation</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Models split into their real parts, each with a researched surface material and a thermal emissivity, under licences that let you download, modify and reshare them. Every entry links back to the original work and its author.</p>
+</div>
+<form class="w-full max-w-3xl bg-surface-container-low p-space-xs rounded flex flex-col sm:flex-row gap-space-xs shadow-md" action="catalogue.html" method="get" role="search">
+<label class="flex-1 flex items-center gap-space-sm px-space-md py-space-xs bg-surface-container-lowest rounded">
+<span class="material-symbols-outlined text-primary text-[20px]">radar</span>
+<input class="w-full bg-transparent font-mono-data-md text-mono-data-md text-on-surface placeholder:text-outline focus:outline-none" id="model-search-input" name="q" type="search" autocomplete="off" placeholder="Search by model, real-world name, vehicle class or material" aria-label="Search the catalogue"/>
+<kbd class="hidden md:inline font-mono-data-sm text-mono-data-sm text-outline px-1.5 py-0.5 rounded bg-surface-container">/</kbd></label>
+<button class="h-10 px-space-lg bg-primary-container hover:bg-secondary-container text-on-primary-container font-headline-sm text-headline-sm rounded flex items-center justify-center gap-space-xs transition-colors shrink-0" type="submit"><span class="material-symbols-outlined text-[18px]">search</span><span>Search catalogue</span></button>
+</form>
+<div class="flex flex-wrap items-center gap-space-xs font-mono-data-sm text-mono-data-sm" id="quick-filters"><span class="text-outline uppercase font-label-caps text-label-caps">Filters:</span></div>
+</div>
+</section>
+
+<!-- Stats -->
+<section class="w-full bg-surface px-gutter py-space-lg border-b border-outline-variant/30" aria-label="Catalogue statistics">
+<div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-space-md" id="stats"></div>
+<div class="max-w-7xl mx-auto mt-space-sm font-mono-data-sm text-mono-data-sm text-outline" id="stats-note"></div>
+</section>
+
+<!-- Featured -->
+<section class="w-full bg-surface px-gutter py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-wrap items-end justify-between gap-space-sm"><div><span class="font-label-caps text-label-caps text-primary uppercase">Featured</span><h2 class="font-headline-lg text-headline-lg text-on-surface">Featured models</h2></div>
+<a class="font-mono-data-md text-mono-data-md text-primary hover:text-secondary flex items-center gap-1" href="catalogue.html">Browse all models <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a></div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-md" id="featured"><div class="text-on-surface-variant font-mono-data-md">Loading…</div></div>
+</div></section>
+
+<!-- Categories -->
+<section class="w-full bg-surface-container-lowest px-gutter py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div><span class="font-label-caps text-label-caps text-primary uppercase">Browse</span><h2 class="font-headline-lg text-headline-lg text-on-surface">By category</h2></div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-space-sm" id="categories"></div>
+</div></section>
+
+<!-- Recent -->
+<section class="w-full bg-surface px-gutter py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div><span class="font-label-caps text-label-caps text-primary uppercase">Latest</span><h2 class="font-headline-lg text-headline-lg text-on-surface">Recently added</h2></div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md" id="recent"></div>
+</div></section>
+
+<!-- What makes these different -->
+<section class="w-full bg-surface-container-lowest px-gutter py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div><span class="font-label-caps text-label-caps text-primary uppercase">Why this zoo</span><h2 class="font-headline-lg text-headline-lg text-on-surface">What makes these models different</h2></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low rounded p-space-lg flex flex-col gap-space-sm"><span class="material-symbols-outlined text-primary">account_tree</span><h3 class="font-headline-md text-headline-md">Real parts</h3><p class="font-body-md text-on-surface-variant">A single mesh is split into the components the real object has: motor, battery, exhaust, windscreen. Each part can then be given its own temperature in a simulation.</p></div>
+<div class="bg-surface-container-low rounded p-space-lg flex flex-col gap-space-sm"><span class="material-symbols-outlined text-primary">thermostat</span><h3 class="font-headline-md text-headline-md">Researched materials</h3><p class="font-body-md text-on-surface-variant">Every part lists what it is made of and an emissivity for the long-wave band, marked <em>measured</em>, <em>reference</em> or <em>estimated</em> so you know how far to trust it.</p></div>
+<div class="bg-surface-container-low rounded p-space-lg flex flex-col gap-space-sm"><span class="material-symbols-outlined text-primary">verified_user</span><h3 class="font-headline-md text-headline-md">Clear licences and credit</h3><p class="font-body-md text-on-surface-variant">Only CC0, CC-BY, CC-BY-SA and the author's own work are accepted. Each page carries the credit line, the original link and a note of what was changed.</p></div>
+</div></div></section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

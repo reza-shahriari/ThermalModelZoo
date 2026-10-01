@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-bright":"#36393f","surface-dim":"#101419","primary-container":"#f59e0b","surface-container":"#1c2025","surface-container-highest":"#31353b","surface":"#101419","on-secondary-fixed":"#370e00","surface-container-low":"#181c21","on-secondary":"#5a1c00","inverse-on-surface":"#2d3136","inverse-primary":"#855300","tertiary-fixed":"#c4e7ff","secondary":"#ffb599","tertiary-container":"#38bdf8","on-error":"#690005","secondary-fixed":"#ffdbce","on-tertiary-container":"#004965","secondary-container":"#f66018","surface-container-lowest":"#0a0e13","on-primary-fixed":"#2a1700","on-tertiary":"#00354a","on-primary":"#472a00","on-secondary-fixed-variant":"#7f2b00","on-surface-variant":"#d8c3ad","outline":"#a08e7a","surface-variant":"#31353b","on-tertiary-fixed-variant":"#004c69","on-secondary-container":"#4f1700","on-surface":"#e0e2ea","primary":"#ffc174","error":"#ffb4ab","secondary-fixed-dim":"#ffb599","primary-fixed-dim":"#ffb95f","on-background":"#e0e2ea","surface-tint":"#ffb95f","on-primary-container":"#613b00","inverse-surface":"#e0e2ea","background":"#101419","tertiary-fixed-dim":"#7bd0ff","outline-variant":"#534434","tertiary":"#8ed5ff","on-tertiary-fixed":"#001e2c","primary-fixed":"#ffddb8","surface-container-high":"#262a30","on-error-container":"#ffdad6","error-container":"#93000a","on-primary-fixed-variant":"#653e00"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xs":"0.25rem","margin":"1.25rem","space-sm":"0.5rem","space-xl":"2rem","space-lg":"1.25rem","gutter":"1rem","space-md":"0.75rem"},fontFamily:{"label-caps":["JetBrains Mono"],"headline-lg-mobile":["Inter"],"mono-data-sm":["JetBrains Mono"],"headline-md":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"display":["Inter"],"mono-data-md":["JetBrains Mono"],"body-md":["Inter"],"mono-data-lg":["JetBrains Mono"],"headline-lg":["Inter"],"headline-sm":["Inter"]},fontSize:{"label-caps":["10px",{lineHeight:"12px",letterSpacing:"0.08em",fontWeight:"600"}],"headline-lg-mobile":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"mono-data-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"400"}],"headline-md":["18px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"display":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"mono-data-md":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"400"}],"body-md":["13px",{lineHeight:"18px",fontWeight:"400"}],"mono-data-lg":["14px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["15px",{lineHeight:"20px",letterSpacing:"-0.005em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="IR Model Zoo Radiometric Sensor Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1US0P0_6lXXLFkWnckOu6cKH_lHUvglgW85MWWlf-uzxpnHJRMHODsBkSZNSrM30mRilrI4KD5AQJLWJZuUfivW-wd5hJSEU4GRbURYFyATeUNStviNTC5U-80rbWpbdmvqZLgbv16z1tc6ggVn3ZMQdtbe8yWb3YzYZRjP0WpFXBIpLZLwM6SKNP5UAJILI_H6EDw9nxHu23e2yH_2S8XfO7frP-mAcxH00XDFf7aKRITYg4_lCduWZ48"/><a class="flex items-center gap-space-sm" data-path="home" href="#"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">IR Model Zoo</span><span class="font-mono-data-sm text-mono-data-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant">v1.2.0 • Static</span></a></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded"><a class="px-space-md py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="px-space-md py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="browse-catalogue" href="#">Browse Catalogue</a><a aria-current="page" class="px-space-md py-space-xs transition-colors bg-primary-container text-on-primary-container font-semibold rounded" data-path="licences-and-criteria" href="#">Licences &amp; Criteria</a><a class="px-space-md py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contribute" href="#">Contribute</a><a class="px-space-md py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-and-methodology" href="#">About &amp; Methodology</a></nav><div class="flex items-center gap-space-sm shrink-0"><button class="h-8 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded flex items-center gap-space-xs transition-colors" title="Quick Model Search (Ctrl+K)" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="hidden sm:inline font-mono-data-sm text-mono-data-sm">Search (/)</span></button><button class="h-8 w-8 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded flex items-center justify-center transition-colors" title="Toggle Radiometric Spectrum Color Theme" type="button"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><a class="h-8 w-8 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded flex items-center justify-center transition-colors" href="https://github.com" rel="noreferrer" target="_blank" title="Source Repository"><span class="material-symbols-outlined text-[18px]">code</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><details class="lg:hidden relative"><summary class="list-none h-8 w-8 bg-surface-container hover:bg-surface-container-high text-on-surface rounded flex items-center justify-center cursor-pointer"><span class="material-symbols-outlined text-[20px]">menu</span></summary><div class="absolute right-0 mt-space-sm w-64 p-space-sm bg-surface-container-high rounded shadow-xl flex flex-col gap-space-xs z-50"><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="home" href="#">Home</a><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="browse-catalogue" href="#">Browse Catalogue</a><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="licences-and-criteria" href="#">Licences &amp; Criteria</a><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="contribute" href="#">Contribute</a><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="about-and-methodology" href="#">About &amp; Methodology</a></div></details></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<!-- SECTION 1: COMPLIANCE HEADER & TELEMETRY STRIP -->
+<section class="w-full bg-surface-container-lowest px-gutter py-space-xl relative overflow-hidden">
+<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg relative z-10">
+<!-- Metadata overline -->
+<div class="flex flex-wrap items-center gap-space-sm font-label-caps text-label-caps tracking-wider text-outline uppercase">
+<span class="inline-flex items-center gap-space-xs text-primary bg-surface-container px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">gavel</span>
+          LEGAL &amp; PROVENANCE STANDARD
+        </span>
+<span>•</span>
+<span>SPEC-ID: IRZ-L1-2025</span>
+<span>•</span>
+<span class="text-tertiary">ISO/IEC 5230 OPENCHAIN HARMONIZED</span>
+</div>
+<!-- Main Headline Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<h1 class="font-display text-display text-on-surface tracking-tight">Accepted Open Licences &amp; Simulation Criteria</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            Ensuring legally unencumbered 3D geometry for academic research, sensor evaluation, and commercial simulation workflows.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-xs p-space-md bg-surface-container-low rounded">
+<div class="flex items-center justify-between font-mono-data-sm text-mono-data-sm">
+<span class="text-on-surface-variant">Attribution Pipeline:</span>
+<span class="text-primary font-semibold">AUTOMATED RFC-3986</span>
+</div>
+<div class="flex items-center justify-between font-mono-data-sm text-mono-data-sm">
+<span class="text-on-surface-variant">Derivative Rights:</span>
+<span class="text-tertiary font-semibold">100% EXPLICIT</span>
+</div>
+<div class="flex items-center justify-between font-mono-data-sm text-mono-data-sm">
+<span class="text-on-surface-variant">Simulation Barrier:</span>
+<span class="text-error font-semibold">NO NC / NO ND</span>
+</div>
+</div>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm pt-space-md">
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Permitted Licences</span>
+<span class="font-headline-md text-headline-md text-on-surface">4 Approved Classes</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Commercial Cleared</span>
+<span class="font-headline-md text-headline-md text-primary">Unrestricted Workflows</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Manifest Format</span>
+<span class="font-headline-md text-headline-md text-tertiary">JSON-LD + ATTRIBUTION</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Takedown SLA</span>
+<span class="font-headline-md text-headline-md text-on-surface">&lt; 48 Working Hours</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: PERMITTED LICENCES MATRIX -->
+<section class="w-full bg-surface px-gutter py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Evaluation Tier Matrix</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Permitted Licence Frameworks</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          To enable thermal radiance parameterization and optical mesh deformation, only permissive licences granting full derivative generation are indexed.
+        </p>
+</div>
+<!-- Comparison Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: CC0 -->
+<div class="bg-surface-container p-space-md rounded flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps px-space-xs py-0.5 rounded bg-surface-container-highest text-primary font-semibold">TIER 1 (OPTIMAL)</span>
+<span class="material-symbols-outlined text-[20px] text-primary">public</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">CC0 1.0 Universal</h3>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Public Domain Dedication</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Unrestricted commercial and research use. All copyright and neighboring rights waived globally. No attribution legally required, though our catalogue provides provenance telemetry out of professional respect.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex flex-col gap-space-xs font-mono-data-sm text-mono-data-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span>Commercial Sim:</span>
+<span class="text-primary">ALLOWED</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>Model Modification:</span>
+<span class="text-primary">UNRESTRICTED</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>Derivative Sublicensing:</span>
+<span class="text-primary">PERMITTED</span>
+</div>
+</div>
+</div>
+<!-- Card 2: CC-BY 4.0 -->
+<div class="bg-surface-container p-space-md rounded flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps px-space-xs py-0.5 rounded bg-surface-container-highest text-tertiary font-semibold">TIER 2 (STANDARD)</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary">attribution</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">CC-BY 4.0</h3>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Attribution International</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Free to use, adapt, and distribute for any purpose, including commercial thermal perception benchmarks. Requires crediting original authors, linking the licence, and documenting modifications applied to CAD geometry.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex flex-col gap-space-xs font-mono-data-sm text-mono-data-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span>Commercial Sim:</span>
+<span class="text-primary">ALLOWED</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>Model Modification:</span>
+<span class="text-primary">ALLOWED (INDICATED)</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>Credit Packaging:</span>
+<span class="text-tertiary">MANDATORY</span>
+</div>
+</div>
+</div>
+<!-- Card 3: CC-BY-SA 4.0 -->
+<div class="bg-surface-container p-space-md rounded flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary font-semibold">TIER 3 (RECIPROCAL)</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">sync</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">CC-BY-SA 4.0</h3>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Attribution-ShareAlike</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Remixing, transforming, and building upon the material is permitted even commercially. Any distributed modified model files or thermal meshes must be shared under identical reciprocal terms. Suitable for open research.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex flex-col gap-space-xs font-mono-data-sm text-mono-data-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span>Commercial Sim:</span>
+<span class="text-primary">ALLOWED</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>Model Modification:</span>
+<span class="text-primary">ALLOWED</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>Derivative Terms:</span>
+<span class="text-secondary">SHARE-ALIKE ONLY</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Own Work -->
+<div class="bg-surface-container p-space-md rounded flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-semibold">COMMUNITY-BUILT</span>
+<span class="material-symbols-outlined text-[20px] text-primary">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Own Work</h3>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Original Sensor Contributions</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Direct original contributions modeled specifically for physical LWIR (8-14 µm) validation. Contributors voluntarily bind their work to either CC0 1.0 or CC-BY 4.0 with full provenance sign-off and zero third-party encumbrances.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex flex-col gap-space-xs font-mono-data-sm text-mono-data-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span>Provenance:</span>
+<span class="text-primary">FIRST-PARTY</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>Target Standard:</span>
+<span class="text-tertiary">CC0 or CC-BY 4.0</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>DCO Sign-off:</span>
+<span class="text-primary">REQUIRED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Comparative Capabilities Table -->
+<div class="w-full bg-surface-container rounded p-space-md overflow-x-auto">
+<div class="min-w-[680px] flex flex-col gap-space-xs font-mono-data-sm text-mono-data-sm">
+<div class="grid grid-cols-12 pb-space-xs text-on-surface-variant font-label-caps text-label-caps uppercase">
+<span class="col-span-3">Simulation Capability Matrix</span>
+<span class="col-span-2 text-center">CC0 1.0</span>
+<span class="col-span-2 text-center">CC-BY 4.0</span>
+<span class="col-span-2 text-center">CC-BY-SA 4.0</span>
+<span class="col-span-3 text-center">Own Work (CC-BY/CC0)</span>
+</div>
+<div class="grid grid-cols-12 py-space-xs items-center bg-surface-container-low px-space-xs rounded">
+<span class="col-span-3 text-on-surface">Finite Element Mesh Retopology</span>
+<span class="col-span-2 text-center text-primary font-semibold">ALLOWED</span>
+<span class="col-span-2 text-center text-primary font-semibold">ALLOWED</span>
+<span class="col-span-2 text-center text-primary font-semibold">ALLOWED</span>
+<span class="col-span-3 text-center text-primary font-semibold">ALLOWED</span>
+</div>
+<div class="grid grid-cols-12 py-space-xs items-center px-space-xs">
+<span class="col-span-3 text-on-surface">Synthetic LWIR Sensor Rendering</span>
+<span class="col-span-2 text-center text-primary font-semibold">ALLOWED</span>
+<span class="col-span-2 text-center text-primary font-semibold">ALLOWED</span>
+<span class="col-span-2 text-center text-primary font-semibold">ALLOWED</span>
+<span class="col-span-3 text-center text-primary font-semibold">ALLOWED</span>
+</div>
+<div class="grid grid-cols-12 py-space-xs items-center bg-surface-container-low px-space-xs rounded">
+<span class="col-span-3 text-on-surface">Proprietary Training Data Export</span>
+<span class="col-span-2 text-center text-primary font-semibold">ALLOWED</span>
+<span class="col-span-2 text-center text-primary font-semibold">ALLOWED</span>
+<span class="col-span-2 text-center text-secondary">DATASET OPEN*</span>
+<span class="col-span-3 text-center text-primary font-semibold">ALLOWED</span>
+</div>
+<div class="grid grid-cols-12 py-space-xs items-center px-space-xs">
+<span class="col-span-3 text-on-surface">Redistribution in Commercial SDKs</span>
+<span class="col-span-2 text-center text-primary font-semibold">PERMITTED</span>
+<span class="col-span-2 text-center text-primary font-semibold">WITH ATTRIB</span>
+<span class="col-span-2 text-center text-secondary">VIRAL REQUIREMENT</span>
+<span class="col-span-3 text-center text-primary font-semibold">PERMITTED</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: STRICT EXCLUSION CRITERIA -->
+<section class="w-full bg-surface-container-low px-gutter py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- High Contrast Exclusion Banner -->
+<div class="p-space-lg bg-surface-container-highest rounded flex flex-col md:flex-row gap-space-md items-start">
+<div class="w-12 h-12 rounded bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">block</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-error tracking-wider">Absolute Policy Requirement</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Strict Exclusion Criteria: What We Do NOT Accept</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+            Assets submitted with restrictions on commercial application or modification are disqualified immediately during ingestion checks. Thermal radiometry simulation requires uninhibited geometric and parametric intervention.
+          </p>
+</div>
+</div>
+<!-- Exclusion Reason Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Reason 1: Non-Commercial -->
+<div class="bg-surface-container p-space-md rounded flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-error font-mono-data-sm text-mono-data-sm">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>PROHIBITED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Non-Commercial (NC)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Licenses bearing <code class="font-mono-data-sm text-primary">CC-BY-NC</code> or similar restrictions make datasets unusable for corporate labs, defense subcontractors, and dual-use aerospace sensor simulation.
+          </p>
+<div class="mt-auto pt-space-xs font-mono-data-sm text-mono-data-sm text-outline">
+            Result: Auto-rejection at triage
+          </div>
+</div>
+<!-- Reason 2: No-Derivatives -->
+<div class="bg-surface-container p-space-md rounded flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-error font-mono-data-sm text-mono-data-sm">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>PROHIBITED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">No-Derivatives (ND)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Thermal simulation mandates structural edits: polygon decimation, UV re-parameterization, thermal property assigning, and sub-assembly slicing. ND prevents baseline radiometric prep.
+          </p>
+<div class="mt-auto pt-space-xs font-mono-data-sm text-mono-data-sm text-outline">
+            Result: Technically incompatible
+          </div>
+</div>
+<!-- Reason 3: Marketplace Generic -->
+<div class="bg-surface-container p-space-md rounded flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-error font-mono-data-sm text-mono-data-sm">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>PROHIBITED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Generic 'Royalty-Free'</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Generic commercial marketplace licenses (TurboSquid, CGTrader, Sketchfab Standard) typically restrict open dataset bundling, redistribution, and static web index embedding.
+          </p>
+<div class="mt-auto pt-space-xs font-mono-data-sm text-mono-data-sm text-outline">
+            Result: Non-redistributable
+          </div>
+</div>
+<!-- Reason 4: Unlicensed CAD Scrapes -->
+<div class="bg-surface-container p-space-md rounded flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-error font-mono-data-sm text-mono-data-sm">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>PROHIBITED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Unlicensed CAD Scrapes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Models ripped from proprietary flight simulators, military game archives, or GrabCAD without clear permissive open-access declarations are strictly forbidden.
+          </p>
+<div class="mt-auto pt-space-xs font-mono-data-sm text-mono-data-sm text-outline">
+            Result: Legal risk zero-tolerance
+          </div>
+</div>
+</div>
+<!-- Why NC/ND Fails Thermal Simulation Explainer -->
+<div class="bg-surface p-space-md rounded flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">science</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Why NC/ND Invalidates Synthetic Thermal Datasets</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              In radiometric LWIR modeling, surfaces are assigned material conduction tensors and internal thermal loads. This mathematically creates a derivative 3D object, legally conflicting with No-Derivatives licenses.
+            </p>
+</div>
+</div>
+<a class="whitespace-nowrap px-space-md py-space-xs bg-surface-container text-on-surface hover:text-primary rounded font-body-md text-body-md transition-colors flex items-center gap-space-xs" href="#attribution-policy">
+<span>Read IP Policy</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 4: INTELLECTUAL PROPERTY & CREATOR RESPECT POLICY -->
+<section class="w-full bg-surface px-gutter py-space-xl" id="attribution-policy">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Provenance &amp; Integrity</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Creator Respect &amp; Takedown Governance</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+          We treat original creators as essential scientific partners. All geometries converted for infrared calibration retain verified attribution paths, traceable hashes, and immediate takedown protections.
+        </p>
+</div>
+<!-- 2-Column Inspector Architecture -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Packaging Protocol -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="bg-surface-container p-space-md rounded flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-mono-data-sm text-mono-data-sm">
+<span class="material-symbols-outlined text-[16px]">folder_zip</span>
+<span>STANDARDIZED ARCHIVE STRUCTURE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Bundled ATTRIBUTION.md in Every Distribution</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Every downloadable asset package (whether downloaded via manual UI, Python API, or Zenodo mirror) includes an authoritative <code class="font-mono-data-sm text-primary">ATTRIBUTION.md</code> file detailing author credits, modification log, original source URLs, and exact thermodynamic adjustments applied.
+            </p>
+<div class="bg-surface-container-lowest p-space-sm rounded font-mono-data-sm text-mono-data-sm text-on-surface overflow-x-auto">
+<pre class="leading-relaxed"># IR MODEL ZOO — ASSET ATTRIBUTION MANIFEST
+MODEL_ID: IRZ-AIR-F16C-LWIR-0842
+ORIGINAL_NAME: General Dynamics F-16C Block 50
+CREATOR: AviationMeshWorks (Sketchfab User: @avmesh)
+LICENCE: Creative Commons Attribution 4.0 International (CC-BY 4.0)
+SOURCE_URL: https://sketchfab.com/3d-models/...
+MODIFICATIONS_APPLIED:
+  - Polygonal optimization for finite element boundary layers (ASTM E1311)
+  - Split exhaust nozzle into independent thermal emitter node (650°C peak)
+  - Emissivity coefficient map assigned (Skin: 0.88, Canopy: 0.94)
+VERIFIED_BY: IR Model Zoo Compliance Bot v2.4 (Hash: 9b2d8...)</pre>
+</div>
+</div>
+<!-- Machine-readable metadata schema block -->
+<div class="bg-surface-container p-space-md rounded flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-tertiary font-mono-data-sm text-mono-data-sm">
+<span class="material-symbols-outlined text-[16px]">data_object</span>
+<span>MACHINE READABLE SPECIFICATION</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Linked JSON-LD Schema</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Automated ingestion pipelines, synthetic dataset generators, and digital twin environments can ingest metadata programmatically through standard <code class="font-mono-data-sm text-tertiary">ir-manifest.json</code> objects.
+            </p>
+<div class="bg-surface-container-lowest p-space-sm rounded font-mono-data-sm text-mono-data-sm text-on-surface-variant overflow-x-auto">
+<pre class="text-tertiary">{
+  "@context": "https://irmodelzoo.org/schemas/v1",
+  "@type": "ThermalSimulationAsset",
+  "id": "irz://geometry/t72b3-lwir",
+  "name": "T-72B3 Main Battle Tank Radiometric Model",
+  "license": "http://creativecommons.org/licenses/by/4.0/",
+  "author": { "name": "MilAssetLabs", "verifiedOrcid": "0000-0002-1825-0097" },
+  "radiometricBands": ["MWIR_3_5", "LWIR_8_14"],
+  "complianceAudit": { "status": "APPROVED", "date": "2025-01-14" }
+}</pre>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Takedown & Provenance Rail -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Immediate Takedown Card -->
+<div class="bg-surface-container-high p-space-md rounded flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-mono-data-sm text-mono-data-sm">
+<span class="material-symbols-outlined text-[16px]">security_update_warning</span>
+<span>DMCA &amp; CREATOR RIGHTS</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Expedited Takedown Procedure</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              If an asset hosted on IR Model Zoo infringes your intellectual property, lacks valid attribution, or was re-uploaded without authorization by a third party, our compliance team enforces an immediate quarantine upon receipt of claim.
+            </p>
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col gap-space-xs font-mono-data-sm text-mono-data-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span>Phase 1: Quarantine</span>
+<span class="text-primary font-semibold">&lt; 12 Hours</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>Phase 2: Source Investigation</span>
+<span class="text-on-surface-variant">24-48 Hours</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>Phase 3: Permanent Purge / Mirror Flush</span>
+<span class="text-error font-semibold">Immediate</span>
+</div>
+</div>
+<!-- Takedown Interactive Micro-Form Trigger -->
+<button class="h-8 mt-space-xs px-space-md bg-primary-container text-on-primary-container font-headline-sm text-headline-sm rounded flex items-center justify-center gap-space-xs hover:bg-secondary-container hover:text-on-secondary-container transition-colors" onclick="document.getElementById('takedown-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">report</span>
+<span>Submit Expedited Takedown Request</span>
+</button>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant text-center">Or email: legal@irmodelzoo.org (GPG Signed)</span>
+</div>
+<!-- Provenance Audit Badge -->
+<div class="bg-surface-container p-space-md rounded flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">AUDIT ASSURANCE</span>
+<span class="flex items-center gap-1 font-mono-data-sm text-mono-data-sm text-primary">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                LIVE
+              </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Automated Web Scrape Quarantine</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Every newly submitted pull request is cross-referenced against public 3D marketplaces and hash dictionaries using visual perceptual hashing to prevent unauthorized licensing resets.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TAKEDOWN MODAL OVERLAY (Controlled via vanilla JS) -->
+<div class="fixed inset-0 z-50 bg-surface/90 backdrop-blur-sm hidden flex items-center justify-center p-space-md" id="takedown-modal">
+<div class="bg-surface-container-high rounded p-space-lg max-w-xl w-full flex flex-col gap-space-md shadow-2xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined">warning</span>
+<span>Initiate Fast-Track Takedown</span>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface flex items-center justify-center" onclick="document.getElementById('takedown-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Complete this form to submit an urgent claim. The specified model index will be placed into unlisted status pending compliance review.
+      </p>
+<form class="flex flex-col gap-space-sm" onsubmit="event.preventDefault(); alert('Claim submitted. Model flagged for immediate review.'); document.getElementById('takedown-modal').classList.add('hidden');">
+<label class="flex flex-col gap-1">
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface">Target Asset Identifier or URL:</span>
+<input class="h-8 bg-surface-container-lowest px-space-sm rounded font-mono-data-md text-mono-data-md text-on-surface outline-none focus:ring-1 focus:ring-primary-container" placeholder="e.g., IRZ-AIR-F16C-LWIR-0842" required="" type="text"/>
+</label>
+<label class="flex flex-col gap-1">
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface">Copyright Owner / Legal Representative Name:</span>
+<input class="h-8 bg-surface-container-lowest px-space-sm rounded font-mono-data-md text-mono-data-md text-on-surface outline-none focus:ring-1 focus:ring-primary-container" placeholder="Your full name or studio name" required="" type="text"/>
+</label>
+<label class="flex flex-col gap-1">
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface">Original Work Reference URL:</span>
+<input class="h-8 bg-surface-container-lowest px-space-sm rounded font-mono-data-md text-mono-data-md text-on-surface outline-none focus:ring-1 focus:ring-primary-container" placeholder="https://..." required="" type="url"/>
+</label>
+<label class="flex flex-col gap-1">
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface">Statement of Infringement:</span>
+<textarea class="bg-surface-container-lowest p-space-sm rounded font-mono-data-md text-mono-data-md text-on-surface outline-none focus:ring-1 focus:ring-primary-container resize-none" placeholder="Describe the licensing conflict or unauthorized redistribution..." required="" rows="3"></textarea>
+</label>
+<div class="flex items-center justify-end gap-space-sm mt-space-xs">
+<button class="px-space-md py-space-xs bg-surface-container text-on-surface-variant hover:text-on-surface rounded font-body-md text-body-md" onclick="document.getElementById('takedown-modal').classList.add('hidden')" type="button">
+            Cancel
+          </button>
+<button class="px-space-md py-space-xs bg-primary-container text-on-primary-container rounded font-headline-sm text-headline-sm hover:bg-secondary-container transition-colors" type="submit">
+            Submit Legal Notice
+          </button>
+</div>
+</form>
+</div>
+</div>
+<script>
+    // Keyboard shortcut for closing modal with Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('takedown-modal');
+        if (modal && !modal.classList.contains('hidden')) {
+          modal.classList.add('hidden');
+        }
+      }
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant mt-auto"><div class="w-full px-gutter py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg mb-space-lg"><div class="md:col-span-7 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Scientific Telemetry Data Portal</span><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Static Pages Build</span></div><p class="font-body-md text-body-md text-on-surface">IR Model Zoo — Curated open radiometric 3D assets for thermal camera simulation, perception datasets &amp; optical sensor engineering.</p><p class="font-body-sm text-body-sm text-on-surface-variant">All 3D airframes, vehicles and geometry remain the intellectual property of their original creators under open attribution licences. Modified for physical LWIR (8-14 µm) radiometric simulation.</p></div><div class="md:col-span-5 flex flex-col justify-between gap-space-md"><div class="flex flex-wrap gap-x-space-md gap-y-space-xs font-mono-data-sm text-mono-data-sm"><a class="text-on-surface-variant hover:text-primary transition-colors" href="https://github.com" rel="noreferrer" target="_blank">GitHub Repo</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="about-and-methodology" href="#">Main IR Simulator Project</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="licences-and-criteria" href="#">Licences &amp; Compliance</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="licences-and-criteria" href="#">Takedown &amp; Provenance Policy</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="https://zenodo.org" rel="noreferrer" target="_blank">Zenodo Community</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="contribute" href="#">Contact</a></div><div class="p-space-sm bg-surface-container-low rounded flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs font-mono-data-sm text-mono-data-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">verified_user</span><span>Zero-tracking, zero-cookie, static GitHub Pages guarantee stamp.</span></div><span class="font-label-caps text-label-caps text-tertiary uppercase">RAD-PASS</span></div></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md font-mono-data-sm text-mono-data-sm text-on-surface-variant"><div class="flex items-center gap-space-sm"><span>© 2025 IR Model Zoo Contributors</span><span>•</span><span>Radiometric Calibration: ASTM E1311</span></div><div><span>LWIR Standard Verification Protocol v2.4</span></div></div></div></footer></body></html>

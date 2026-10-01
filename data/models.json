@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "site": {
+    "name": "Thermal Model Zoo",
+    "repo": "https://github.com/reza-shahriari/ThermalModelZoo",
+    "main_project": ""
+  },
+  "categories": [
+    {"id": "drones", "label": "Drones (sUAS)", "icon": "flight_takeoff"},
+    {"id": "aircraft", "label": "Aircraft & Fixed Wing", "icon": "airplanemode_active"},
+    {"id": "ground", "label": "Ground Vehicles", "icon": "directions_car"},
+    {"id": "ships", "label": "Maritime / Ships", "icon": "directions_boat"},
+    {"id": "animals", "label": "Animals (Fauna IR)", "icon": "pets"},
+    {"id": "infrastructure", "label": "Infrastructure / Masts", "icon": "cell_tower"},
+    {"id": "props", "label": "Props & Misc", "icon": "category"}
+  ],
+  "licences": [
+    {"id": "CC0-1.0", "short": "CC0", "name": "CC0 1.0 Universal", "url": "https://creativecommons.org/publicdomain/zero/1.0/"},
+    {"id": "CC-BY-4.0", "short": "CC-BY 4.0", "name": "Creative Commons Attribution 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+    {"id": "CC-BY-SA-4.0", "short": "CC-BY-SA 4.0", "name": "Creative Commons Attribution-ShareAlike 4.0", "url": "https://creativecommons.org/licenses/by-sa/4.0/"},
+    {"id": "OWN", "short": "Own work", "name": "Own work (released by its author as CC0 or CC-BY)", "url": ""}
+  ],
+  "models": [
+    {
+      "id": "demo-quadrotor",
+      "demo": true,
+      "featured": true,
+      "name": "Example Quadrotor",
+      "real_name": "Generic carbon-fibre quadrotor",
+      "category": "drones",
+      "subcategory": "Multirotor",
+      "summary": "PLACEHOLDER ENTRY. Shows how a drone is presented: four motors, battery, avionics and airframe as separate parts.",
+      "licence": "CC-BY-4.0",
+      "author": "Example Author",
+      "author_url": "",
+      "source_url": "",
+      "changes": "Placeholder: in a real entry, list exactly what was changed (scale, part split, materials).",
+      "dimensions_m": [0.58, 0.58, 0.22],
+      "triangles": 48200,
+      "date_added": "2026-10-01",
+      "thumb": "thumb.svg",
+      "images": [
+        {"file": "beauty.svg", "kind": "beauty", "caption": "Beauty render (placeholder)"},
+        {"file": "thermal.svg", "kind": "thermal", "caption": "Synthetic LWIR, white-hot (placeholder)"},
+        {"file": "wireframe.svg", "kind": "wireframe", "caption": "Parts / wireframe view (placeholder)"}
+      ],
+      "parts": [
+        {"name": "Motors (x4)", "material": "Anodised aluminium, black", "emissivity": 0.82, "source": "estimated", "note": "Stator heat source"},
+        {"name": "Avionics housing", "material": "PC/ABS blend", "emissivity": 0.94, "source": "estimated", "note": "Internal compute heat"},
+        {"name": "Arms (x4)", "material": "Matte carbon fibre", "emissivity": 0.86, "source": "estimated", "note": ""},
+        {"name": "Propellers (x4)", "material": "Glass-filled polyamide", "emissivity": 0.91, "source": "estimated", "note": ""},
+        {"name": "Battery pack", "material": "PVC heat-shrink wrap", "emissivity": 0.95, "source": "estimated", "note": "Discharge heating"}
+      ],
+      "downloads": [
+        {"format": "blend", "url": "", "host": "GitHub Releases", "size_mb": null, "sha256": ""},
+        {"format": "usdc", "url": "", "host": "GitHub Releases", "size_mb": null, "sha256": ""}
+      ]
+    },
+    {
+      "id": "demo-sedan",
+      "demo": true,
+      "featured": true,
+      "name": "Example Sedan",
+      "real_name": "Generic passenger car",
+      "category": "ground",
+      "subcategory": "Passenger car",
+      "summary": "PLACEHOLDER ENTRY. Shows a vehicle with engine bay, exhaust, tyres and glazing as separate parts.",
+      "licence": "CC0-1.0",
+      "author": "Example Author",
+      "author_url": "",
+      "source_url": "",
+      "changes": "Placeholder: in a real entry, list exactly what was changed.",
+      "dimensions_m": [4.7, 1.85, 1.45],
+      "triangles": 210400,
+      "date_added": "2026-10-01",
+      "thumb": "thumb.svg",
+      "images": [
+        {"file": "beauty.svg", "kind": "beauty", "caption": "Beauty render (placeholder)"},
+        {"file": "thermal.svg", "kind": "thermal", "caption": "Synthetic LWIR, white-hot (placeholder)"},
+        {"file": "wireframe.svg", "kind": "wireframe", "caption": "Parts / wireframe view (placeholder)"}
+      ],
+      "parts": [
+        {"name": "Body panels", "material": "Painted steel", "emissivity": 0.90, "source": "estimated", "note": "Paint, not bare metal"},
+        {"name": "Windscreen and glazing", "material": "Laminated glass", "emissivity": 0.91, "source": "estimated", "note": "Opaque in LWIR"},
+        {"name": "Tyres (x4)", "material": "Carbon-black rubber", "emissivity": 0.95, "source": "estimated", "note": "Heat from rolling"},
+        {"name": "Engine block", "material": "Cast aluminium", "emissivity": 0.30, "source": "estimated", "note": "Hidden inside the shell"},
+        {"name": "Exhaust", "material": "Oxidised stainless steel", "emissivity": 0.80, "source": "estimated", "note": "Hottest part"}
+      ],
+      "downloads": [
+        {"format": "blend", "url": "", "host": "GitHub Releases", "size_mb": null, "sha256": ""}
+      ]
+    },
+    {
+      "id": "demo-turboprop",
+      "demo": true,
+      "featured": true,
+      "name": "Example Turboprop",
+      "real_name": "Generic twin turboprop",
+      "category": "aircraft",
+      "subcategory": "Fixed wing",
+      "summary": "PLACEHOLDER ENTRY. Shows a fixed-wing aircraft with exhaust stacks and leading-edge parts separated.",
+      "licence": "CC-BY-SA-4.0",
+      "author": "Example Author",
+      "author_url": "",
+      "source_url": "",
+      "changes": "Placeholder: in a real entry, list exactly what was changed.",
+      "dimensions_m": [27.2, 27.0, 7.6],
+      "triangles": 268000,
+      "date_added": "2026-10-01",
+      "thumb": "thumb.svg",
+      "images": [
+        {"file": "beauty.svg", "kind": "beauty", "caption": "Beauty render (placeholder)"},
+        {"file": "thermal.svg", "kind": "thermal", "caption": "Synthetic LWIR, white-hot (placeholder)"},
+        {"file": "wireframe.svg", "kind": "wireframe", "caption": "Parts / wireframe view (placeholder)"}
+      ],
+      "parts": [
+        {"name": "Fuselage skin", "material": "Painted aluminium alloy", "emissivity": 0.88, "source": "estimated", "note": ""},
+        {"name": "Engine nacelles (x2)", "material": "Titanium and aluminium", "emissivity": 0.55, "source": "estimated", "note": ""},
+        {"name": "Exhaust stacks (x2)", "material": "Nickel superalloy, oxidised", "emissivity": 0.85, "source": "estimated", "note": "Hot gas path"},
+        {"name": "Propellers (x2)", "material": "Composite blades, painted", "emissivity": 0.90, "source": "estimated", "note": ""}
+      ],
+      "downloads": [
+        {"format": "blend", "url": "", "host": "GitHub Releases", "size_mb": null, "sha256": ""}
+      ]
+    }
+  ]
+}

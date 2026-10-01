@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-bright":"#36393f","surface-dim":"#101419","primary-container":"#f59e0b","surface-container":"#1c2025","surface-container-highest":"#31353b","surface":"#101419","on-secondary-fixed":"#370e00","surface-container-low":"#181c21","on-secondary":"#5a1c00","inverse-on-surface":"#2d3136","inverse-primary":"#855300","tertiary-fixed":"#c4e7ff","secondary":"#ffb599","tertiary-container":"#38bdf8","on-error":"#690005","secondary-fixed":"#ffdbce","on-tertiary-container":"#004965","secondary-container":"#f66018","surface-container-lowest":"#0a0e13","on-primary-fixed":"#2a1700","on-tertiary":"#00354a","on-primary":"#472a00","on-secondary-fixed-variant":"#7f2b00","on-surface-variant":"#d8c3ad","outline":"#a08e7a","surface-variant":"#31353b","on-tertiary-fixed-variant":"#004c69","on-secondary-container":"#4f1700","on-surface":"#e0e2ea","primary":"#ffc174","error":"#ffb4ab","secondary-fixed-dim":"#ffb599","primary-fixed-dim":"#ffb95f","on-background":"#e0e2ea","surface-tint":"#ffb95f","on-primary-container":"#613b00","inverse-surface":"#e0e2ea","background":"#101419","tertiary-fixed-dim":"#7bd0ff","outline-variant":"#534434","tertiary":"#8ed5ff","on-tertiary-fixed":"#001e2c","primary-fixed":"#ffddb8","surface-container-high":"#262a30","on-error-container":"#ffdad6","error-container":"#93000a","on-primary-fixed-variant":"#653e00"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xs":"0.25rem","margin":"1.25rem","space-sm":"0.5rem","space-xl":"2rem","space-lg":"1.25rem","gutter":"1rem","space-md":"0.75rem"},fontFamily:{"label-caps":["JetBrains Mono"],"headline-lg-mobile":["Inter"],"mono-data-sm":["JetBrains Mono"],"headline-md":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"display":["Inter"],"mono-data-md":["JetBrains Mono"],"body-md":["Inter"],"mono-data-lg":["JetBrains Mono"],"headline-lg":["Inter"],"headline-sm":["Inter"]},fontSize:{"label-caps":["10px",{lineHeight:"12px",letterSpacing:"0.08em",fontWeight:"600"}],"headline-lg-mobile":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"mono-data-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"400"}],"headline-md":["18px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"display":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"mono-data-md":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"400"}],"body-md":["13px",{lineHeight:"18px",fontWeight:"400"}],"mono-data-lg":["14px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["15px",{lineHeight:"20px",letterSpacing:"-0.005em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="IR Model Zoo Radiometric Sensor Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1US0P0_6lXXLFkWnckOu6cKH_lHUvglgW85MWWlf-uzxpnHJRMHODsBkSZNSrM30mRilrI4KD5AQJLWJZuUfivW-wd5hJSEU4GRbURYFyATeUNStviNTC5U-80rbWpbdmvqZLgbv16z1tc6ggVn3ZMQdtbe8yWb3YzYZRjP0WpFXBIpLZLwM6SKNP5UAJILI_H6EDw9nxHu23e2yH_2S8XfO7frP-mAcxH00XDFf7aKRITYg4_lCduWZ48"/><a class="flex items-center gap-space-sm" data-path="home" href="#"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">IR Model Zoo</span><span class="font-mono-data-sm text-mono-data-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant">v1.2.0 • Static</span></a></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded"><a class="px-space-md py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="px-space-md py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="browse-catalogue" href="#">Browse Catalogue</a><a class="px-space-md py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="licences-and-criteria" href="#">Licences &amp; Criteria</a><a class="px-space-md py-space-xs font-body-md text-body-md bg-primary-container text-on-primary-container font-semibold rounded transition-colors" data-path="contribute" href="#">Contribute</a><a class="px-space-md py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-and-methodology" href="#">About &amp; Methodology</a></nav><div class="flex items-center gap-space-sm shrink-0"><button class="h-8 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded flex items-center gap-space-xs transition-colors" title="Quick Model Search (Ctrl+K)" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="hidden sm:inline font-mono-data-sm text-mono-data-sm">Search (/)</span></button><button class="h-8 w-8 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded flex items-center justify-center transition-colors" title="Toggle Radiometric Spectrum Color Theme" type="button"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><a class="h-8 w-8 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded flex items-center justify-center transition-colors" href="https://github.com" rel="noreferrer" target="_blank" title="Source Repository"><span class="material-symbols-outlined text-[18px]">code</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><details class="lg:hidden relative"><summary class="list-none h-8 w-8 bg-surface-container hover:bg-surface-container-high text-on-surface rounded flex items-center justify-center cursor-pointer"><span class="material-symbols-outlined text-[20px]">menu</span></summary><div class="absolute right-0 mt-space-sm w-64 p-space-sm bg-surface-container-high rounded shadow-xl flex flex-col gap-space-xs z-50"><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="home" href="#">Home</a><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="browse-catalogue" href="#">Browse Catalogue</a><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="licences-and-criteria" href="#">Licences &amp; Criteria</a><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md bg-primary-container text-on-primary-container font-semibold rounded" data-path="contribute" href="#">Contribute</a><a class="min-h-[44px] px-space-md flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-highest" data-path="about-and-methodology" href="#">About &amp; Methodology</a></div></details></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<!-- INGESTION PIPELINE HERO / STATUS CONTEXT -->
+<section class="w-full bg-surface-container-lowest px-gutter py-space-xl border-b border-surface-container-highest/60">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-md">
+<!-- Breadcrumb & Compliance Spec Badges -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs font-mono-data-sm text-mono-data-sm text-on-surface-variant">
+<span class="text-tertiary">ROOT</span>
+<span>/</span>
+<a class="hover:text-primary transition-colors" data-path="browse-catalogue" href="#">MODELS</a>
+<span>/</span>
+<span class="text-primary font-semibold">INGESTION PIPELINE</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-xs py-0.5 bg-surface-container-high text-primary font-mono-data-sm text-mono-data-sm rounded flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            ZERO-BACKEND STATIC SUBMISSION
+          </span>
+<span class="px-space-xs py-0.5 bg-surface-container-high text-on-surface-variant font-mono-data-sm text-mono-data-sm rounded">
+            ASTM E1311-21
+          </span>
+<span class="px-space-xs py-0.5 bg-surface-container-high text-on-surface-variant font-mono-data-sm text-mono-data-sm rounded">
+            ISO/IEC 5230 OPENCHAIN
+          </span>
+</div>
+</div>
+<!-- Main Headline Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-xs">
+<div class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Synthetic Sensor Telemetry Specification v2.4</div>
+<h1 class="font-display text-display text-on-surface font-bold tracking-tight">Contribute a Radiometric 3D Model</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            Because IR Model Zoo operates as a zero-server static catalog hosted via GitHub Pages, all volumetric radiometric assets undergo community auditing via GitHub Issues &amp; Pull Requests. Use this client-side telemetry generator to validate boundary conditions, decompose thermal layers, and compile the pull-request issue manifest.
+          </p>
+</div>
+<div class="lg:col-span-4 bg-surface-container-low p-space-md rounded flex flex-col gap-space-xs border border-surface-container-highest">
+<div class="flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-on-surface-variant">Pipeline Ingestion Mode</span>
+<span class="text-tertiary">Deterministic Static</span>
+</div>
+<div class="flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-on-surface-variant">Target Sensor Envelope</span>
+<span class="text-on-surface">LWIR (8.0 - 14.0 µm)</span>
+</div>
+<div class="flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-on-surface-variant">Attribution Standard</span>
+<span class="text-primary">SPDX 2.3 Expressive</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MAIN INTERACTIVE WORKSPACE (Two-column instrument grade) -->
+<section class="w-full px-gutter py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- PRE-SUBMISSION VERIFICATION CHECKLIST (4 Interactive Gates) -->
+<div class="bg-surface-container-lowest p-space-lg rounded border border-surface-container-highest">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md pb-space-sm border-b border-surface-container-highest">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Gate Verification Matrix</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Mandatory Radiometric Intake Criteria</h2>
+</div>
+<div class="font-mono-data-sm text-mono-data-sm px-space-sm py-1 bg-surface-container rounded text-on-surface-variant self-start sm:self-auto" id="criteriaProgressBadge">
+            Audit Progress: <span class="text-primary font-semibold" id="criteriaCount">4 / 4 Complete</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Gate 1: Permissive Licence -->
+<label class="group relative p-space-md bg-surface-container-low rounded border border-surface-container-highest hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Gate 01 • Licence</span>
+<input checked="" class="w-4 h-4 rounded bg-surface border border-outline-variant text-primary-container focus:ring-0 focus:ring-offset-0 cursor-pointer accent-primary-container" id="check-licence" onchange="updateManifest()" type="checkbox"/>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface mb-1">Permissive Licence</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Asset is CC0, CC-BY, CC-BY-SA, or original work. Strictly blocks non-commercial (NC) or no-derivatives (ND) clauses.</p>
+</div>
+<span class="font-mono-data-sm text-mono-data-sm text-primary flex items-center gap-1 mt-space-xs">
+<span class="material-symbols-outlined text-[14px]">verified</span> SPDX-Audited
+            </span>
+</label>
+<!-- Gate 2: Decomposition -->
+<label class="group relative p-space-md bg-surface-container-low rounded border border-surface-container-highest hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Gate 02 • Mesh Topology</span>
+<input checked="" class="w-4 h-4 rounded bg-surface border border-outline-variant text-primary-container focus:ring-0 focus:ring-offset-0 cursor-pointer accent-primary-container" id="check-decomp" onchange="updateManifest()" type="checkbox"/>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface mb-1">Part Decomposition</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Airframe or hull partitioned into thermodynamic sub-assemblies (e.g., motor, exhaust, battery, tire footprint, sensor bay).</p>
+</div>
+<span class="font-mono-data-sm text-mono-data-sm text-tertiary flex items-center gap-1 mt-space-xs">
+<span class="material-symbols-outlined text-[14px]">layers</span> Multi-Material
+            </span>
+</label>
+<!-- Gate 3: Emissivity Tagging -->
+<label class="group relative p-space-md bg-surface-container-low rounded border border-surface-container-highest hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Gate 03 • ASTM E1933</span>
+<input checked="" class="w-4 h-4 rounded bg-surface border border-outline-variant text-primary-container focus:ring-0 focus:ring-offset-0 cursor-pointer accent-primary-container" id="check-emissivity" onchange="updateManifest()" type="checkbox"/>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface mb-1">LWIR Emissivity</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Surface directional normal LWIR (8–14 µm) emissivity assigned or estimated per material layer (0.00 – 1.00).</p>
+</div>
+<span class="font-mono-data-sm text-mono-data-sm text-secondary flex items-center gap-1 mt-space-xs">
+<span class="material-symbols-outlined text-[14px]">tune</span> ε Values Grounded
+            </span>
+</label>
+<!-- Gate 4: Renders & Imagery -->
+<label class="group relative p-space-md bg-surface-container-low rounded border border-surface-container-highest hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Gate 04 • Diagnostic Imagery</span>
+<input checked="" class="w-4 h-4 rounded bg-surface border border-outline-variant text-primary-container focus:ring-0 focus:ring-offset-0 cursor-pointer accent-primary-container" id="check-renders" onchange="updateManifest()" type="checkbox"/>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface mb-1">Visual &amp; Thermal Stills</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1x Visible RGB render, 1x LWIR White-Hot simulation render, 1x Wireframe topology still (4:3 aspect, max 1200px).</p>
+</div>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant flex items-center gap-1 mt-space-xs">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span> 3x Tri-Renders
+            </span>
+</label>
+</div>
+</div>
+<!-- MAIN SPLIT WORKBENCH -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: INTAKE METADATA & TELEMETRY FORM (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Section A: Identity & Classification -->
+<div class="bg-surface-container-lowest p-space-lg rounded border border-surface-container-highest flex flex-col gap-space-md">
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-data-sm text-mono-data-sm text-primary font-semibold">01</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Identity &amp; Taxonomy</h3>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">SPDX Namespace Root</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="modelName">Asset Display Title <span class="text-error">*</span></label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-body-md text-body-md rounded border border-surface-container-highest focus:border-primary-container focus:outline-none transition-colors" id="modelName" oninput="handleNameInput(this.value)" placeholder="e.g. RQ-4 Global Hawk" type="text" value="Heavy Logistics 6x6 Hauler"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="modelSlug">Generated Unique Slug (ID)</label>
+<div class="h-9 px-space-sm bg-surface-container-high text-primary font-mono-data-md text-mono-data-md rounded border border-surface-container-highest flex items-center select-all">
+<span id="modelSlugDisplay">heavy-logistics-6x6-hauler</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="realWorldRef">Real-World / OEM Equivalent</label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-body-md text-body-md rounded border border-surface-container-highest focus:border-primary-container focus:outline-none transition-colors" id="realWorldRef" oninput="updateManifest()" placeholder="e.g. Scania R500 or Bayraktar TB2" type="text" value="Commercial All-Wheel Drive Transport Truck"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="taxonomyCategory">Taxonomy Category <span class="text-error">*</span></label>
+<select class="h-9 px-space-sm bg-surface-container-low text-on-surface font-mono-data-sm text-mono-data-sm rounded border border-surface-container-highest focus:border-primary-container focus:outline-none transition-colors" id="taxonomyCategory" onchange="updateManifest()">
+<option selected="" value="Ground Vehicles">Ground Vehicles (Commercial / Military)</option>
+<option value="Drones / UAS">Drones &amp; Unmanned Aerial Systems (UAS)</option>
+<option value="Aircraft / Fixed Wing">Aircraft &amp; Fixed-Wing Aviation</option>
+<option value="Maritime / Ships">Maritime Vessels &amp; Naval Surfaces</option>
+<option value="Fauna / Animals">Fauna &amp; Biological Endotherms</option>
+<option value="Infrastructure">Industrial Infrastructure &amp; Power</option>
+<option value="Optical Props">Optical Calibration Props &amp; Targets</option>
+</select>
+</div>
+<div class="md:col-span-2 flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="licenceType">Open Permissive Licence <span class="text-error">*</span></label>
+<select class="h-9 px-space-sm bg-surface-container-low text-on-surface font-mono-data-sm text-mono-data-sm rounded border border-surface-container-highest focus:border-primary-container focus:outline-none transition-colors" id="licenceType" onchange="updateManifest()">
+<option selected="" value="CC-BY 4.0 International">Creative Commons Attribution 4.0 (CC-BY 4.0)</option>
+<option value="CC0 1.0 Universal (Public Domain)">CC0 1.0 Universal (Public Domain Dedication)</option>
+<option value="CC-BY-SA 4.0 International">Creative Commons Attribution-ShareAlike (CC-BY-SA 4.0)</option>
+<option value="Author Direct Contribution (Public Domain)">Author Direct Own Work (Explicit Commercial/Research Waiver)</option>
+<option value="MIT Open Asset Licence">MIT License (Open 3D Asset Port)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Section B: Provenance & Attribution -->
+<div class="bg-surface-container-lowest p-space-lg rounded border border-surface-container-highest flex flex-col gap-space-md">
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-data-sm text-mono-data-sm text-primary font-semibold">02</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Provenance &amp; Original Attribution</h3>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Traceability Chain</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="authorName">Original Modeler / Creator Handle <span class="text-error">*</span></label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-body-md text-body-md rounded border border-surface-container-highest focus:border-primary-container focus:outline-none transition-colors" id="authorName" oninput="updateManifest()" placeholder="e.g. JaneDoe / CADForge" type="text" value="MechanicalLab"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="authorUrl">Creator Profile or Portfolio URL</label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-body-md text-body-md rounded border border-surface-container-highest focus:border-primary-container focus:outline-none transition-colors" id="authorUrl" oninput="updateManifest()" placeholder="https://..." type="url" value="https://github.com/mechanicallab"/>
+</div>
+<div class="md:col-span-2 flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="sourceUrl">Upstream Original Source Repository / URL <span class="text-error">*</span></label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-body-md text-body-md rounded border border-surface-container-highest focus:border-primary-container focus:outline-none transition-colors" id="sourceUrl" oninput="updateManifest()" placeholder="e.g. Zenodo DOI, Sketchfab, GitHub repo" type="url" value="https://zenodo.org/records/8410291"/>
+</div>
+<div class="md:col-span-2 flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="modificationsDesc">Summary of Radiometric &amp; Topological Modifications</label>
+<textarea class="p-space-sm bg-surface-container-low text-on-surface font-body-md text-body-md rounded border border-surface-container-highest focus:border-primary-container focus:outline-none transition-colors leading-relaxed" id="modificationsDesc" oninput="updateManifest()" placeholder="Describe vertex decimation, scale calibration, separation of engine block into a dedicated thermodynamic node, and optical emissivity assignments." rows="3">Mesh scale normalized to true 1:1 metric units. Separated solid single hull into 4 distinct physical parts: Chassis Frame, Diesel Powertrain/Exhaust, Reinforced Rubber Tires, and Cab Windshield glass. Radiometric LWIR properties assigned to ASTM E1933 standard materials.</textarea>
+</div>
+</div>
+</div>
+<!-- Section C: Mesh Geometry & Physical Scale -->
+<div class="bg-surface-container-lowest p-space-lg rounded border border-surface-container-highest flex flex-col gap-space-md">
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-data-sm text-mono-data-sm text-primary font-semibold">03</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Mesh Geometry &amp; Scale Invariants</h3>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">SI Metrics (Meters)</span>
+</div>
+<div class="grid grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="dimLength">Length (m)</label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-mono-data-md text-mono-data-md rounded border border-surface-container-highest focus:border-primary-container focus:outline-none" id="dimLength" oninput="updateManifest()" step="0.01" type="number" value="7.85"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="dimWidth">Width (m)</label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-mono-data-md text-mono-data-md rounded border border-surface-container-highest focus:border-primary-container focus:outline-none" id="dimWidth" oninput="updateManifest()" step="0.01" type="number" value="2.55"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="dimHeight">Height (m)</label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-mono-data-md text-mono-data-md rounded border border-surface-container-highest focus:border-primary-container focus:outline-none" id="dimHeight" oninput="updateManifest()" step="0.01" type="number" value="3.10"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="polyCount">Triangle Count (Tris)</label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-mono-data-md text-mono-data-md rounded border border-surface-container-highest focus:border-primary-container focus:outline-none" id="polyCount" oninput="updateManifest()" type="number" value="184200"/>
+</div>
+<div class="flex flex-col justify-end">
+<label class="h-9 px-space-sm bg-surface-container-low rounded border border-surface-container-highest flex items-center gap-space-xs cursor-pointer">
+<input checked="" class="w-4 h-4 rounded bg-surface border border-outline-variant text-primary-container accent-primary-container" id="scaleVerified" onchange="updateManifest()" type="checkbox"/>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface">Verified 1:1 Metric Scale (SI Units)</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Archived Format Distribution Included</span>
+<div class="flex flex-wrap gap-space-md">
+<label class="flex items-center gap-space-xs font-mono-data-sm text-mono-data-sm text-on-surface cursor-pointer">
+<input checked="" class="w-4 h-4 text-primary-container accent-primary-container" id="fmt-glb" onchange="updateManifest()" type="checkbox"/>
+<span>.glb (glTF 2.0 Radiometric)</span>
+</label>
+<label class="flex items-center gap-space-xs font-mono-data-sm text-mono-data-sm text-on-surface cursor-pointer">
+<input checked="" class="w-4 h-4 text-primary-container accent-primary-container" id="fmt-blend" onchange="updateManifest()" type="checkbox"/>
+<span>.blend (Master Scene)</span>
+</label>
+<label class="flex items-center gap-space-xs font-mono-data-sm text-mono-data-sm text-on-surface cursor-pointer">
+<input checked="" class="w-4 h-4 text-primary-container accent-primary-container" id="fmt-usdc" onchange="updateManifest()" type="checkbox"/>
+<span>.usdc (OpenUSD Simulation)</span>
+</label>
+<label class="flex items-center gap-space-xs font-mono-data-sm text-mono-data-sm text-on-surface cursor-pointer">
+<input class="w-4 h-4 text-primary-container accent-primary-container" id="fmt-fbx" onchange="updateManifest()" type="checkbox"/>
+<span>.fbx (Legacy Optical)</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Section D: Thermal Parts Decomposition & Emissivity (Dynamic rows) -->
+<div class="bg-surface-container-lowest p-space-lg rounded border border-surface-container-highest flex flex-col gap-space-md">
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-data-sm text-mono-data-sm text-primary font-semibold">04</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Thermodynamic Sub-Assemblies</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Partitioned mesh parts with assigned ASTM E1933 directional LWIR (8-14 µm) emissivity values.</p>
+</div>
+<button class="h-8 px-space-sm bg-surface-container-high hover:bg-surface-container text-primary font-mono-data-sm text-mono-data-sm rounded border border-primary/30 flex items-center gap-1 transition-colors" onclick="addPartRow()" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span> Add Part
+              </button>
+</div>
+<!-- Table Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-mono-data-sm text-mono-data-sm border-collapse">
+<thead>
+<tr class="text-on-surface-variant border-b border-surface-container-highest bg-surface-container-low">
+<th class="py-2 px-3 font-semibold">Part Node Name</th>
+<th class="py-2 px-3 font-semibold">Material Profile</th>
+<th class="py-2 px-3 font-semibold text-right">LWIR ε (8-14µm)</th>
+<th class="py-2 px-3 font-semibold">Ref Type</th>
+<th class="py-2 px-2 text-center w-10">Act</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest" id="partsTableBody">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-2 px-3">
+<input class="w-full bg-transparent text-on-surface focus:bg-surface-container-high px-1 rounded outline-none" oninput="updateManifest()" type="text" value="chassis_frame_painted"/>
+</td>
+<td class="py-2 px-3">
+<input class="w-full bg-transparent text-on-surface focus:bg-surface-container-high px-1 rounded outline-none" oninput="updateManifest()" type="text" value="Matte Polyurethane Mil-Spec Paint"/>
+</td>
+<td class="py-2 px-3 text-right">
+<input class="w-16 bg-transparent text-primary text-right focus:bg-surface-container-high px-1 rounded outline-none" max="1" min="0" oninput="updateManifest()" step="0.01" type="number" value="0.94"/>
+</td>
+<td class="py-2 px-3">
+<select class="bg-surface-container text-on-surface-variant text-[11px] rounded px-1 py-0.5 border border-surface-container-highest" onchange="updateManifest()">
+<option selected="" value="Lab Measured">ASTM Lab</option>
+<option value="Estimated">Estimated</option>
+<option value="NIST Table">NIST Ref</option>
+</select>
+</td>
+<td class="py-2 px-2 text-center">
+<button class="text-on-surface-variant hover:text-error opacity-60 group-hover:opacity-100" onclick="removePartRow(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-2 px-3">
+<input class="w-full bg-transparent text-on-surface focus:bg-surface-container-high px-1 rounded outline-none" oninput="updateManifest()" type="text" value="engine_exhaust_manifold"/>
+</td>
+<td class="py-2 px-3">
+<input class="w-full bg-transparent text-on-surface focus:bg-surface-container-high px-1 rounded outline-none" oninput="updateManifest()" type="text" value="Oxidized Cast Iron Alloy"/>
+</td>
+<td class="py-2 px-3 text-right">
+<input class="w-16 bg-transparent text-primary text-right focus:bg-surface-container-high px-1 rounded outline-none" max="1" min="0" oninput="updateManifest()" step="0.01" type="number" value="0.82"/>
+</td>
+<td class="py-2 px-3">
+<select class="bg-surface-container text-on-surface-variant text-[11px] rounded px-1 py-0.5 border border-surface-container-highest" onchange="updateManifest()">
+<option value="Lab Measured">ASTM Lab</option>
+<option value="Estimated">Estimated</option>
+<option selected="" value="NIST Table">NIST Ref</option>
+</select>
+</td>
+<td class="py-2 px-2 text-center">
+<button class="text-on-surface-variant hover:text-error opacity-60 group-hover:opacity-100" onclick="removePartRow(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-2 px-3">
+<input class="w-full bg-transparent text-on-surface focus:bg-surface-container-high px-1 rounded outline-none" oninput="updateManifest()" type="text" value="tires_vulcanized_rubber"/>
+</td>
+<td class="py-2 px-3">
+<input class="w-full bg-transparent text-on-surface focus:bg-surface-container-high px-1 rounded outline-none" oninput="updateManifest()" type="text" value="Carbon-Black Reinforced Elastomer"/>
+</td>
+<td class="py-2 px-3 text-right">
+<input class="w-16 bg-transparent text-primary text-right focus:bg-surface-container-high px-1 rounded outline-none" max="1" min="0" oninput="updateManifest()" step="0.01" type="number" value="0.95"/>
+</td>
+<td class="py-2 px-3">
+<select class="bg-surface-container text-on-surface-variant text-[11px] rounded px-1 py-0.5 border border-surface-container-highest" onchange="updateManifest()">
+<option selected="" value="Lab Measured">ASTM Lab</option>
+<option value="Estimated">Estimated</option>
+<option value="NIST Table">NIST Ref</option>
+</select>
+</td>
+<td class="py-2 px-2 text-center">
+<button class="text-on-surface-variant hover:text-error opacity-60 group-hover:opacity-100" onclick="removePartRow(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-2 px-3">
+<input class="w-full bg-transparent text-on-surface focus:bg-surface-container-high px-1 rounded outline-none" oninput="updateManifest()" type="text" value="windshield_glass"/>
+</td>
+<td class="py-2 px-3">
+<input class="w-full bg-transparent text-on-surface focus:bg-surface-container-high px-1 rounded outline-none" oninput="updateManifest()" type="text" value="Laminated Silicate Glass (LWIR Opaque)"/>
+</td>
+<td class="py-2 px-3 text-right">
+<input class="w-16 bg-transparent text-primary text-right focus:bg-surface-container-high px-1 rounded outline-none" max="1" min="0" oninput="updateManifest()" step="0.01" type="number" value="0.91"/>
+</td>
+<td class="py-2 px-3">
+<select class="bg-surface-container text-on-surface-variant text-[11px] rounded px-1 py-0.5 border border-surface-container-highest" onchange="updateManifest()">
+<option value="Lab Measured">ASTM Lab</option>
+<option value="Estimated">Estimated</option>
+<option selected="" value="NIST Table">NIST Ref</option>
+</select>
+</td>
+<td class="py-2 px-2 text-center">
+<button class="text-on-surface-variant hover:text-error opacity-60 group-hover:opacity-100" onclick="removePartRow(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Section E: Hosting & Mirror Links -->
+<div class="bg-surface-container-lowest p-space-lg rounded border border-surface-container-highest flex flex-col gap-space-md">
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-data-sm text-mono-data-sm text-primary font-semibold">05</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Volumetric Archive Hosting Mirrors</h3>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-tertiary">Zero Ingestion Hosting Cost</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Because Git repos struggle with binaries &gt; 50MB, our ingest pipeline references immutable DOI archives. Host your full-resolution 3D archive (.zip containing .glb, textures &amp; .blend) on free scientific repositories:
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="mirrorZenodo">Zenodo Archive DOI / URL</label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-mono-data-md text-mono-data-md rounded border border-surface-container-highest focus:border-primary-container focus:outline-none" id="mirrorZenodo" oninput="updateManifest()" placeholder="https://doi.org/10.5281/zenodo..." type="url" value="https://doi.org/10.5281/zenodo.10849204"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" for="mirrorHF">Hugging Face Dataset URL</label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-mono-data-md text-mono-data-md rounded border border-surface-container-highest focus:border-primary-container focus:outline-none" id="mirrorHF" oninput="updateManifest()" placeholder="https://huggingface.co/datasets/..." type="url" value="https://huggingface.co/datasets/IR-Model-Zoo/logistics-6x6"/>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: LIVE MANIFEST & ISSUE GENERATOR (Sticky HUD, 5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md lg:sticky lg:top-20">
+<!-- Diagnostic Telemetry Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded border border-surface-container-highest flex flex-col gap-space-md shadow-xl">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container-highest">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" id="manifestPulse"></span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface font-semibold">MANIFEST TELEMETRY</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-primary px-space-xs py-0.5 rounded bg-surface-container-high" id="auditVerdictBadge">
+                VALIDATION: PASSED
+              </span>
+</div>
+<!-- Radiometric Ingestion Visual Target Mockup -->
+<div class="relative w-full h-44 bg-surface-container-low rounded border border-surface-container-highest overflow-hidden flex items-center justify-center group">
+<!-- Grid Matrix overlay -->
+<div class="absolute inset-0 opacity-15 pointer-events-none" style="background-image: radial-gradient(#d8c3ad 1px, transparent 1px); background-size: 16px 16px;"></div>
+<!-- Reticle Corner Marks -->
+<span class="absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-primary/70 pointer-events-none"></span>
+<span class="absolute top-2 right-2 w-2 h-2 border-t-2 border-r-2 border-primary/70 pointer-events-none"></span>
+<span class="absolute bottom-2 left-2 w-2 h-2 border-b-2 border-l-2 border-primary/70 pointer-events-none"></span>
+<span class="absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-primary/70 pointer-events-none"></span>
+<!-- Mock Wireframe / Radiometric Sensor View -->
+<div class="flex flex-col items-center gap-1 text-center z-10">
+<span class="material-symbols-outlined text-[36px] text-primary">view_in_ar</span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface font-medium" id="hudAssetTitle">heavy-logistics-6x6-hauler</span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant" id="hudAssetMetrics">184,200 Tris • 4 Physical Nodes • 7.85m</span>
+</div>
+<!-- Corner telemetry HUD -->
+<div class="absolute bottom-2 left-3 font-mono-data-sm text-[10px] text-tertiary">
+                LWIR: 8-14µm OK
+              </div>
+<div class="absolute bottom-2 right-3 font-mono-data-sm text-[10px] text-primary">
+                RAD-AUDIT PASS
+              </div>
+</div>
+<!-- Issue Actions CTA Block -->
+<div class="flex flex-col gap-space-xs">
+<a class="h-10 px-space-md bg-primary-container hover:bg-secondary-container text-on-primary-container font-headline-sm text-headline-sm font-semibold rounded flex items-center justify-center gap-space-xs transition-colors shadow-md" href="#" id="githubSubmitLink" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Open Prefilled GitHub Issue →</span>
+</a>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="h-9 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-mono-data-sm text-mono-data-sm rounded border border-surface-container-highest flex items-center justify-center gap-1 transition-colors" onclick="copyMarkdownManifest()" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span id="copyBtnText">Copy Markdown</span>
+</button>
+<button class="h-9 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-mono-data-sm text-mono-data-sm rounded border border-surface-container-highest flex items-center justify-center gap-1 transition-colors" onclick="downloadJsonSnippet()" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>JSON Snippet</span>
+</button>
+</div>
+</div>
+<!-- Live Compiled Markdown Issue Preview -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-mono-data-sm text-mono-data-sm text-on-surface-variant">
+<span>Real-Time Issue Body Preview</span>
+<span class="text-tertiary">#issues/new</span>
+</div>
+<div class="relative">
+<pre class="w-full h-72 p-space-sm bg-surface-container-lowest text-on-surface-variant font-mono-data-sm text-[11px] leading-tight rounded border border-surface-container-highest overflow-y-auto select-all whitespace-pre-wrap font-mono" id="markdownPreview">### Model Submission Manifest
+Loading manifest preview...</pre>
+</div>
+</div>
+</div>
+<!-- Quick Pipeline Instructions Pill -->
+<div class="p-space-md bg-surface-container-low rounded border border-surface-container-highest flex flex-col gap-space-xs font-mono-data-sm text-mono-data-sm">
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">info</span> Ingestion SLA &amp; Review Protocol
+            </span>
+<p class="text-on-surface-variant">
+              Automated GitHub Action will run <code class="text-tertiary bg-surface-container px-1 py-0.5 rounded">glTF-Validator</code> and check texture boundary sizes on submission. Human maintainers review radiometric material emissivity plausibility within 48 hours.
+            </p>
+</div>
+</div>
+</div>
+<!-- ALTERNATIVE INGESTION WORKFLOW & POLICY (FULL WIDTH BAR) -->
+<div class="bg-surface-container-lowest p-space-lg rounded border border-surface-container-highest grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Prefer Git CLI &amp; Direct Pull Request?</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Power contributors can bypass the issue generator. Fork <code class="text-tertiary bg-surface-container px-1.5 py-0.5 rounded font-mono-data-sm text-mono-data-sm">ir-model-zoo/models</code>, copy thumb renders to <code class="text-on-surface bg-surface-container px-1 py-0.5 rounded font-mono-data-sm text-mono-data-sm">/models/&lt;slug&gt;/</code>, append your JSON record to <code class="text-on-surface bg-surface-container px-1 py-0.5 rounded font-mono-data-sm text-mono-data-sm">data/models.json</code>, and trigger the PR branch audit.
+          </p>
+<div class="mt-space-xs flex items-center gap-space-sm font-mono-data-sm text-mono-data-sm">
+<a class="text-primary hover:underline flex items-center gap-1" href="https://github.com" rel="noreferrer" target="_blank">
+<span>View Repository Contribution Spec</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[20px]">policy</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Large File Storage (&gt;50MB) Policy</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Never commit raw multi-gigabyte simulation geometries directly into GitHub tree commits. Use our official automated Zenodo DOI hook or Hugging Face Hub dataset sync. We mirror immutable copies on decentralized Arweave scientific vaults.
+          </p>
+<div class="mt-space-xs flex items-center gap-space-sm font-mono-data-sm text-mono-data-sm">
+<a class="text-tertiary hover:underline flex items-center gap-1" data-path="licences-and-criteria" href="#">
+<span>Read Takedown &amp; Provenance Protocol</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SCRIPT ENGINE FOR REAL-TIME TELEMETRY ISSUE GENERATOR -->
+<script>
+    function slugify(text) {
+      return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
+    }
+
+    function handleNameInput(val) {
+      const slug = slugify(val) || 'unnamed-model';
+      document.getElementById('modelSlugDisplay').innerText = slug;
+      document.getElementById('hudAssetTitle').innerText = slug;
+      updateManifest();
+    }
+
+    function addPartRow() {
+      const tbody = document.getElementById('partsTableBody');
+      const tr = document.createElement('tr');
+      tr.className = 'hover:bg-surface-container-low transition-colors group';
+      tr.innerHTML = `
+        <td class="py-2 px-3">
+          <input type="text" value="sensor_optical_pod" oninput="updateManifest()" class="w-full bg-transparent text-on-surface focus:bg-surface-container-high px-1 rounded outline-none" />
+        </td>
+        <td class="py-2 px-3">
+          <input type="text" value="Germanium Lens Coating (AR LWIR)" oninput="updateManifest()" class="w-full bg-transparent text-on-surface focus:bg-surface-container-high px-1 rounded outline-none" />
+        </td>
+        <td class="py-2 px-3 text-right">
+          <input type="number" step="0.01" min="0" max="1" value="0.08" oninput="updateManifest()" class="w-16 bg-transparent text-primary text-right focus:bg-surface-container-high px-1 rounded outline-none" />
+        </td>
+        <td class="py-2 px-3">
+          <select onchange="updateManifest()" class="bg-surface-container text-on-surface-variant text-[11px] rounded px-1 py-0.5 border border-surface-container-highest">
+            <option value="Lab Measured" selected>ASTM Lab</option>
+            <option value="Estimated">Estimated</option>
+            <option value="NIST Table">NIST Ref</option>
+          </select>
+        </td>
+        <td class="py-2 px-2 text-center">
+          <button type="button" onclick="removePartRow(this)" class="text-on-surface-variant hover:text-error opacity-60 group-hover:opacity-100">
+            <span class="material-symbols-outlined text-[16px]">close</span>
+          </button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+      updateManifest();
+    }
+
+    function removePartRow(btn) {
+      const row = btn.closest('tr');
+      if (document.querySelectorAll('#partsTableBody tr').length > 1) {
+        row.remove();
+        updateManifest();
+      } else {
+        alert('Model requires at least one thermodynamic sub-assembly part.');
+      }
+    }
+
+    function getPartsData() {
+      const rows = document.querySelectorAll('#partsTableBody tr');
+      const parts = [];
+      rows.forEach(r => {
+        const inputs = r.querySelectorAll('input');
+        const select = r.querySelector('select');
+        if (inputs.length >= 3) {
+          parts.push({
+            name: inputs[0].value.trim(),
+            material: inputs[1].value.trim(),
+            emissivity: parseFloat(inputs[2].value) || 0.90,
+            refType: select ? select.value : 'Estimated'
+          });
+        }
+      });
+      return parts;
+    }
+
+    function updateManifest() {
+      // Check criteria gates
+      const c1 = document.getElementById('check-licence').checked;
+      const c2 = document.getElementById('check-decomp').checked;
+      const c3 = document.getElementById('check-emissivity').checked;
+      const c4 = document.getElementById('check-renders').checked;
+      const totalChecks = [c1, c2, c3, c4].filter(Boolean).length;
+
+      const countBadge = document.getElementById('criteriaCount');
+      if (countBadge) {
+        countBadge.innerText = `${totalChecks} / 4 Complete`;
+        countBadge.className = totalChecks === 4 ? 'text-primary font-semibold' : 'text-error font-semibold';
+      }
+
+      const pulse = document.getElementById('manifestPulse');
+      const verdict = document.getElementById('auditVerdictBadge');
+      if (totalChecks === 4) {
+        if (pulse) pulse.className = 'w-2.5 h-2.5 rounded-full bg-primary animate-pulse';
+        if (verdict) {
+          verdict.innerText = 'VALIDATION: PASSED';
+          verdict.className = 'font-label-caps text-label-caps uppercase text-primary px-space-xs py-0.5 rounded bg-surface-container-high';
+        }
+      } else {
+        if (pulse) pulse.className = 'w-2.5 h-2.5 rounded-full bg-error';
+        if (verdict) {
+          verdict.innerText = `HOLD: ${4 - totalChecks} GATES PENDING`;
+          verdict.className = 'font-label-caps text-label-caps uppercase text-error px-space-xs py-0.5 rounded bg-surface-container-high';
+        }
+      }
+
+      // Gather input values
+      const name = document.getElementById('modelName').value || 'Unnamed Asset';
+      const slug = document.getElementById('modelSlugDisplay').innerText || 'unnamed-model';
+      const realRef = document.getElementById('realWorldRef').value || 'Unspecified';
+      const category = document.getElementById('taxonomyCategory').value;
+      const licence = document.getElementById('licenceType').value;
+
+      const authorName = document.getElementById('authorName').value || 'Anonymous';
+      const authorUrl = document.getElementById('authorUrl').value || 'N/A';
+      const sourceUrl = document.getElementById('sourceUrl').value || 'N/A';
+      const modifications = document.getElementById('modificationsDesc').value || 'None specified.';
+
+      const dimL = document.getElementById('dimLength').value;
+      const dimW = document.getElementById('dimWidth').value;
+      const dimH = document.getElementById('dimHeight').value;
+      const tris = parseInt(document.getElementById('polyCount').value, 10).toLocaleString();
+
+      const fmts = [];
+      if (document.getElementById('fmt-glb').checked) fmts.push('.glb');
+      if (document.getElementById('fmt-blend').checked) fmts.push('.blend');
+      if (document.getElementById('fmt-usdc').checked) fmts.push('.usdc');
+      if (document.getElementById('fmt-fbx').checked) fmts.push('.fbx');
+
+      const parts = getPartsData();
+
+      const zenodo = document.getElementById('mirrorZenodo').value || 'Pending';
+      const hf = document.getElementById('mirrorHF').value || 'Pending';
+
+      // Update HUD metrics
+      const hudMetrics = document.getElementById('hudAssetMetrics');
+      if (hudMetrics) {
+        hudMetrics.innerText = `${tris} Tris • ${parts.length} Physical Nodes • ${dimL}m`;
+      }
+
+      // Generate Markdown Table for parts
+      let partsTableMarkdown = '| Part Node Identifier | Material Composition | LWIR ε (8-14µm) | ASTM Reference |\n|---|---|---|---|\n';
+      parts.forEach(p => {
+        partsTableMarkdown += `| \`${p.name}\` | ${p.material} | \`${p.emissivity.toFixed(2)}\` | ${p.refType} |\n`;
+      });
+
+      // Format complete GitHub Issue Markdown
+      const issueMarkdown = `### Model Submission Manifest
+
+#### 1. Identity & Classification
+- **Display Title:** ${name}
+- **Unique Model Slug:** \`${slug}\`
+- **Real-World / Hardware Equivalent:** ${realRef}
+- **Taxonomy Group:** ${category}
+- **Licence (SPDX):** ${licence}
+
+#### 2. Provenance & Attribution
+- **Original Modeler / Author:** [${authorName}](${authorUrl})
+- **Upstream Source Repository / URL:** ${sourceUrl}
+- **Topological & Physical Modifications:**
+> ${modifications}
+
+#### 3. Metric Invariants & Geometry
+- **SI Dimensions:** ${dimL}m (L) × ${dimW}m (W) × ${dimH}m (H)
+- **Polygon Resolution:** ${tris} Triangles
+- **Scale Standard:** 1:1 Ground Verified (SI Metres)
+- **Included Archives:** ${fmts.join(', ')}
+
+#### 4. Thermodynamic Sub-Assemblies & LWIR Emissivity
+${partsTableMarkdown}
+#### 5. Storage & Mirror Archives
+- **Zenodo DOI:** ${zenodo}
+- **Hugging Face Hub:** ${hf}
+
+#### Intake Audit Checklist:
+- [x] Permissive open licence confirmed (no NC / ND clauses)
+- [x] Part nodes separated for independent thermal state injection
+- [x] ASTM E1933 LWIR directional emissivity mapped
+- [x] RGB visible, White-Hot thermal, and Wireframe stills included
+
+_Generated deterministically by IR Model Zoo Submission Suite v2.4._`;
+
+      const previewEl = document.getElementById('markdownPreview');
+      if (previewEl) {
+        previewEl.innerText = issueMarkdown;
+      }
+
+      // Update GitHub Issue URL
+      const issueTitle = encodeURIComponent(`[NEW MODEL]: ${name} (${slug})`);
+      const issueBody = encodeURIComponent(issueMarkdown);
+      const ghBtn = document.getElementById('githubSubmitLink');
+      if (ghBtn) {
+        ghBtn.href = `https://github.com/ir-model-zoo/models/issues/new?title=${issueTitle}&body=${issueBody}`;
+      }
+    }
+
+    function copyMarkdownManifest() {
+      const text = document.getElementById('markdownPreview').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btnText = document.getElementById('copyBtnText');
+        const orig = btnText.innerText;
+        btnText.innerText = 'Copied!';
+        setTimeout(() => { btnText.innerText = orig; }, 2000);
+      });
+    }
+
+    function downloadJsonSnippet() {
+      const name = document.getElementById('modelName').value;
+      const slug = document.getElementById('modelSlugDisplay').innerText;
+      const realRef = document.getElementById('realWorldRef').value;
+      const category = document.getElementById('taxonomyCategory').value;
+      const licence = document.getElementById('licenceType').value;
+      const authorName = document.getElementById('authorName').value;
+      const authorUrl = document.getElementById('authorUrl').value;
+      const sourceUrl = document.getElementById('sourceUrl').value;
+      const dimL = parseFloat(document.getElementById('dimLength').value);
+      const dimW = parseFloat(document.getElementById('dimWidth').value);
+      const dimH = parseFloat(document.getElementById('dimHeight').value);
+      const tris = parseInt(document.getElementById('polyCount').value, 10);
+      const parts = getPartsData();
+      const zenodo = document.getElementById('mirrorZenodo').value;
+      const hf = document.getElementById('mirrorHF').value;
+
+      const jsonObj = {
+        id: slug,
+        title: name,
+        taxonomy: category,
+        hardware_ref: realRef,
+        licence: licence,
+        attribution: {
+          author: authorName,
+          author_url: authorUrl,
+          source_url: sourceUrl
+        },
+        geometry: {
+          dimensions_meters: { length: dimL, width: dimW, height: dimH },
+          triangles: tris,
+          scale: "1:1"
+        },
+        thermodynamic_nodes: parts,
+        mirrors: {
+          zenodo: zenodo,
+          huggingface: hf
+        },
+        schema_version: "2.4.0"
+      };
+
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(jsonObj, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `${slug}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    }
+
+    // Initialize telemetry
+    document.addEventListener('DOMContentLoaded', () => {
+      updateManifest();
+    });
+    // Fallback invocation in case DOMContentLoaded already fired
+    updateManifest();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant mt-auto"><div class="w-full px-gutter py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg mb-space-lg"><div class="md:col-span-7 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Scientific Telemetry Data Portal</span><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Static Pages Build</span></div><p class="font-body-md text-body-md text-on-surface">IR Model Zoo — Curated open radiometric 3D assets for thermal camera simulation, perception datasets &amp; optical sensor engineering.</p><p class="font-body-sm text-body-sm text-on-surface-variant">All 3D airframes, vehicles and geometry remain the intellectual property of their original creators under open attribution licences. Modified for physical LWIR (8-14 µm) radiometric simulation.</p></div><div class="md:col-span-5 flex flex-col justify-between gap-space-md"><div class="flex flex-wrap gap-x-space-md gap-y-space-xs font-mono-data-sm text-mono-data-sm"><a class="text-on-surface-variant hover:text-primary transition-colors" href="https://github.com" rel="noreferrer" target="_blank">GitHub Repo</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="about-and-methodology" href="#">Main IR Simulator Project</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="licences-and-criteria" href="#">Licences &amp; Compliance</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="licences-and-criteria" href="#">Takedown &amp; Provenance Policy</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="https://zenodo.org" rel="noreferrer" target="_blank">Zenodo Community</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="contribute" href="#">Contact</a></div><div class="p-space-sm bg-surface-container-low rounded flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs font-mono-data-sm text-mono-data-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">verified_user</span><span>Zero-tracking, zero-cookie, static GitHub Pages guarantee stamp.</span></div><span class="font-label-caps text-label-caps text-tertiary uppercase">RAD-PASS</span></div></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md font-mono-data-sm text-mono-data-sm text-on-surface-variant"><div class="flex items-center gap-space-sm"><span>© 2025 IR Model Zoo Contributors</span><span>•</span><span>Radiometric Calibration: ASTM E1311</span></div><div><span>LWIR Standard Verification Protocol v2.4</span></div></div></div></footer></body></html>

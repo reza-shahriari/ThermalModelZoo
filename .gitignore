@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+# Model files are hosted externally (Releases / Hugging Face / Zenodo), never committed.
+*.blend
+*.blend1
+*.usd
+*.usda
+*.usdc
+*.usdz
+*.fbx
+*.obj
+*.stl
+*.step
+*.stp
+*.glb
+*.gltf
+*.zip
