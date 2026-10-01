@@ -8,6 +8,8 @@ It is plain HTML, CSS and JavaScript with no build step and no backend, so it ru
 The images and descriptions live in this repository; the large model files (`.blend`, `.usdc`, `.fbx`, `.glb`)
 are hosted on free external storage (GitHub Releases, Hugging Face, Zenodo, Drive) and linked from each page.
 
+> **Live site:** https://reza-shahriari.github.io/ThermalModelZoo/
+
 > The three entries currently in `data/models.json` are **placeholders** (marked `"demo": true`) that show the
 > layout. Delete them once real models are added.
 
@@ -67,4 +69,10 @@ Settings → Pages → Deploy from branch `main`, folder `/ (root)`. Links are r
 
 ## Licence
 
-Models keep their authors' licences, shown on each page. A licence for this site's own code and text has not been chosen yet.
+The site's own code and text (HTML, CSS, JavaScript, tools and documentation) are released under the
+[MIT License](LICENSE).
+
+**Models are not covered by it.** Every model keeps its author's licence (CC0, CC-BY, CC-BY-SA, or the
+contributor's own CC0/CC-BY release), shown on its page and in `data/models.json`. The images in
+`models/<id>/` are renders of those models and carry the same licence and credit. The Stitch design export
+under `design/` is included as design reference.
