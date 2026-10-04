@@ -45,14 +45,23 @@
         {"file": "emissivity.webp", "kind": "emissivity", "caption": "LWIR emissivity per surface, 8-14 µm (black 0.7, white 1.0)"}
       ],
       "parts": [
-        {"name": "Arm (x4)", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
+        {"name": "Arm front left", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
+        {"name": "Arm front right", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
+        {"name": "Arm rear left", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
+        {"name": "Arm rear right", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
         {"name": "Battery", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
         {"name": "Camera lens", "material": "glass windshield", "emissivity": 0.88, "source": "reference", "note": ""},
         {"name": "Electronics", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
         {"name": "Fuselage", "material": "polycarbonate dark grey 100 %, aluminium anodised 0 %", "emissivity": 0.94, "source": "estimated", "note": "area-weighted over 2 materials; the top canopy is 80 % opaque in the source model (the artist ghosted it to show the internals) -- the real canopy, and the infrared material, are opaque"},
         {"name": "Gimbal camera", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
-        {"name": "Motor (x4)", "material": "aluminium anodised 84 %, polycarbonate dark grey 16 %", "emissivity": 0.86, "source": "estimated", "note": "area-weighted over 2 materials"},
-        {"name": "Propeller (x4)", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""}
+        {"name": "Motor front left", "material": "aluminium anodised 86 %, polycarbonate dark grey 14 %", "emissivity": 0.86, "source": "estimated", "note": "area-weighted over 2 materials"},
+        {"name": "Motor front right", "material": "aluminium anodised 86 %, polycarbonate dark grey 14 %", "emissivity": 0.86, "source": "estimated", "note": "area-weighted over 2 materials"},
+        {"name": "Motor rear left", "material": "aluminium anodised 82 %, polycarbonate dark grey 18 %", "emissivity": 0.86, "source": "estimated", "note": "area-weighted over 2 materials"},
+        {"name": "Motor rear right", "material": "aluminium anodised 82 %, polycarbonate dark grey 18 %", "emissivity": 0.86, "source": "estimated", "note": "area-weighted over 2 materials"},
+        {"name": "Propeller front left", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""},
+        {"name": "Propeller front right", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""},
+        {"name": "Propeller rear left", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""},
+        {"name": "Propeller rear right", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""}
       ],
       "downloads": [
         {"format": "blend", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-fpv/dji-fpv.blend", "host": "GitHub Releases", "size_mb": 9.8, "sha256": "fc5837e60741accc56890b9bf7227c236bd54866b105dbab92eaab0a507440be"},
@@ -66,37 +75,49 @@
       "real_name": "",
       "category": "drones",
       "subcategory": "FPV",
-      "summary": "DJI's ducted cinewhoop, split into propellers, motors, braces, ducts, frame, chassis, battery and camera, each with an infrared material.",
+      "summary": "DJI's ducted cinewhoop, split into four propellers, four ducts, motors, braces, frame, chassis, battery and camera, each with an infrared material.",
       "licence": "CC-BY-4.0",
       "author": "raphael.harris.gaffga",
       "author_url": "",
       "source_url": "https://sketchfab.com/3d-models/dji-avata2-e27ed758e2174a89a48368e84027f8d9",
-      "changes": "Rescaled to metres, regrouped into functional parts, renamed, and re-exported to USD/FBX; materials remapped onto an infrared material library. A modified derivative, not the original.",
+      "changes": "Rescaled to metres, welded at its texture seams, the one-piece guard moulding cut into a duct per propeller, regrouped into functional parts, renamed, and re-exported to USD/FBX; materials remapped onto an infrared material library. A modified derivative, not the original.",
       "dimensions_m": [0.212, 0.184, 0.064],
-      "triangles": 200571,
+      "triangles": 201619,
       "date_added": "2026-10-04",
       "thumb": "thumb.webp",
       "images": [
         {"file": "beauty.webp", "kind": "beauty", "caption": "Beauty render"},
-        {"file": "wireframe.webp", "kind": "wireframe", "caption": "Functional parts, one colour each (20 parts)"},
+        {"file": "wireframe.webp", "kind": "wireframe", "caption": "Functional parts, one colour each (22 parts)"},
         {"file": "emissivity.webp", "kind": "emissivity", "caption": "LWIR emissivity per surface, 8-14 µm (black 0.7, white 1.0)"}
       ],
       "parts": [
-        {"name": "Arm (x4)", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
+        {"name": "Arm front left", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
+        {"name": "Arm front right", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
+        {"name": "Arm rear left", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
+        {"name": "Arm rear right", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
         {"name": "Battery", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
         {"name": "Camera lens", "material": "glass windshield", "emissivity": 0.88, "source": "reference", "note": ""},
         {"name": "Chassis", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
-        {"name": "Duct (x2)", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
+        {"name": "Duct front left", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
+        {"name": "Duct front right", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
+        {"name": "Duct rear left", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
+        {"name": "Duct rear right", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
         {"name": "Frame", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
         {"name": "Fuselage", "material": "pet black 98 %, glass windshield 1 %, aluminium anodised 0 %, +1 more", "emissivity": 0.94, "source": "estimated", "note": "area-weighted over 4 materials"},
         {"name": "Gimbal camera", "material": "aluminium anodised 66 %, pet black 32 %, polycarbonate light grey 2 %", "emissivity": 0.88, "source": "estimated", "note": "area-weighted over 3 materials"},
-        {"name": "Motor (x4)", "material": "pet black 78 %, aluminium anodised 22 %", "emissivity": 0.92, "source": "reference", "note": "area-weighted over 2 materials"},
-        {"name": "Propeller (x4)", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""}
+        {"name": "Motor front left", "material": "pet black 78 %, aluminium anodised 22 %", "emissivity": 0.92, "source": "reference", "note": "area-weighted over 2 materials"},
+        {"name": "Motor front right", "material": "pet black 78 %, aluminium anodised 22 %", "emissivity": 0.92, "source": "reference", "note": "area-weighted over 2 materials"},
+        {"name": "Motor rear left", "material": "pet black 78 %, aluminium anodised 22 %", "emissivity": 0.92, "source": "reference", "note": "area-weighted over 2 materials"},
+        {"name": "Motor rear right", "material": "pet black 78 %, aluminium anodised 22 %", "emissivity": 0.92, "source": "reference", "note": "area-weighted over 2 materials"},
+        {"name": "Propeller front left", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""},
+        {"name": "Propeller front right", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""},
+        {"name": "Propeller rear left", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""},
+        {"name": "Propeller rear right", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""}
       ],
       "downloads": [
-        {"format": "blend", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-avata-2/dji-avata-2.blend", "host": "GitHub Releases", "size_mb": 54.9, "sha256": "2e0d0881fd2416f5ef1690b63747005d4d236cff9eb7d80361e2a381b1af2b1e"},
-        {"format": "fbx.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-avata-2/dji-avata-2.fbx.zip", "host": "GitHub Releases", "size_mb": 20.7, "sha256": "7f4e9a7a428e4d0cda9eba51732948293fe4400bd43dee728f0a511b174ad9c5"},
-        {"format": "usdc.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-avata-2/dji-avata-2.usdc.zip", "host": "GitHub Releases", "size_mb": 46.3, "sha256": "0e7915ea303e58fe42be26ad0def038373d76c0d5611563f01dec17e3c57fbe8"}
+        {"format": "blend", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-avata-2/dji-avata-2.blend", "host": "GitHub Releases", "size_mb": 54.8, "sha256": "639a10475c78762e4ec9fd1e6e313d52a27950da316a2731a76679aacc78fd49"},
+        {"format": "fbx.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-avata-2/dji-avata-2.fbx.zip", "host": "GitHub Releases", "size_mb": 20.8, "sha256": "4ce22955c3c07f5c2cd4b149b477c8f1b710e0eb862e308824241fdeb56aaaa7"},
+        {"format": "usdc.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-avata-2/dji-avata-2.usdc.zip", "host": "GitHub Releases", "size_mb": 46.3, "sha256": "3a5e8ce45694f45eb179e27497f008aa7bde5de6c1ea00bbb93150604f4f4f7f"}
       ]
     },
     {
