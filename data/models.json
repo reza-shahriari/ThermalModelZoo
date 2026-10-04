@@ -24,6 +24,80 @@
   ],
   "models": [
     {
+      "id": "dji-fpv",
+      "name": "DJI FPV",
+      "real_name": "",
+      "category": "drones",
+      "subcategory": "FPV",
+      "summary": "DJI's first FPV racer, levelled and split into propellers, motors, arms, battery, electronics and camera, each with an infrared material.",
+      "licence": "CC-BY-4.0",
+      "author": "Polyman_3D",
+      "author_url": "",
+      "source_url": "https://sketchfab.com/3d-models/dji-fpv-7c5346e50ffb4e8c9ac12cb0847be39a",
+      "changes": "Rescaled from millimetres to metres, levelled from the 36 deg nose-down flight pose the artist gave it, regrouped into functional parts, renamed, and re-exported to USD/FBX; materials remapped onto an infrared material library. A modified derivative, not the original.",
+      "dimensions_m": [0.33, 0.241, 0.137],
+      "triangles": 112937,
+      "date_added": "2026-10-04",
+      "thumb": "thumb.webp",
+      "images": [
+        {"file": "beauty.webp", "kind": "beauty", "caption": "Beauty render"},
+        {"file": "wireframe.webp", "kind": "wireframe", "caption": "Functional parts, one colour each (17 parts)"},
+        {"file": "emissivity.webp", "kind": "emissivity", "caption": "LWIR emissivity per surface, 8-14 µm (black 0.7, white 1.0)"}
+      ],
+      "parts": [
+        {"name": "Arm (x4)", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
+        {"name": "Battery", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
+        {"name": "Camera lens", "material": "glass windshield", "emissivity": 0.88, "source": "reference", "note": ""},
+        {"name": "Electronics", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
+        {"name": "Fuselage", "material": "polycarbonate dark grey 100 %, aluminium anodised 0 %", "emissivity": 0.94, "source": "estimated", "note": "area-weighted over 2 materials; the top canopy is 80 % opaque in the source model (the artist ghosted it to show the internals) -- the real canopy, and the infrared material, are opaque"},
+        {"name": "Gimbal camera", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
+        {"name": "Motor (x4)", "material": "aluminium anodised 84 %, polycarbonate dark grey 16 %", "emissivity": 0.86, "source": "estimated", "note": "area-weighted over 2 materials"},
+        {"name": "Propeller (x4)", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""}
+      ],
+      "downloads": [
+        {"format": "blend", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-fpv/dji-fpv.blend", "host": "GitHub Releases", "size_mb": 9.8, "sha256": "fc5837e60741accc56890b9bf7227c236bd54866b105dbab92eaab0a507440be"},
+        {"format": "fbx.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-fpv/dji-fpv.fbx.zip", "host": "GitHub Releases", "size_mb": 14.4, "sha256": "71322ce8321beef3ee9cef72d752f7f5e8ae90328f706f56f5e74570cd3aa50f"},
+        {"format": "usdc.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-fpv/dji-fpv.usdc.zip", "host": "GitHub Releases", "size_mb": 11.0, "sha256": "43f65974dd15b060c5679dc6bbc98e0b90a7a9045dde452629740024bd6efe2a"}
+      ]
+    },
+    {
+      "id": "dji-avata-2",
+      "name": "DJI Avata 2",
+      "real_name": "",
+      "category": "drones",
+      "subcategory": "FPV",
+      "summary": "DJI's ducted cinewhoop, split into propellers, motors, ducts, chassis, battery and camera, each with an infrared material.",
+      "licence": "CC-BY-4.0",
+      "author": "raphael.harris.gaffga",
+      "author_url": "",
+      "source_url": "https://sketchfab.com/3d-models/dji-avata2-e27ed758e2174a89a48368e84027f8d9",
+      "changes": "Rescaled to metres, regrouped into functional parts, renamed, and re-exported to USD/FBX; materials remapped onto an infrared material library. A modified derivative, not the original.",
+      "dimensions_m": [0.212, 0.184, 0.064],
+      "triangles": 200571,
+      "date_added": "2026-10-04",
+      "thumb": "thumb.webp",
+      "images": [
+        {"file": "beauty.webp", "kind": "beauty", "caption": "Beauty render"},
+        {"file": "wireframe.webp", "kind": "wireframe", "caption": "Functional parts, one colour each (16 parts)"},
+        {"file": "emissivity.webp", "kind": "emissivity", "caption": "LWIR emissivity per surface, 8-14 µm (black 0.7, white 1.0)"}
+      ],
+      "parts": [
+        {"name": "Arm (x2)", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
+        {"name": "Battery", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
+        {"name": "Camera lens", "material": "glass windshield", "emissivity": 0.88, "source": "reference", "note": ""},
+        {"name": "Duct (x2)", "material": "pet black", "emissivity": 0.94, "source": "reference", "note": ""},
+        {"name": "Fuselage", "material": "pet black 94 %, aluminium anodised 5 %, polycarbonate light grey 0 %, +1 more", "emissivity": 0.94, "source": "estimated", "note": "area-weighted over 4 materials"},
+        {"name": "Gimbal camera", "material": "aluminium anodised 97 %, polycarbonate light grey 3 %", "emissivity": 0.85, "source": "estimated", "note": "area-weighted over 2 materials"},
+        {"name": "Motor (x4)", "material": "pet black 77 %, aluminium anodised 23 %", "emissivity": 0.92, "source": "reference", "note": "area-weighted over 2 materials"},
+        {"name": "Propeller (x4)", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""}
+      ],
+      "downloads": [
+        {"format": "blend", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-avata-2/dji-avata-2.blend", "host": "GitHub Releases", "size_mb": 55.7, "sha256": "6c16f98d91b18fc69fce7a185b911b39532e1785f8d2f571098ae65788fa3c9b"},
+        {"format": "fbx.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-avata-2/dji-avata-2.fbx.zip", "host": "GitHub Releases", "size_mb": 21.9, "sha256": "0efd9c235bb213aec60c17b284a7ef9290e1f00fec1b4f3e7295ad0397e75185"},
+        {"format": "usdc.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-avata-2/dji-avata-2.usdc.zip", "host": "GitHub Releases", "size_mb": 46.0, "sha256": "238498afede590974a20fae5c7f2df204c7c80acb96fa671ab7a97bd2713c3a5"}
+      ]
+    },
+    {
       "id": "dji-mini-3-pro",
       "featured": true,
       "name": "DJI Mini 3 Pro",
