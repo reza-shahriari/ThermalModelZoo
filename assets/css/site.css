@@ -11,4 +11,11 @@ details > summary { list-style: none; }
 details > summary::-webkit-details-marker { display: none; }
 input[type="range"] { accent-color: rgb(var(--c-primary-container)); }
 .lightbox[hidden] { display: none; }
+/* Model-page stage: layers stack in the same cell and cross-fade (see show() in model.js). */
+.stage-layer { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .3s ease; }
+.stage-layer.is-on { opacity: 1; }
+.lightbox { opacity: 0; transition: opacity .2s ease; }
+.lightbox.is-open { opacity: 1; }
+#lb-img { transition: opacity .15s ease; }
+#lb-img.is-swapping { opacity: .35; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }

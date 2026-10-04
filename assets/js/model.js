@@ -32,6 +32,9 @@
     return rows || '<p class="text-on-surface-variant">No files are listed for this model.</p>';
   }
 
+  // A row named "Motor (x4)" stands for four meshes.
+  function partCount() { return (M.parts || []).reduce(function (n, p) { var m = /\(x(\d+)\)\s*$/.exec(p.name || ""); return n + (m ? +m[1] : 1); }, 0); }
+
   function partsTable(sortKey, dir) {
     var ps = (M.parts || []).slice();
     if (sortKey) ps.sort(function (a, b) { var x = a[sortKey], y = b[sortKey]; var r = typeof x === "number" ? x - y : String(x).localeCompare(String(y)); return dir * r; });
@@ -41,12 +44,12 @@
     }).join("");
   }
 
+  // Swap the stage without a blank frame: the next image is decoded off-screen, laid over the current one,
+  // and cross-faded in. A newer click cancels an older one that is still loading (token).
+  var token = 0;
   function show(i) {
     cur = (i + shots.length) % shots.length;
-    var s = shots[cur], stage = document.getElementById("stage");
-    if (s.kind === "video") stage.innerHTML = '<video class="w-full h-full object-contain" controls preload="metadata" src="' + E(s.src) + '"></video>';
-    else if (s.kind === "viewer") stage.innerHTML = '<model-viewer class="w-full h-full" src="' + E(s.src) + '" camera-controls auto-rotate shadow-intensity="0.6" alt="Interactive 3D preview"></model-viewer>';
-    else stage.innerHTML = '<img id="stage-img" class="w-full h-full object-contain cursor-zoom-in" src="' + E(s.src) + '" alt="' + E(s.caption) + '" width="1200" height="900"/>';
+    var s = shots[cur], stage = document.getElementById("stage"), my = ++token;
     document.getElementById("stage-cap").textContent = s.caption;
     Array.prototype.forEach.call(document.querySelectorAll("[data-shot]"), function (b) {
       var on = +b.dataset.shot === cur;
@@ -54,11 +57,33 @@
       if (on) b.className += b.dataset.role === "tab" ? " bg-surface-container-highest text-on-surface" : " ring-2 ring-primary-container";
       b.setAttribute("aria-current", on);
     });
+    var el;
+    if (s.kind === "video") { el = document.createElement("video"); el.controls = true; el.preload = "metadata"; el.src = s.src; }
+    else if (s.kind === "viewer") { el = document.createElement("model-viewer"); ["camera-controls", "auto-rotate"].forEach(function (a) { el.setAttribute(a, ""); }); el.setAttribute("shadow-intensity", "0.6"); el.setAttribute("alt", "Interactive 3D preview"); el.src = s.src; }
+    else { el = new Image(1200, 900); el.id = "stage-img"; el.alt = s.caption; el.src = s.src; el.className = "cursor-zoom-in object-contain"; }
+    el.className += " stage-layer";
+    var ready = el.decode ? el.decode().catch(function () {}) : Promise.resolve();
+    ready.then(function () {
+      if (my !== token) return;
+      var old = stage.querySelectorAll(".stage-layer");
+      stage.appendChild(el);
+      void el.offsetWidth; el.classList.add("is-on"); // reflow first so the opacity transition runs
+      Array.prototype.forEach.call(old, function (o) {
+        if (o.id === "stage-img") o.removeAttribute("id");
+        o.classList.remove("is-on");
+        setTimeout(function () { o.remove(); }, 320);
+      });
+    });
   }
   function lb(open) {
     var el = document.getElementById("lightbox");
-    if (open) { var s = shots[cur]; if (s.kind === "viewer" || s.kind === "video") return; document.getElementById("lb-img").src = s.src; document.getElementById("lb-cap").textContent = s.caption; el.hidden = false; document.getElementById("lb-close").focus(); }
-    else el.hidden = true;
+    if (open) {
+      var s = shots[cur]; if (s.kind === "viewer" || s.kind === "video") return;
+      var img = document.getElementById("lb-img"), first = el.hidden;
+      document.getElementById("lb-cap").textContent = s.caption;
+      if (first) { img.src = s.src; el.hidden = false; void el.offsetWidth; el.classList.add("is-open"); document.getElementById("lb-close").focus(); }
+      else if (img.getAttribute("src") !== s.src) { img.classList.add("is-swapping"); var n = new Image(); n.src = s.src; (n.decode ? n.decode().catch(function () {}) : Promise.resolve()).then(function () { img.src = s.src; img.classList.remove("is-swapping"); }); }
+    } else { el.classList.remove("is-open"); setTimeout(function () { if (!el.classList.contains("is-open")) el.hidden = true; }, 200); }
   }
 
   function render() {
@@ -84,13 +109,13 @@
 
       '<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg"><div class="lg:col-span-8 flex flex-col gap-space-sm">' +
       '<div class="bg-surface-container-lowest rounded-xl p-space-sm flex flex-col gap-space-sm"><div class="flex flex-wrap gap-1 bg-surface-container-low p-1.5 rounded-lg font-mono-data-sm" role="tablist">' +
-      shots.map(function (s, i) { return '<button type="button" role="tab" data-role="tab" data-shot="' + i + '" class="px-space-sm py-1.5 rounded font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container">' + (i + 1) + ". " + E(KIND[s.kind] || s.kind || "Image") + (s.kind === "viewer" ? "" : "") + "</button>"; }).join("") + "</div>" +
+      shots.map(function (s, i) { return '<button type="button" role="tab" data-role="tab" data-shot="' + i + '" class="px-space-sm py-1.5 rounded font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">' + (i + 1) + ". " + E(KIND[s.kind] || s.kind || "Image") + (s.kind === "viewer" ? "" : "") + "</button>"; }).join("") + "</div>" +
       '<div id="stage" class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center"></div>' +
       '<div class="flex items-center justify-between gap-space-sm px-1"><span id="stage-cap" class="font-mono-data-sm text-on-surface-variant"></span><span class="font-mono-data-sm text-outline hidden sm:inline">← → to browse · click image to zoom</span></div>' +
-      '<div class="flex gap-space-xs overflow-x-auto scroll-thin">' + shots.map(function (s, i) { return s.kind === "viewer" || s.kind === "video" ? "" : '<button type="button" data-role="thumb" data-shot="' + i + '" class="shrink-0 w-24 h-[72px] rounded overflow-hidden bg-surface-container-low" aria-label="Show ' + E(s.caption) + '"><img class="w-full h-full object-cover" loading="lazy" width="96" height="72" alt="" src="' + E(s.src) + '"/></button>'; }).join("") + "</div></div></div>" +
+      '<div class="flex gap-space-xs overflow-x-auto scroll-thin p-1">' + shots.map(function (s, i) { return s.kind === "viewer" || s.kind === "video" ? "" : '<button type="button" data-role="thumb" data-shot="' + i + '" class="shrink-0 w-24 h-[72px] rounded overflow-hidden bg-surface-container-low transition-shadow" aria-label="Show ' + E(s.caption) + '"><img class="w-full h-full object-cover" loading="lazy" width="96" height="72" alt="" src="' + E(s.src) + '"/></button>'; }).join("") + "</div></div></div>" +
 
       '<aside class="lg:col-span-4 flex flex-col gap-space-md"><div class="bg-surface-container-low rounded p-space-md flex flex-col gap-space-md"><h2 class="font-headline-md text-headline-md flex items-center gap-2"><span class="material-symbols-outlined text-primary">straighten</span>Technical specifications</h2>' +
-      '<div class="grid grid-cols-2 gap-space-md">' + fact("Bounding box", E(TMZ.fmtDims(M.dimensions_m)), "length × width × height") + fact("Triangles", M.triangles ? M.triangles.toLocaleString("en-US") : "—") + fact("Parts", (M.parts || []).length, "separate meshes") + fact("Emissivity range", r ? r[0].toFixed(2) + " – " + r[1].toFixed(2) : "—", "LWIR 8–14 µm") + "</div>" +
+      '<div class="grid grid-cols-2 gap-space-md">' + fact("Bounding box", E(TMZ.fmtDims(M.dimensions_m)), "length × width × height") + fact("Triangles", M.triangles ? M.triangles.toLocaleString("en-US") : "—") + fact("Parts", partCount(), "separate meshes") + fact("Emissivity range", r ? r[0].toFixed(2) + " – " + r[1].toFixed(2) : "—", "LWIR 8–14 µm") + "</div>" +
       '<div class="font-body-sm text-on-surface-variant">Emissivity values are per part. Each is marked measured, reference or estimated in the table below; treat estimated values as starting points.</div></div></aside></div>' +
 
       '<section aria-labelledby="parts-h"><div class="flex flex-wrap items-end justify-between gap-space-sm mb-space-md"><div><span class="font-label-caps text-label-caps text-primary uppercase">Parts &amp; materials</span><h2 id="parts-h" class="font-headline-lg text-headline-lg">Functional parts and materials</h2></div><button id="csv" type="button" class="h-8 px-space-md bg-surface-container hover:bg-surface-container-high rounded font-mono-data-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">download</span>Export CSV</button></div>' +

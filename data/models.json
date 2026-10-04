@@ -12,6 +12,8 @@
     {"id": "ships", "label": "Maritime / Ships", "icon": "directions_boat"},
     {"id": "animals", "label": "Animals (Fauna IR)", "icon": "pets"},
     {"id": "infrastructure", "label": "Infrastructure / Masts", "icon": "cell_tower"},
+    {"id": "vegetation", "label": "Trees & Vegetation", "icon": "park"},
+    {"id": "environments", "label": "Environments & Scenes", "icon": "landscape"},
     {"id": "props", "label": "Props & Misc", "icon": "category"}
   ],
   "licences": [
