@@ -29,6 +29,7 @@ licences.html contribute.html about.html 404.html
 data/models.json                          # the catalogue: one entry per model
 models/<id>/                              # web-sized images only (WebP/JPG, under 600 kB each)
 assets/css  assets/js                     # tokens.css + site.css, and one small script per page
+tools/publish.py                          # bundle folder -> images, uploaded files, catalogue entry
 tools/validate.py                         # licence / field / image checks (runs in CI)
 tools/gen_tokens.py                       # design tokens -> tokens.css + tailwind-config.js
 tools/make_placeholders.py                # draws the demo images
@@ -37,6 +38,48 @@ design/                                   # Stitch design system and the origina
 ```
 
 ## Add a model
+
+### With the publish tool (recommended)
+
+Make a **bundle** folder, then run one command:
+
+```
+my-model/
+  entry.json        # the fields below, without images / thumb / downloads (the tool fills them)
+  images/           # beauty.png, thermal.png, wireframe.png, emissivity.png, extra*.png (any size)
+  files/            # what people download: .blend, .fbx, .glb, .usdz, or a .zip with textures
+  ATTRIBUTION.md    # credit for the original author; required unless it is your own work
+```
+
+```bash
+pip install pillow
+python3 tools/publish.py my-model                # files -> GitHub Releases (tag model-<id>)
+python3 tools/publish.py my-model --host hf      # files -> Hugging Face dataset instead
+python3 tools/publish.py my-model --dry-run      # try it without uploading
+python3 tools/publish.py --remove <id>           # take an entry out again
+```
+
+The tool converts the images to WebP (≤ 1200 px, ≤ 600 kB) into `models/<id>/`, hashes and uploads the files,
+writes the entry into `data/models.json` (replacing one with the same id), and runs `tools/validate.py`.
+Then look at it locally and commit:
+
+```bash
+python3 -m http.server 8000
+git add data/models.json models/<id> && git commit -m "model: <id>" && git push
+```
+
+**Where the files go.** GitHub Releases is the default: nothing to set up beyond `gh auth login`, up to
+2 GB per file, one release per model. Hugging Face (`pip install huggingface_hub`, `hf auth login`) has
+no practical size limit and suits large environments; files go under `<id>/` in the dataset repo.
+
+**Environments** use the same bundle: zip the scene (USD stage plus its textures and referenced assets)
+into `files/`, list the surface types (soil, grass, asphalt, foliage, …) as `parts`, and give the extent
+in `dimensions_m`. Prefer `--host hf` once a scene passes a few hundred MB.
+
+Models from the [irsim](https://github.com/reza-shahriari/isaac-thermal-camera-simulation) asset library get their bundle from
+`scripts/zoo_bundle.py` there (renders, part table and emissivities generated from the library).
+
+### By hand
 
 1. Check the licence. Only **CC0, CC-BY, CC-BY-SA or your own work** are accepted (see `licences.html`).
 2. Upload the model files to free storage and note the links and SHA-256 hashes. Include an `ATTRIBUTION.md` in the download.
