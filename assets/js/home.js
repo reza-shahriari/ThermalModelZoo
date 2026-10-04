@@ -12,7 +12,7 @@
     qf.insertAdjacentHTML("beforeend", '<a class="px-space-sm py-1 bg-surface-container hover:bg-surface-container-high rounded text-tertiary transition-colors flex items-center gap-1" href="catalogue.html?licence=CC0-1.0"><span class="material-symbols-outlined text-[14px]">lock_open</span>CC0 public domain</a>');
 
     // Statistics are computed, never typed in.
-    var parts = models.reduce(function (n, m) { return n + (m.parts || []).length; }, 0);
+    var parts = models.reduce(function (n, m) { return n + TMZ.partCount(m); }, 0);
     var lic = {}; models.forEach(function (m) { lic[m.licence] = 1; });
     var demos = models.filter(function (m) { return m.demo; }).length;
     function tile(label, value, sub) {

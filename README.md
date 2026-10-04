@@ -10,8 +10,8 @@ are hosted on free external storage (GitHub Releases, Hugging Face, Zenodo, Driv
 
 > **Live site:** https://reza-shahriari.github.io/ThermalModelZoo/
 
-> The three entries currently in `data/models.json` are **placeholders** (marked `"demo": true`) that show the
-> layout. Delete them once real models are added.
+> Model files are hosted on this repository's [Releases](https://github.com/reza-shahriari/ThermalModelZoo/releases),
+> one release per model.
 
 ## Run it locally
 

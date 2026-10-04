@@ -52,7 +52,7 @@
     "name": function (a, b) { return a.name.localeCompare(b.name); },
     "tris-asc": function (a, b) { return (a.triangles || 0) - (b.triangles || 0); },
     "tris-desc": function (a, b) { return (b.triangles || 0) - (a.triangles || 0); },
-    "parts": function (a, b) { return (b.parts || []).length - (a.parts || []).length; }
+    "parts": function (a, b) { return TMZ.partCount(b) - TMZ.partCount(a); }
   };
 
   function checkbox(name, value, label, count, checked) {
@@ -90,7 +90,7 @@
   function row(m) {
     var lic = TMZ.licence(D, m.licence);
     return '<tr class="border-t border-outline-variant/30 hover:bg-surface-container"><td class="p-2"><a class="flex items-center gap-2 text-on-surface hover:text-primary" href="' + TMZ.modelUrl(m) + '"><img class="w-14 h-10 object-cover rounded" loading="lazy" width="56" height="40" alt="" src="' + TMZ.thumbUrl(m) + '"/><span class="font-semibold">' + TMZ.esc(m.name) + (m.demo ? " " + TMZ.demoBadge() : "") + "</span></a></td>" +
-      "<td class='p-2'>" + TMZ.esc(TMZ.category(D, m.category).label) + "</td><td class='p-2'>" + TMZ.esc(lic.short) + "</td><td class='p-2 text-right'>" + TMZ.fmtTris(m.triangles) + "</td><td class='p-2 text-right'>" + (m.parts || []).length + "</td><td class='p-2 text-right'>" + TMZ.emisText(m) + "</td><td class='p-2'>" + TMZ.esc(TMZ.formats(m).join(", ")) + "</td></tr>";
+      "<td class='p-2'>" + TMZ.esc(TMZ.category(D, m.category).label) + "</td><td class='p-2'>" + TMZ.esc(lic.short) + "</td><td class='p-2 text-right'>" + TMZ.fmtTris(m.triangles) + "</td><td class='p-2 text-right'>" + TMZ.partCount(m) + "</td><td class='p-2 text-right'>" + TMZ.emisText(m) + "</td><td class='p-2'>" + TMZ.esc(TMZ.formats(m).join(", ")) + "</td></tr>";
   }
 
   function render() {

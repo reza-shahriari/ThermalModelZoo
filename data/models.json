@@ -24,105 +24,116 @@
   ],
   "models": [
     {
-      "id": "demo-quadrotor",
-      "demo": true,
+      "id": "dji-mini-3-pro",
       "featured": true,
-      "name": "Example Quadrotor",
-      "real_name": "Generic carbon-fibre quadrotor",
+      "name": "DJI Mini 3 Pro",
+      "real_name": "",
       "category": "drones",
       "subcategory": "Multirotor",
-      "summary": "PLACEHOLDER ENTRY. Shows how a drone is presented: four motors, battery, avionics and airframe as separate parts.",
+      "summary": "DJI Mini 3 Pro, split into 15 functional parts, each with its library material and an area-weighted LWIR (8-14 µm) emissivity.",
       "licence": "CC-BY-4.0",
-      "author": "Example Author",
+      "author": "wishmaster88",
       "author_url": "",
-      "source_url": "",
-      "changes": "Placeholder: in a real entry, list exactly what was changed (scale, part split, materials).",
-      "dimensions_m": [0.58, 0.58, 0.22],
-      "triangles": 48200,
-      "date_added": "2026-10-01",
-      "thumb": "thumb.svg",
+      "source_url": "https://sketchfab.com/3d-models/dji-3-mini-pro-a67e84ebcec145818e122cdf40705fb0",
+      "changes": "Rescaled to metres, regrouped into functional parts, renamed, and re-exported to USD/FBX; materials remapped onto an infrared material library. A modified derivative, not the original.",
+      "dimensions_m": [0.282, 0.298, 0.085],
+      "triangles": 194281,
+      "date_added": "2026-10-04",
+      "thumb": "thumb.webp",
       "images": [
-        {"file": "beauty.svg", "kind": "beauty", "caption": "Beauty render (placeholder)"},
-        {"file": "thermal.svg", "kind": "thermal", "caption": "Synthetic LWIR, white-hot (placeholder)"},
-        {"file": "wireframe.svg", "kind": "wireframe", "caption": "Parts / wireframe view (placeholder)"}
+        {"file": "beauty.webp", "kind": "beauty", "caption": "Beauty render"},
+        {"file": "wireframe.webp", "kind": "wireframe", "caption": "Functional parts, one colour each (15 parts)"},
+        {"file": "emissivity.webp", "kind": "emissivity", "caption": "LWIR emissivity per surface, 8-14 µm (black 0.7, white 1.0)"}
       ],
       "parts": [
-        {"name": "Motors (x4)", "material": "Anodised aluminium, black", "emissivity": 0.82, "source": "estimated", "note": "Stator heat source"},
-        {"name": "Avionics housing", "material": "PC/ABS blend", "emissivity": 0.94, "source": "estimated", "note": "Internal compute heat"},
-        {"name": "Arms (x4)", "material": "Matte carbon fibre", "emissivity": 0.86, "source": "estimated", "note": ""},
-        {"name": "Propellers (x4)", "material": "Glass-filled polyamide", "emissivity": 0.91, "source": "estimated", "note": ""},
-        {"name": "Battery pack", "material": "PVC heat-shrink wrap", "emissivity": 0.95, "source": "estimated", "note": "Discharge heating"}
+        {"name": "Arm (x4)", "material": "polycarbonate light grey", "emissivity": 0.94, "source": "estimated", "note": ""},
+        {"name": "Battery", "material": "polycarbonate light grey 64 %, pet black 28 %, polycarbonate dark grey 6 %, +1 more", "emissivity": 0.94, "source": "estimated", "note": "area-weighted over 4 materials"},
+        {"name": "Fuselage", "material": "polycarbonate light grey 66 %, pet black 32 %, polycarbonate dark grey 1 %, +1 more", "emissivity": 0.94, "source": "estimated", "note": "area-weighted over 4 materials"},
+        {"name": "Gimbal camera", "material": "pet black 58 %, polycarbonate light grey 41 %, glass windshield 1 %", "emissivity": 0.94, "source": "estimated", "note": "area-weighted over 3 materials"},
+        {"name": "Motor (x4)", "material": "aluminium anodised 54 %, pet black 24 %, aircraft aluminium painted 21 %, +2 more", "emissivity": 0.88, "source": "estimated", "note": "area-weighted over 5 materials"},
+        {"name": "Propeller (x4)", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""}
       ],
       "downloads": [
-        {"format": "blend", "url": "", "host": "GitHub Releases", "size_mb": null, "sha256": ""},
-        {"format": "usdc", "url": "", "host": "GitHub Releases", "size_mb": null, "sha256": ""}
+        {"format": "blend", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-mini-3-pro/dji-mini-3-pro.blend", "host": "GitHub Releases", "size_mb": 13.9, "sha256": "db28afa5b07e06e10e390b283effeffa9db44ec2e790329455f6c8e58e402bea"},
+        {"format": "fbx.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-mini-3-pro/dji-mini-3-pro.fbx.zip", "host": "GitHub Releases", "size_mb": 15.0, "sha256": "ac62a5eb1082dc940e8f7b19ecc0fbc7cbf4d652fbea443e283fd46f44e2aa62"},
+        {"format": "usdc.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-mini-3-pro/dji-mini-3-pro.usdc.zip", "host": "GitHub Releases", "size_mb": 11.2, "sha256": "1be1ea87a540e2e608565346873aa896002947831a6971ca45f59b4efcd16fb3"}
       ]
     },
     {
-      "id": "demo-sedan",
-      "demo": true,
+      "id": "dji-inspire-3",
       "featured": true,
-      "name": "Example Sedan",
-      "real_name": "Generic passenger car",
-      "category": "ground",
-      "subcategory": "Passenger car",
-      "summary": "PLACEHOLDER ENTRY. Shows a vehicle with engine bay, exhaust, tyres and glazing as separate parts.",
-      "licence": "CC0-1.0",
-      "author": "Example Author",
+      "name": "DJI Inspire 3",
+      "real_name": "",
+      "category": "drones",
+      "subcategory": "Multirotor",
+      "summary": "DJI Inspire 3, split into 26 functional parts, each with its library material and an area-weighted LWIR (8-14 µm) emissivity.",
+      "licence": "CC-BY-4.0",
+      "author": "Polyman_3D",
       "author_url": "",
-      "source_url": "",
-      "changes": "Placeholder: in a real entry, list exactly what was changed.",
-      "dimensions_m": [4.7, 1.85, 1.45],
-      "triangles": 210400,
-      "date_added": "2026-10-01",
-      "thumb": "thumb.svg",
+      "source_url": "https://sketchfab.com/3d-models/dji-inspire-3-158e4fa0710f4511be14b73374b5df9b",
+      "changes": "Rescaled to metres, regrouped into functional parts, renamed, and re-exported to USD/FBX; materials remapped onto an infrared material library. A modified derivative, not the original.",
+      "dimensions_m": [0.828, 0.687, 0.339],
+      "triangles": 514253,
+      "date_added": "2026-10-04",
+      "thumb": "thumb.webp",
       "images": [
-        {"file": "beauty.svg", "kind": "beauty", "caption": "Beauty render (placeholder)"},
-        {"file": "thermal.svg", "kind": "thermal", "caption": "Synthetic LWIR, white-hot (placeholder)"},
-        {"file": "wireframe.svg", "kind": "wireframe", "caption": "Parts / wireframe view (placeholder)"}
+        {"file": "beauty.webp", "kind": "beauty", "caption": "Beauty render"},
+        {"file": "wireframe.webp", "kind": "wireframe", "caption": "Functional parts, one colour each (26 parts)"},
+        {"file": "emissivity.webp", "kind": "emissivity", "caption": "LWIR emissivity per surface, 8-14 µm (black 0.7, white 1.0)"}
       ],
       "parts": [
-        {"name": "Body panels", "material": "Painted steel", "emissivity": 0.90, "source": "estimated", "note": "Paint, not bare metal"},
-        {"name": "Windscreen and glazing", "material": "Laminated glass", "emissivity": 0.91, "source": "estimated", "note": "Opaque in LWIR"},
-        {"name": "Tyres (x4)", "material": "Carbon-black rubber", "emissivity": 0.95, "source": "estimated", "note": "Heat from rolling"},
-        {"name": "Engine block", "material": "Cast aluminium", "emissivity": 0.30, "source": "estimated", "note": "Hidden inside the shell"},
-        {"name": "Exhaust", "material": "Oxidised stainless steel", "emissivity": 0.80, "source": "estimated", "note": "Hottest part"}
+        {"name": "Arm (x4)", "material": "carbon fibre", "emissivity": 0.90, "source": "reference", "note": ""},
+        {"name": "Arm root (x2)", "material": "carbon fibre", "emissivity": 0.90, "source": "reference", "note": ""},
+        {"name": "Batteries", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
+        {"name": "Camera lens", "material": "glass windshield", "emissivity": 0.88, "source": "reference", "note": ""},
+        {"name": "Fuselage", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
+        {"name": "Gimbal camera", "material": "metal sheet painted grey", "emissivity": 0.94, "source": "reference", "note": ""},
+        {"name": "Landing foot (x4)", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
+        {"name": "Motor (x4)", "material": "aluminium anodised", "emissivity": 0.84, "source": "reference", "note": ""},
+        {"name": "Motor mount (x4)", "material": "aluminium anodised", "emissivity": 0.84, "source": "reference", "note": ""},
+        {"name": "Propeller (x4)", "material": "nylon glass filled black", "emissivity": 0.93, "source": "estimated", "note": ""}
       ],
       "downloads": [
-        {"format": "blend", "url": "", "host": "GitHub Releases", "size_mb": null, "sha256": ""}
+        {"format": "blend", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-inspire-3/dji-inspire-3.blend", "host": "GitHub Releases", "size_mb": 24.2, "sha256": "914b16ff0efac8b2f434b827738af5a44d0f4c4fde981ca7a8cfeb5895e1e4e4"},
+        {"format": "fbx.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-inspire-3/dji-inspire-3.fbx.zip", "host": "GitHub Releases", "size_mb": 23.7, "sha256": "b8ab094ecfedffffb65bf3abdf6ae7297c6e0c0f7c86f2df1c48cd98ea3e2ce3"},
+        {"format": "usdc.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-inspire-3/dji-inspire-3.usdc.zip", "host": "GitHub Releases", "size_mb": 13.6, "sha256": "ef5310f690ee0b2ccaf58c89b89bfadca73112f982b42fdbd8ba13b64ed6f8ad"}
       ]
     },
     {
-      "id": "demo-turboprop",
-      "demo": true,
+      "id": "dji-matrice-300-rtk",
       "featured": true,
-      "name": "Example Turboprop",
-      "real_name": "Generic twin turboprop",
-      "category": "aircraft",
-      "subcategory": "Fixed wing",
-      "summary": "PLACEHOLDER ENTRY. Shows a fixed-wing aircraft with exhaust stacks and leading-edge parts separated.",
-      "licence": "CC-BY-SA-4.0",
-      "author": "Example Author",
+      "name": "DJI Matrice 300 RTK",
+      "real_name": "",
+      "category": "drones",
+      "subcategory": "Multirotor, enterprise",
+      "summary": "DJI Matrice 300 RTK, split into 17 functional parts, each with its library material and an area-weighted LWIR (8-14 µm) emissivity.",
+      "licence": "CC-BY-4.0",
+      "author": "19vitali99",
       "author_url": "",
-      "source_url": "",
-      "changes": "Placeholder: in a real entry, list exactly what was changed.",
-      "dimensions_m": [27.2, 27.0, 7.6],
-      "triangles": 268000,
-      "date_added": "2026-10-01",
-      "thumb": "thumb.svg",
+      "source_url": "https://sketchfab.com/3d-models/quadcopter-dji-matrice-300-rtk-6677d02d66df4b73aad0d8e7bb9e3d9c",
+      "changes": "Rescaled to metres, regrouped into functional parts, renamed, and re-exported to USD/FBX; materials remapped onto an infrared material library. A modified derivative, not the original.",
+      "dimensions_m": [0.964, 1.032, 0.457],
+      "triangles": 888380,
+      "date_added": "2026-10-04",
+      "thumb": "thumb.webp",
       "images": [
-        {"file": "beauty.svg", "kind": "beauty", "caption": "Beauty render (placeholder)"},
-        {"file": "thermal.svg", "kind": "thermal", "caption": "Synthetic LWIR, white-hot (placeholder)"},
-        {"file": "wireframe.svg", "kind": "wireframe", "caption": "Parts / wireframe view (placeholder)"}
+        {"file": "beauty.webp", "kind": "beauty", "caption": "Beauty render"},
+        {"file": "wireframe.webp", "kind": "wireframe", "caption": "Functional parts, one colour each (17 parts)"},
+        {"file": "emissivity.webp", "kind": "emissivity", "caption": "LWIR emissivity per surface, 8-14 µm (black 0.7, white 1.0)"}
       ],
       "parts": [
-        {"name": "Fuselage skin", "material": "Painted aluminium alloy", "emissivity": 0.88, "source": "estimated", "note": ""},
-        {"name": "Engine nacelles (x2)", "material": "Titanium and aluminium", "emissivity": 0.55, "source": "estimated", "note": ""},
-        {"name": "Exhaust stacks (x2)", "material": "Nickel superalloy, oxidised", "emissivity": 0.85, "source": "estimated", "note": "Hot gas path"},
-        {"name": "Propellers (x2)", "material": "Composite blades, painted", "emissivity": 0.90, "source": "estimated", "note": ""}
+        {"name": "Arm (x4)", "material": "carbon fibre 72 %, pet black 28 %", "emissivity": 0.91, "source": "reference", "note": "area-weighted over 2 materials"},
+        {"name": "Batteries", "material": "polycarbonate dark grey", "emissivity": 0.94, "source": "estimated", "note": ""},
+        {"name": "Fuselage", "material": "polycarbonate dark grey 90 %, carbon fibre 5 %, aluminium anodised 3 %, +2 more", "emissivity": 0.93, "source": "estimated", "note": "area-weighted over 5 materials"},
+        {"name": "Gimbal camera", "material": "polycarbonate dark grey 88 %, pet black 7 %, glass windshield 5 %, +2 more", "emissivity": 0.93, "source": "estimated", "note": "area-weighted over 5 materials"},
+        {"name": "Landing gear (x2)", "material": "carbon fibre 73 %, pet black 27 %", "emissivity": 0.91, "source": "reference", "note": "area-weighted over 2 materials"},
+        {"name": "Motor (x4)", "material": "polycarbonate dark grey 61 %, aircraft aluminium painted 36 %, glass windshield 2 %, +2 more", "emissivity": 0.92, "source": "estimated", "note": "area-weighted over 5 materials"},
+        {"name": "Propeller (x4)", "material": "carbon fibre", "emissivity": 0.90, "source": "reference", "note": ""}
       ],
       "downloads": [
-        {"format": "blend", "url": "", "host": "GitHub Releases", "size_mb": null, "sha256": ""}
+        {"format": "blend", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-matrice-300-rtk/dji-matrice-300-rtk.blend", "host": "GitHub Releases", "size_mb": 24.7, "sha256": "8f4bcd1a952ed6266cdcac5466504c7849b0d0bddca7c5a237a1357ce0e3e527"},
+        {"format": "fbx.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-matrice-300-rtk/dji-matrice-300-rtk.fbx.zip", "host": "GitHub Releases", "size_mb": 22.0, "sha256": "228d74601f72adb7268cbefcfe1c46a555b7521f59b15567608a98ee175eb821"},
+        {"format": "usdc.zip", "url": "https://github.com/reza-shahriari/ThermalModelZoo/releases/download/model-dji-matrice-300-rtk/dji-matrice-300-rtk.usdc.zip", "host": "GitHub Releases", "size_mb": 13.8, "sha256": "f54db35f424b2e385382bded697377ebee9d914414b40c605df248a7cefdb589"}
       ]
     }
   ]

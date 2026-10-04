@@ -32,9 +32,6 @@
     return rows || '<p class="text-on-surface-variant">No files are listed for this model.</p>';
   }
 
-  // A row named "Motor (x4)" stands for four meshes.
-  function partCount() { return (M.parts || []).reduce(function (n, p) { var m = /\(x(\d+)\)\s*$/.exec(p.name || ""); return n + (m ? +m[1] : 1); }, 0); }
-
   function partsTable(sortKey, dir) {
     var ps = (M.parts || []).slice();
     if (sortKey) ps.sort(function (a, b) { var x = a[sortKey], y = b[sortKey]; var r = typeof x === "number" ? x - y : String(x).localeCompare(String(y)); return dir * r; });
@@ -115,7 +112,7 @@
       '<div class="flex gap-space-xs overflow-x-auto scroll-thin p-1">' + shots.map(function (s, i) { return s.kind === "viewer" || s.kind === "video" ? "" : '<button type="button" data-role="thumb" data-shot="' + i + '" class="shrink-0 w-24 h-[72px] rounded overflow-hidden bg-surface-container-low transition-shadow" aria-label="Show ' + E(s.caption) + '"><img class="w-full h-full object-cover" loading="lazy" width="96" height="72" alt="" src="' + E(s.src) + '"/></button>'; }).join("") + "</div></div></div>" +
 
       '<aside class="lg:col-span-4 flex flex-col gap-space-md"><div class="bg-surface-container-low rounded p-space-md flex flex-col gap-space-md"><h2 class="font-headline-md text-headline-md flex items-center gap-2"><span class="material-symbols-outlined text-primary">straighten</span>Technical specifications</h2>' +
-      '<div class="grid grid-cols-2 gap-space-md">' + fact("Bounding box", E(TMZ.fmtDims(M.dimensions_m)), "length × width × height") + fact("Triangles", M.triangles ? M.triangles.toLocaleString("en-US") : "—") + fact("Parts", partCount(), "separate meshes") + fact("Emissivity range", r ? r[0].toFixed(2) + " – " + r[1].toFixed(2) : "—", "LWIR 8–14 µm") + "</div>" +
+      '<div class="grid grid-cols-2 gap-space-md">' + fact("Bounding box", E(TMZ.fmtDims(M.dimensions_m)), "length × width × height") + fact("Triangles", M.triangles ? M.triangles.toLocaleString("en-US") : "—") + fact("Parts", TMZ.partCount(M), "separate meshes") + fact("Emissivity range", r ? r[0].toFixed(2) + " – " + r[1].toFixed(2) : "—", "LWIR 8–14 µm") + "</div>" +
       '<div class="font-body-sm text-on-surface-variant">Emissivity values are per part. Each is marked measured, reference or estimated in the table below; treat estimated values as starting points.</div></div></aside></div>' +
 
       '<section aria-labelledby="parts-h"><div class="flex flex-wrap items-end justify-between gap-space-sm mb-space-md"><div><span class="font-label-caps text-label-caps text-primary uppercase">Parts &amp; materials</span><h2 id="parts-h" class="font-headline-lg text-headline-lg">Functional parts and materials</h2></div><button id="csv" type="button" class="h-8 px-space-md bg-surface-container hover:bg-surface-container-high rounded font-mono-data-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">download</span>Export CSV</button></div>' +

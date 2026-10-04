@@ -32,6 +32,8 @@ var TMZ = (function () {
   function imgUrl(m, file) { return "models/" + encodeURIComponent(m.id) + "/" + encodeURIComponent(file); }
   function thumbUrl(m) { return imgUrl(m, m.thumb || (m.images[0] && m.images[0].file) || ""); }
   function modelUrl(m) { return "model.html?id=" + encodeURIComponent(m.id); }
+  // Meshes, not table rows: a row named "Motor (x4)" stands for four.
+  function partCount(m) { return (m.parts || []).reduce(function (n, p) { var x = /\(x(\d+)\)\s*$/.exec(p.name || ""); return n + (x ? +x[1] : 1); }, 0); }
   function formats(m) { return (m.downloads || []).map(function (d) { return d.format; }); }
   function hasKind(m, k) { return (m.images || []).some(function (i) { return i.kind === k; }); }
   function hasGlb(m) { return !!m.viewer_glb; }
@@ -68,7 +70,7 @@ var TMZ = (function () {
       (m.real_name ? '<div class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">' + esc(m.real_name) + "</div>" : "") +
       '<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">' + esc(m.summary) + "</p></div>" +
       '<div class="pt-space-xs flex flex-col gap-space-xs">' +
-      '<div class="flex items-center justify-between text-on-surface-variant font-mono-data-sm text-mono-data-sm py-1 bg-surface-container rounded px-2"><span>Parts: <span class="text-on-surface font-semibold">' + (m.parts || []).length + '</span></span><span>ε: <span class="text-primary font-semibold">' + emisText(m) + "</span></span></div>" +
+      '<div class="flex items-center justify-between text-on-surface-variant font-mono-data-sm text-mono-data-sm py-1 bg-surface-container rounded px-2"><span>Parts: <span class="text-on-surface font-semibold">' + partCount(m) + '</span></span><span>ε: <span class="text-primary font-semibold">' + emisText(m) + "</span></span></div>" +
       '<div class="flex items-center gap-1.5 flex-wrap min-h-[22px]">' + fmts + "</div>" +
       '<a class="h-8 bg-primary-container hover:bg-secondary-container text-on-primary-container font-mono-data-sm text-mono-data-sm font-semibold rounded flex items-center justify-center gap-1 transition-colors" href="' + modelUrl(m) + '"><span class="material-symbols-outlined text-[16px]">visibility</span><span>View parts &amp; materials</span></a>' +
       "</div></div></article>";
@@ -85,6 +87,6 @@ var TMZ = (function () {
   }
 
   return { load: load, esc: esc, safeUrl: safeUrl, fmtTris: fmtTris, fmtDims: fmtDims, find: find, licence: licence, category: category,
-           imgUrl: imgUrl, thumbUrl: thumbUrl, modelUrl: modelUrl, formats: formats, hasKind: hasKind, hasGlb: hasGlb,
+           imgUrl: imgUrl, thumbUrl: thumbUrl, modelUrl: modelUrl, formats: formats, partCount: partCount, hasKind: hasKind, hasGlb: hasGlb,
            emisRange: emisRange, emisText: emisText, card: card, demoBadge: demoBadge, demoNotice: demoNotice, copyText: copyText, showError: showError };
 })();
