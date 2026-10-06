@@ -5,6 +5,7 @@
     python3 tools/publish.py path/to/bundle --host hf       # Hugging Face dataset instead
     python3 tools/publish.py path/to/bundle --dry-run       # everything except the upload
     python3 tools/publish.py --remove demo-quadrotor        # take an entry (and its images) out
+    python3 tools/publish.py path/to/bundle --images-only   # new pictures, same entry and files
 
 A bundle is a folder:
 
@@ -199,6 +200,17 @@ def publish(a):
     to_webp(imgs[0], out / "thumb.webp", THUMB_W)
     e["thumb"] = "thumb.webp"
 
+    if a.images_only:
+        # Refresh the pictures of a listed model and nothing else: its parts, notes, links and
+        # hosted files stay exactly as the live entry has them (hand edits included).
+        old = [m for m in d["models"] if m.get("id") == mid]
+        if not old:
+            die(f"--images-only: {mid!r} is not in the catalogue yet; publish it whole first")
+        old[0]["images"], old[0]["thumb"] = e["images"], e["thumb"]
+        CATALOGUE.write_text(dump_catalogue(d))
+        print(f"\nreplaced the images of {mid}; entry and downloads unchanged")
+        return finish(mid)
+
     # files -> host
     files = sorted(p for p in (b / "files").glob("*") if p.is_file()) if (b / "files").is_dir() else []
     meta = []
@@ -262,6 +274,7 @@ def main():
     ap.add_argument("--hf-repo", default=REPO, help=f"Hugging Face dataset repo for --host hf (default {REPO})")
     ap.add_argument("--dry-run", action="store_true", help="do everything except upload; download links stay empty")
     ap.add_argument("--remove", metavar="ID", help="remove an entry and its images instead")
+    ap.add_argument("--images-only", action="store_true", help="replace a listed model's images only; keep its entry and files")
     a = ap.parse_args()
     if a.remove:
         return remove(a.remove)

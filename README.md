@@ -57,6 +57,7 @@ python3 tools/publish.py my-model                # files -> GitHub Releases (tag
 python3 tools/publish.py my-model --host hf      # files -> Hugging Face dataset instead
 python3 tools/publish.py my-model --dry-run      # try it without uploading
 python3 tools/publish.py --remove <id>           # take an entry out again
+python3 tools/publish.py my-model --images-only  # new pictures for a listed model; entry and files kept
 ```
 
 The tool converts the images to WebP (≤ 1200 px, ≤ 600 kB) into `models/<id>/`, hashes and uploads the files,

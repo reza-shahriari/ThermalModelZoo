@@ -40,7 +40,8 @@
       "date_added": "2026-10-04",
       "thumb": "thumb.webp",
       "images": [
-        {"file": "beauty.webp", "kind": "beauty", "caption": "Beauty render"},
+        {"file": "beauty.webp", "kind": "beauty", "caption": "Visible companion, clear midday sky (Isaac Sim, path traced)"},
+        {"file": "thermal.webp", "kind": "thermal", "caption": "LWIR white-hot from the same camera, at cruise: motors hottest, pack warm, shell near air (per-part temperatures)"},
         {"file": "wireframe.webp", "kind": "wireframe", "caption": "Functional parts, one colour each (17 parts)"},
         {"file": "emissivity.webp", "kind": "emissivity", "caption": "LWIR emissivity per surface, 8-14 µm (black 0.7, white 1.0)"}
       ],
@@ -86,7 +87,8 @@
       "date_added": "2026-10-04",
       "thumb": "thumb.webp",
       "images": [
-        {"file": "beauty.webp", "kind": "beauty", "caption": "Beauty render"},
+        {"file": "beauty.webp", "kind": "beauty", "caption": "Visible companion, clear midday sky (Isaac Sim, path traced)"},
+        {"file": "thermal.webp", "kind": "thermal", "caption": "LWIR white-hot from the same camera, at cruise: motors hottest, pack warm, shell near air (per-part temperatures)"},
         {"file": "wireframe.webp", "kind": "wireframe", "caption": "Functional parts, one colour each (22 parts)"},
         {"file": "emissivity.webp", "kind": "emissivity", "caption": "LWIR emissivity per surface, 8-14 µm (black 0.7, white 1.0)"}
       ],
@@ -138,7 +140,8 @@
       "date_added": "2026-10-04",
       "thumb": "thumb.webp",
       "images": [
-        {"file": "beauty.webp", "kind": "beauty", "caption": "Beauty render"},
+        {"file": "beauty.webp", "kind": "beauty", "caption": "Visible companion, clear midday sky (Isaac Sim, path traced)"},
+        {"file": "thermal.webp", "kind": "thermal", "caption": "LWIR white-hot from the same camera, at cruise: motors hottest, pack warm, shell near air (per-part temperatures)"},
         {"file": "wireframe.webp", "kind": "wireframe", "caption": "Functional parts, one colour each (15 parts)"},
         {"file": "emissivity.webp", "kind": "emissivity", "caption": "LWIR emissivity per surface, 8-14 µm (black 0.7, white 1.0)"}
       ],
@@ -174,7 +177,8 @@
       "date_added": "2026-10-04",
       "thumb": "thumb.webp",
       "images": [
-        {"file": "beauty.webp", "kind": "beauty", "caption": "Beauty render"},
+        {"file": "beauty.webp", "kind": "beauty", "caption": "Visible companion, clear midday sky (Isaac Sim, path traced)"},
+        {"file": "thermal.webp", "kind": "thermal", "caption": "LWIR white-hot from the same camera, at cruise: motors hottest, pack warm, shell near air (per-part temperatures)"},
         {"file": "wireframe.webp", "kind": "wireframe", "caption": "Functional parts, one colour each (26 parts)"},
         {"file": "emissivity.webp", "kind": "emissivity", "caption": "LWIR emissivity per surface, 8-14 µm (black 0.7, white 1.0)"}
       ],
@@ -214,7 +218,8 @@
       "date_added": "2026-10-04",
       "thumb": "thumb.webp",
       "images": [
-        {"file": "beauty.webp", "kind": "beauty", "caption": "Beauty render"},
+        {"file": "beauty.webp", "kind": "beauty", "caption": "Visible companion, clear midday sky (Isaac Sim, path traced)"},
+        {"file": "thermal.webp", "kind": "thermal", "caption": "LWIR white-hot from the same camera, at cruise: motors hottest, pack warm, shell near air (per-part temperatures)"},
         {"file": "wireframe.webp", "kind": "wireframe", "caption": "Functional parts, one colour each (17 parts)"},
         {"file": "emissivity.webp", "kind": "emissivity", "caption": "LWIR emissivity per surface, 8-14 µm (black 0.7, white 1.0)"}
       ],

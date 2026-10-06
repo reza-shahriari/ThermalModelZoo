@@ -55,7 +55,7 @@ var TMZ = (function () {
   function card(data, m) {
     var lic = licence(data, m.licence), cat = category(data, m.category);
     var fmts = formats(m).map(function (f) { return '<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-mono-data-sm text-mono-data-sm text-on-surface">.' + esc(f) + "</span>"; }).join("");
-    var thermalTag = hasKind(m, "thermal") ? '<div class="absolute top-2 left-2 flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-dim/85 backdrop-blur font-mono-data-sm text-mono-data-sm text-primary"><span class="material-symbols-outlined text-[14px]">videocam</span><span>WHITE-HOT LWIR</span></div>' : "";
+    var thermalTag = hasKind(m, "thermal") ? '<div class="absolute top-2 left-2 flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-dim/85 backdrop-blur font-mono-data-sm text-mono-data-sm text-primary"><span class="material-symbols-outlined text-[14px]">videocam</span><span>' + (hasKind(m, "beauty") ? "RGB + LWIR PAIR" : "WHITE-HOT LWIR") + '</span></div>' : "";
     return '<article class="model-card flex flex-col bg-surface-container-low rounded overflow-hidden hover:bg-surface-container transition-colors group">' +
       '<a class="relative block aspect-[4/3] w-full bg-surface-container-lowest overflow-hidden" href="' + modelUrl(m) + '" tabindex="-1" aria-hidden="true">' +
       '<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="300" src="' + thumbUrl(m) + '" alt="' + esc(m.name) + ' thermal render"/>' +
